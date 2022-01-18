@@ -3,7 +3,7 @@ import sys
 import glob
 
 
-def h_to_py(h_filename):
+def h_to_txt(h_filename):
     nl_file = h_filename[:h_filename.find('.')]
     print(nl_file)
     txt_filename = str(nl_file + '.txt')
@@ -17,7 +17,7 @@ def recurse_down(root_dir):
     print(os.getcwd())
     for filename in glob.glob(root_dir + '**/*.h', recursive=True):
         print(filename)
-        new_filename = h_to_py(filename)
+        new_filename = h_to_txt(filename)
         print(new_filename)
         parse_txt(new_filename)
 
