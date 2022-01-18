@@ -22,4 +22,4 @@ def recurse_down(root_dir):
 
 
 if __name__ == '__main__':
-    recurse_down('linux/')
+    recurse_down('linux-test/')
