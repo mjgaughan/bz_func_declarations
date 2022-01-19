@@ -1,15 +1,19 @@
+from ast import arg
 from curses.ascii import isalnum
 import os
 from string import punctuation 
-import sys
+#import sys
 import glob
 from typing import List, Optional, Tuple
-import re 
+#import re 
 #import attr
 C_PROHIB = ["return ", "=", "/*", "*/", "while ", ">", "if ", "define ", "extern "]
 PUNCTUATION = [",", ";"]
 PROHIB_START = set(op[0] for op in C_PROHIB)
 
+
+#decayed and unnecessary function to flip the h files to txt files
+#can just read in the h files AS txt files
 def h_to_txt(h_filename):
     nl_file = h_filename[:h_filename.find('.')]
     print(nl_file)
@@ -18,67 +22,77 @@ def h_to_txt(h_filename):
     return txt_filename
 
 
-
+#simple method to find every *.h file in the directory
 def recurse_down(root_dir):
     print(root_dir)
     print(os.getcwd())
     for filename in glob.glob(root_dir + '**/*.h', recursive=True):
         print(filename)
-        
-        #new_filename = h_to_txt(filename)
-        #print(new_filename)
         parse_txt(filename)
-        
-        '''
-        with open(filename) as f:
-            rdr = CharReader(f.read())
-        tokens = rdr.read_all()
-        print(len(tokens))
-        print(tokens)
-        '''
-
+    
+#parsing the h file as txt
 def parse_txt(txtfile):
     with open(txtfile) as f:
         chars = f.read()
         block = ""
-        #previous_char = ""
-        #print(chars)
         for char in chars:
-            #print(len(char))
+            #if # is the character, can skip
             if "#" in char:
                 continue
-            #print(char)
-            #arr_char = char.split()
-            #for word in arr_char:
+            #block is just the accumulation of characters in the txt file
             block += char
-            
-            #https://stackoverflow.com/questions/476173/regex-to-pull-out-c-function-prototype-declarations
-            
             
             #this has to be all of the logic for parsing 
             if char == '}' or char == ";":
-                #if re.match(r"^(\w+( )?){2,}\([^!@#$+%^]+?\)\{[^!@#$+%^]+?\}",block):
-                    #print(block)
                 if "{" in block:
                     block = block[:block.find('{')]
                 valid = True
                 for entry in C_PROHIB:
                     if entry in block:
                         valid = False
+                #checks form of lines to see if they match function prototypes as defined in literature
                 valid = check_form(block, valid)
-                if '(' in block and ')' in block and valid:
-                    print("---------")
-                    func_prototype = block
-                    print(func_prototype)
-                    print("---------")
+                if '(' in block and ')' in block:
+                    #isolating arguments between first open paren and last close paren
+                    arguments = block[block.find('(') + 1 :block.rfind(')') - 1]
+                    temp_arg = ""
+                    open_paren = 1
+                    arg_arr = []
+                    #for each character in the argument, append to temporary save
+                    for char in arguments:
+                        if char == "(":
+                            open_paren += 1
+                        if char == ")":
+                            open_paren -= 1
+                        if (open_paren == 1 and char == ",") or open_paren == 0:
+                            arg_arr.append(temp_arg)
+                            temp_arg = ""
+                        temp_arg += char
+                    #print(arg_arr)
+                    #this below block is for identifying function prototypes that might be in other prototypes
+                    for arg in arg_arr:
+                        cleaned_arg = clean_arg_string(arg)
+                        if "(" in cleaned_arg and check_form(cleaned_arg, True):
+                            if cleaned_arg[1] == "(":
+                                cleaned_arg = cleaned_arg[2:]
+                            print("---------")
+                            print(cleaned_arg)
+                            print("---------")
+                    #this block above does the function prototype within thing
+                    if valid:
+                        print("---------")
+                        func_prototype = block
+                        print(func_prototype)
+                        print("---------")
                 block = ""
             #previous_char = char
             
 def check_form(block, valid):
+    #if it comes in being not valid
     if not valid:
         return False
     begin_args = block.find('(')
-    #print(begin_args)
+    #if there are no open paren in the entire block
     if begin_args == -1:
         return False
     prev_char = '('
@@ -93,10 +107,11 @@ def check_form(block, valid):
         if current_char in PUNCTUATION:
             return False
         prev_char = current_char
-        #iterating forwards 
-        block[index]
     return False
-        
+
+def clean_arg_string(arg):
+    new_arg = " ".join(arg.split())
+    return new_arg
 
 if __name__ == '__main__':
     recurse_down('linux-test/')
