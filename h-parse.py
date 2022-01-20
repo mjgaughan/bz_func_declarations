@@ -27,13 +27,16 @@ def h_to_txt(h_filename):
 def recurse_down(root_dir):
     print(root_dir)
     print(os.getcwd())
-    with open('testing.csv', 'w') as csvfile:
+    with open('init-corp-00.csv', 'w') as csvfile:
+        files_examined = 0
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(['func_prototype', 'line', 'file', 'in_macro']) 
         for filename in glob.glob(root_dir + '**/*.h', recursive=True):
+            files_examined += 1
             print("starting parse on " + filename)
             parse_txt(filename, csvwriter)
             print("done with " + filename)
+            print("files: " + str(files_examined))
     
 #parsing the h file as txt
 def parse_txt(txtfile, writer):
@@ -138,4 +141,4 @@ def clean_arg_string(arg):
     return new_arg
 
 if __name__ == '__main__':
-    recurse_down('linux-test/')
+    recurse_down('../linux/')
