@@ -27,7 +27,7 @@ def h_to_txt(h_filename):
 def recurse_down(root_dir):
     print(root_dir)
     print(os.getcwd())
-    with open('init-corp-00.csv', 'w') as csvfile:
+    with open('init-corp-02.csv', 'w') as csvfile:
         files_examined = 0
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(['func_prototype', 'line', 'file', 'in_macro']) 
