@@ -1,6 +1,8 @@
 from ast import arg
 from curses.ascii import isalnum
 import os
+import time
+import datetime
 from string import punctuation 
 #import sys
 import glob
@@ -27,7 +29,7 @@ def h_to_txt(h_filename):
 def recurse_down(root_dir):
     print(root_dir)
     print(os.getcwd())
-    with open('init-corp-03.csv', 'w') as csvfile:
+    with open('init-corp-04.csv', 'w') as csvfile:
         files_examined = 0
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(['func_prototype', 'line', 'file', 'in_macro']) 
@@ -43,6 +45,7 @@ def parse_txt(txtfile, writer):
     with open(txtfile) as f:
         chars = f.read()
         block = ""
+        time_start = datetime.datetime.now()
         line_loc = 0
         for char in chars:
             #print(char)
@@ -104,8 +107,12 @@ def parse_txt(txtfile, writer):
                         writer.writerow([func_prototype, line_loc, str(txtfile), "False"])
                         #print("---------")
                 block = ""
-            #previous_char = char
-            
+            #if a given file takes more than 10 minutes, skip it
+            time_elapsed = datetime.datetime.now() - time_start
+            if time_elapsed > datetime.timedelta(seconds = 600):
+                break
+
+
 def check_form(block, valid):
     #if it comes in being not valid
     if not valid:
