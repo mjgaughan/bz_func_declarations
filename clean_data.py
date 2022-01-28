@@ -59,13 +59,13 @@ def multiply_for_par(csv_reader, csv_writer):
         
 
 if __name__ == "__main__":
-    temp_name = "testing.csv"
-    with open("init-corp-00.csv") as read, open(temp_name, "w") as write:
+    temp_name = "temp-full.csv"
+    with open("init-corp-04.csv") as read, open(temp_name, "w") as write:
         csv_read = csv.reader(read, delimiter=',')
         csv_write = csv.writer(write)
         csv_write.writerow(['func_prototype', 'line', 'file', 'in_macro']) 
         exclude_void(csv_read, csv_write)
-    with open(temp_name) as read, open ("final.csv", "w") as write:
+    with open(temp_name) as read, open ("final_full.csv", "w") as write:
         csv_read = csv.reader(read, delimiter=',')
         csv_write = csv.writer(write)
         csv_write.writerow(['func_prototype', 'est_line', 'file', 'in_macro', 'a0','a1','a2','a3','a4','a5', 'a6', 'a7', 'a8', 'a9'])
