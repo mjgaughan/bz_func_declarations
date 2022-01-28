@@ -51,6 +51,7 @@ def multiply_for_par(csv_reader, csv_writer):
                     row_array.append('u')
             total_lines += 1
             #print(row_array)
+            csv_writer.writerow(row_array)
     print("--------")
     print("# of pointers in params: " + str(pointers))
     print("total params: " + str(total_lines))
