@@ -49,21 +49,6 @@ def edit_file(location_array, original_row):
         current_line = string_list[file_line-index]
         #is the func_name in the current line
         if location_array[0] in current_line:
-            '''
-            #make it the func head
-            func_head = current_line
-            #if the def not done
-            if ')' not in current_line:
-                #trying to find end of the func def
-                for i in range(1,30):
-                    nested_line = string_list[file_line - index + i]
-                    func_head += nested_line
-                    if ')' in nested_line:
-                        break
-            if target_param in func_head:
-                print("this is from the location of target param")
-                print(func_head)
-            '''
             if target_param not in current_line:
                 new_index = -1
                 while target_param not in current_line:
@@ -73,18 +58,21 @@ def edit_file(location_array, original_row):
             print("This is it, this is the target param!")
             print(current_line)
             new_line = current_line
+            new_param = target_param
             if "const" not in target_param:
-                new_line = current_line[:current_line.index(target_param)] + "const " + current_line[current_line.index(target_param):]
+                new_param = "const " + new_param
+                #new_line = current_line[:current_line.index(target_param)] + "const " + current_line[current_line.index(target_param):]
             if "*" in target_param:
-                star_location = []
-                for letter_index in range(len(target_param)):
-                    if target_param[letter_index] == "*":
-                        star_location.append(letter_index)
-                for entry in star_location:
-                    new_line = new_line[:new_line.index(target_param) + entry + 1] + " const " + new_line[new_line.index(target_param) + entry + 1:]
+                for letter_index in range(len(new_param)):
+                    if new_param[letter_index] == "*":
+                        new_param = new_param[:letter_index + 1] + " const " + new_param[letter_index + 1:]
+            new_line = new_line[:new_line.index(target_param)] + new_param + new_line[new_line.index(target_param) + len(target_param):]
             print(new_line)
+            #TODO: replace old line with new one
+            #string_list[file_line-index] = new_line 
             break
     opened_file.close()
+    #write to file
 
 def find_location(func_name):
     locations = {}
@@ -126,4 +114,3 @@ if  __name__ == "__main__":
         csv_write = csv.writer(write)
         #gz_to_csv("tags.gz", csv_write)
         main(csv_read, csv_write)
-        #edit_file(['gpiotools_get_values', 'tools/gpio/gpio-utils.h', '33;"', 'p'], ['\nint gpiotools_get_values(const int fd, struct gpio_v2_line_values *values);', '32', '../linux/tools/gpio/gpio-utils.h', 'False', 'ignore', ' struct gpio_v2_line_values *values', 'u', 'u', 'u', 'u', 'u', 'u', 'u', 'u']) 
