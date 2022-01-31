@@ -26,7 +26,7 @@ def main(csv_reader, csv_writer):
                 #TODO: revert to original
                 #TODO: quick compile back as regular
         location += 1
-        if location > 5:
+        if location > 3:
             break
 
 
@@ -46,7 +46,7 @@ def edit_file(location_array, original_row):
     #making sure the line we are grabbing has the target param the way we need
     for index in range(len(string_list)):
         #this is the current line being examined in the file
-        current_line = string_list[file_line-index]
+        current_line = string_list[file_line -index]
         #is the func_name in the current line
         if location_array[0] in current_line:
             if target_param not in current_line:
@@ -57,6 +57,7 @@ def edit_file(location_array, original_row):
                     print(current_line)
             print("This is it, this is the target param!")
             print(current_line)
+            edit_line = string_list.index(current_line)
             new_line = current_line
             new_param = target_param
             if "const" not in target_param:
@@ -68,11 +69,14 @@ def edit_file(location_array, original_row):
                         new_param = new_param[:letter_index + 1] + " const " + new_param[letter_index + 1:]
             new_line = new_line[:new_line.index(target_param)] + new_param + new_line[new_line.index(target_param) + len(target_param):]
             print(new_line)
-            #TODO: replace old line with new one
-            #string_list[file_line-index] = new_line 
+            string_list[edit_line] = new_line 
             break
     opened_file.close()
     #write to file
+    new_file = open("hehe" + file_location[-2:], "w")
+    new_file_edits = "".join(string_list)
+    new_file.write(new_file_edits)
+    new_file.close()
 
 def find_location(func_name):
     locations = {}
