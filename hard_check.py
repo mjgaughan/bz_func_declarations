@@ -1,7 +1,7 @@
 import csv 
 import re
 import gzip
-
+import subprocess
 
 def main(csv_reader, csv_writer):
     location = 0
@@ -24,6 +24,7 @@ def main(csv_reader, csv_writer):
                 #TODO: quick compile
                 #TODO: record and save output of quick compile
                 #TODO: revert to original
+                subprocess.run(["git", "reset"])
                 #TODO: quick compile back as regular
         location += 1
         if location > 3:

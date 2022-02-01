@@ -54,7 +54,7 @@
  * Return:		On success return the fd;
  *			On failure return the errno.
  */
-int gpiotools_request_line(const char *device_name, const unsigned int * const lines,
+int gpiotools_request_line(const char *device_name,  unsigned int * lines,
 			   unsigned int num_lines,
 			   struct gpio_v2_line_config *config,
 			   const char *consumer)
