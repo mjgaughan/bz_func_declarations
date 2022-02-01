@@ -1,10 +1,14 @@
-import csv 
+import csv
 import re
 import gzip
 import subprocess
+import os
 
 def main(csv_reader, csv_writer):
     location = 0
+    #getting into the directory
+    #subprocess.run(["cd", "../test_target/"])
+    os.chdir('../test_target/')
     for row in csv_reader:
         print(row)
         if location != 0:
@@ -18,17 +22,35 @@ def main(csv_reader, csv_writer):
             else:
                 print(row)
                 print(loc_locations)
-                #TODO: editing files in prot and func
+                # editing files in prot and func
                 for locations_array in loc_locations.values():
                     edit_file(locations_array, row)
-                #TODO: quick compile
-                #TODO: record and save output of quick compile
-                #TODO: revert to original
-                subprocess.run(["git", "reset"])
-                #TODO: quick compile back as regular
+                #quick compile
+                immutable = compile_files()
+                row.append(immutable)
+                print(row)
+                csv_writer.writerow(row)
+                # revert to original
+                subprocess.run(["git", "reset", "--hard"])
+                #quick compile back as regular
+                compile_files()
         location += 1
         if location > 3:
             break
+    #return home
+    #subprocess.run(["cd", "../bz_func_declarations/"])
+    os.chdir('../bz_func_declarations/')
+
+def compile_files():
+    print("buonosera")
+    print("-----------------------") 
+    compile_result = subprocess.run(["make"])
+    if compile_result.returncode != 0:
+        print("it didn't work")
+        return False
+    else:
+        return True
+    
 
 
 def edit_file(location_array, original_row):
@@ -81,7 +103,7 @@ def edit_file(location_array, original_row):
 
 def find_location(func_name):
     locations = {}
-    with open("tags_f_p.csv") as tags:
+    with open("../bz_func_declarations/tags_f_p.csv") as tags:
         tags_reader = csv.reader(tags, delimiter = ',')
         for row in tags_reader:
             #print(row)

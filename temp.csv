@@ -1,0 +1,13 @@
+"
+extern	void resize_handler(int sig);",160,../linux/tools/thermal/tmon/tmon.h,False,int sig,u,u,u,u,u,u,u,u,u,False
+"int gpiotools_request_line(const char *device_name,
+			   unsigned int *lines,
+			   unsigned int num_lines,
+			   struct gpio_v2_line_config *config,
+			   const char *consumer);",30,../linux/tools/gpio/gpio-utils.h,False,const char *device_name,ignore,ignore,ignore,ignore,u,u,u,u,u,False
+"int gpiotools_request_line(const char *device_name,
+			   unsigned int *lines,
+			   unsigned int num_lines,
+			   struct gpio_v2_line_config *config,
+			   const char *consumer);",30,../linux/tools/gpio/gpio-utils.h,False,ignore,"
+			   unsigned int *lines",ignore,ignore,ignore,u,u,u,u,u,False
