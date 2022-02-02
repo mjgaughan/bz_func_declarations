@@ -3,9 +3,14 @@ import re
 import gzip
 import subprocess
 import os
+import time
+from parse_commands import find_func
+
 
 def main(csv_reader, csv_writer):
     location = 0
+    t1 = time.time()
+    valid_ones = []
     #getting into the directory
     os.chdir('../linux/')
     #os.chdir('../test_target/')
@@ -24,27 +29,41 @@ def main(csv_reader, csv_writer):
                 print(loc_locations)
                 # editing files in prot and func
                 for locations_array in loc_locations.values():
-                    edit_file(locations_array, row)
+                    try:
+                        edit_file(locations_array, row)
+                    except IndexError:
+                        print("index error at:" + locations_array[1])
+                    if locations_array[1][-1] == "c":
+                        #print("found CCCCCCCCCC")
+                        func_path = locations_array[1]
                 #quick compile
-                immutable = compile_files()
-                row.append(immutable)
-                print(row)
-                csv_writer.writerow(row)
+                gcc_ = find_func("../bz_func_declarations/commands.sh",func_path)
+                if gcc_ is not None:
+                    print("WE GOT ONE, WE FOUND THE COMPILE!!!! ___________________________________________________")
+                    immutable = compile_files(gcc_)
+                    row.append(immutable)
+                    print(row)
+                    valid_ones.append(row)
+                    csv_writer.writerow(row)
                 # revert to original
                 subprocess.run(["git", "reset", "--hard"])
-                #quick compile back as regular
-                compile_files()
+                if gcc_ is not None:
+                    #quick compile back as regular
+                    compile_files(gcc_)
         location += 1
-        if location > 3:
+        if location > 400:
             break
     #return home
+    print(valid_ones)
+    t2 = time.time()
+    print(t1-t2)
     #subprocess.run(["cd", "../bz_func_declarations/"])
     os.chdir('../bz_func_declarations/')
 
-def compile_files():
+def compile_files(gcc_command):
     print("buonosera")
     print("-----------------------") 
-    compile_result = subprocess.run(["make"])
+    compile_result = subprocess.run([gcc_command])
     if compile_result.returncode != 0:
         print("it didn't work")
         return False

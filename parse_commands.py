@@ -29,4 +29,4 @@ def find_func(filename, target_file):
 
 if __name__ == "__main__":
     print("hi")
-    print(find_func("commands.sh", "arch/x86/events/amd/uncore.c "))
+    print(find_func("commands.sh", "tools/thermal/tmon/tui.c"))
