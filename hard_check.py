@@ -7,8 +7,8 @@ import os
 def main(csv_reader, csv_writer):
     location = 0
     #getting into the directory
-    #subprocess.run(["cd", "../test_target/"])
-    os.chdir('../test_target/')
+    os.chdir('../linux/')
+    #os.chdir('../test_target/')
     for row in csv_reader:
         print(row)
         if location != 0:
@@ -96,7 +96,12 @@ def edit_file(location_array, original_row):
             break
     opened_file.close()
     #write to file
-    new_file = open("hehe" + file_location[-2:], "w")
+    print("this is the file location")
+    print(file_location)
+    print(os.getcwd())
+    augmented_location = file_location[9:]
+    print(augmented_location)
+    new_file = open(augmented_location, "w")
     new_file_edits = "".join(string_list)
     new_file.write(new_file_edits)
     new_file.close()
