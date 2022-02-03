@@ -12,6 +12,7 @@ import pandas as pd
 
 def main(csv_reader, csv_writer):
     location = 0
+    immutable_count = 0
     time_start = datetime.datetime.now()
     valid_ones = []
     #getting into the directory
@@ -51,6 +52,8 @@ def main(csv_reader, csv_writer):
                     immutable = compile_files(gcc_)
                     row.append(immutable)
                     print(row)
+                    if immutable:
+                        immutable_count += 1
                     valid_ones.append(row)
                     csv_writer.writerow(row)
                 # revert to original
@@ -59,19 +62,25 @@ def main(csv_reader, csv_writer):
                     #quick compile back as regular
                     compile_files(gcc_)
         location += 1
-        if location > 3:
+        if location > 6:
             break
     #return home
     print(valid_ones)
     time_elapsed = datetime.datetime.now() - time_start
     print(time_elapsed)
+    print("compile %")
+    print(len(valid_ones)/1000)
+    print("immutable % from compiles")
+    print(immutable_count/len(valid_ones))
     #subprocess.run(["cd", "../bz_func_declarations/"])
     os.chdir('../bz_func_declarations/')
 
 def compile_files(gcc_command):
     print("buonosera")
     print("-----------------------") 
-    compile_result = subprocess.run(gcc_command.split(" "), shell = True)
+    compile_result = subprocess.run(gcc_command.split(" "), shell = True, stdout=PIPE, stderr=STDOUT)
+    #print(subprocess.run(gcc_command.split(" "), shell = True))
+    print(compile_result)
     if compile_result.returncode != 0:
         print("it didn't work")
         return False
