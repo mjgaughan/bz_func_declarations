@@ -3,18 +3,23 @@ import re
 import gzip
 import subprocess
 import os
-import time
+import datetime
 from parse_commands import find_func
+from tqdm import tqdm
+import pandas as pd
+
 
 
 def main(csv_reader, csv_writer):
     location = 0
-    t1 = time.time()
+    time_start = datetime.datetime.now()
     valid_ones = []
     #getting into the directory
     os.chdir('../linux/')
     #os.chdir('../test_target/')
     for row in csv_reader:
+        #for row in csv_reader.iterrows(): 
+        #row = csv_reader[i]
         print(row)
         if location != 0:
             func_name = row[0][:row[0].index('(')]
@@ -27,6 +32,7 @@ def main(csv_reader, csv_writer):
             else:
                 print(row)
                 print(loc_locations)
+                func_path = "THIS SUBSTRING IS NEVER FOUND IN ANY FILES"
                 # editing files in prot and func
                 for locations_array in loc_locations.values():
                     try:
@@ -40,6 +46,8 @@ def main(csv_reader, csv_writer):
                 gcc_ = find_func("../bz_func_declarations/commands.sh",func_path)
                 if gcc_ is not None:
                     print("WE GOT ONE, WE FOUND THE COMPILE!!!! ___________________________________________________")
+                    print(gcc_)
+                    print(func_path)
                     immutable = compile_files(gcc_)
                     row.append(immutable)
                     print(row)
@@ -51,19 +59,19 @@ def main(csv_reader, csv_writer):
                     #quick compile back as regular
                     compile_files(gcc_)
         location += 1
-        if location > 400:
+        if location > 3:
             break
     #return home
     print(valid_ones)
-    t2 = time.time()
-    print(t1-t2)
+    time_elapsed = datetime.datetime.now() - time_start
+    print(time_elapsed)
     #subprocess.run(["cd", "../bz_func_declarations/"])
     os.chdir('../bz_func_declarations/')
 
 def compile_files(gcc_command):
     print("buonosera")
     print("-----------------------") 
-    compile_result = subprocess.run([gcc_command])
+    compile_result = subprocess.run(gcc_command.split(" "), shell = True)
     if compile_result.returncode != 0:
         print("it didn't work")
         return False
@@ -160,7 +168,8 @@ def check_csv(filename):
 
 if  __name__ == "__main__":
     print("bozo")
-    with open("final_full.csv") as read, open("temp.csv", "w") as write:
+    #total_scraped = pd.read_csv("final_full.csv")
+    with open("final_full_shufffled.csv") as read,  open("temp.csv", "w") as write:
         csv_read = csv.reader(read, delimiter=',')
         csv_write = csv.writer(write)
         #gz_to_csv("tags.gz", csv_write)

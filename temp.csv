@@ -1,0 +1,3 @@
+"
+int ubi_vtbl_rename_volumes(struct ubi_device *ubi,
+			    struct list_head *rename_list);",841,../linux/drivers/mtd/ubi/ubi.h,False,struct ubi_device *ubi,ignore,u,u,u,u,u,u,u,u,True

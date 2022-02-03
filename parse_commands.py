@@ -22,11 +22,11 @@ def find_func(filename, target_file):
                         index += 1
                         if index == 2 and  "CC" in temp:
                             valid = True
-                        if index == 3 and valid and "gcc" in temp:
+                        if index == 3 and valid and "gcc" in temp and target_file in temp:
                             return temp[:temp.index(";")]
                         temp = ""
 
 
 if __name__ == "__main__":
     print("hi")
-    print(find_func("commands.sh", "tools/thermal/tmon/tui.c"))
+    #print(find_func("commands.sh", "tools/thermal/tmon/tui.c"))
