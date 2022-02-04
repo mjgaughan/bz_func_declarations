@@ -19,6 +19,7 @@ def main(csv_reader, csv_writer):
     os.chdir('../linux/')
     #os.chdir('../test_target/')
     for row in csv_reader:
+        row_time_start = datetime.datetime.now()
         #for row in csv_reader.iterrows(): 
         #row = csv_reader[i]
         print(row)
@@ -49,14 +50,24 @@ def main(csv_reader, csv_writer):
                     print("WE GOT ONE, WE FOUND THE COMPILE!!!! ___________________________________________________")
                     print(gcc_)
                     print(func_path)
+                    opened_file = open(func_path)
+                    string_list = opened_file.readlines()
+                    # kill the bottom 3 lines
+                    #for line in string_list:
+                        #if "hjksdfjashjlhjfhjadklnsanjkdnkjlfdjknfkjnjknfsnjkfs"  in line:
+                            #print(line)
+                    opened_file.close()
                     immutable = compile_files(gcc_)
                     row.append(immutable)
                     print(row)
                     if immutable:
                         immutable_count += 1
                     valid_ones.append(row)
+                    row_time_elapsed = datetime.datetime.now() - row_time_start
+                    row.append(row_time_elapsed)
                     csv_writer.writerow(row)
                 # revert to original
+                # uncomment
                 subprocess.run(["git", "reset", "--hard"])
                 if gcc_ is not None:
                     #quick compile back as regular
@@ -69,17 +80,22 @@ def main(csv_reader, csv_writer):
     time_elapsed = datetime.datetime.now() - time_start
     print(time_elapsed)
     print("compile %")
-    print(len(valid_ones)/1000)
+    print(len(valid_ones)/location)
     print("immutable % from compiles")
     print(immutable_count/len(valid_ones))
     #subprocess.run(["cd", "../bz_func_declarations/"])
     os.chdir('../bz_func_declarations/')
 
 def compile_files(gcc_command):
-    print("buonosera")
-    print("-----------------------") 
-    compile_result = subprocess.run(gcc_command.split(" "), shell = True, stdout=PIPE, stderr=STDOUT)
-    #print(subprocess.run(gcc_command.split(" "), shell = True))
+    print(os.getcwd())
+    print("-----------------------")
+    initial_commands = gcc_command.split(" ")[2:]
+    cleaned_gcc = []
+    for entry in initial_commands:
+        if entry != " " and entry != '':
+            cleaned_gcc.append(entry)
+    compile_result = subprocess.run(cleaned_gcc)
+    #subprocess.run(gcc_command.split(" "))
     print(compile_result)
     if compile_result.returncode != 0:
         print("it didn't work")
@@ -125,8 +141,10 @@ def edit_file(location_array, original_row):
             if "*" in target_param:
                 for letter_index in range(len(new_param)):
                     if new_param[letter_index] == "*":
-                        new_param = new_param[:letter_index + 1] + " const " + new_param[letter_index + 1:]
+                        new_param = new_param[:letter_index + 1] + " const " + new_param[letter_index + 1:] 
+            #switch the bottom two
             new_line = new_line[:new_line.index(target_param)] + new_param + new_line[new_line.index(target_param) + len(target_param):]
+            #new_line = "hjksdfjashjlhjfhjadklnsanjkdnkjlfdjknfkjnjknfsnjkfs"
             print(new_line)
             string_list[edit_line] = new_line 
             break
@@ -178,8 +196,9 @@ def check_csv(filename):
 if  __name__ == "__main__":
     print("bozo")
     #total_scraped = pd.read_csv("final_full.csv")
-    with open("final_full_shufffled.csv") as read,  open("temp.csv", "w") as write:
+    with open("final_full_shufffled.csv") as read,  open("temp_shuffle_k.csv", "w") as write:
         csv_read = csv.reader(read, delimiter=',')
         csv_write = csv.writer(write)
         #gz_to_csv("tags.gz", csv_write)
+        csv_write.writerow(["func_prototype", "est_line", "file", "in_macro", "a0", "a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9", "immutable", "label_time"])
         main(csv_read, csv_write)
