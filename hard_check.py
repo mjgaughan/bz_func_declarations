@@ -19,6 +19,7 @@ def main(csv_reader, csv_writer):
     os.chdir('../linux/')
     #os.chdir('../test_target/')
     for row in csv_reader:
+        print(location)
         row_time_start = datetime.datetime.now()
         #for row in csv_reader.iterrows(): 
         #row = csv_reader[i]
@@ -73,7 +74,7 @@ def main(csv_reader, csv_writer):
                     #quick compile back as regular
                     compile_files(gcc_)
         location += 1
-        if location > 6:
+        if location > 1000:
             break
     #return home
     print(valid_ones)

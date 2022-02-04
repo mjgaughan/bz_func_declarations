@@ -1,11 +1,1823 @@
 func_prototype,est_line,file,in_macro,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,immutable,label_time
 "
 int ubi_vtbl_rename_volumes(struct ubi_device *ubi,
-			    struct list_head *rename_list);",841,../linux/drivers/mtd/ubi/ubi.h,False,struct ubi_device *ubi,ignore,u,u,u,u,u,u,u,u,True,0:00:01.250192
+			    struct list_head *rename_list);",841,../linux/drivers/mtd/ubi/ubi.h,False,struct ubi_device *ubi,ignore,u,u,u,u,u,u,u,u,True,0:00:01.291159
 "
-void vmw_kms_lost_device(struct drm_device *dev);",1215,../linux/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h,False,struct drm_device *dev,u,u,u,u,u,u,u,u,u,True,0:00:01.683010
+void vmw_kms_lost_device(struct drm_device *dev);",1215,../linux/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h,False,struct drm_device *dev,u,u,u,u,u,u,u,u,u,True,0:00:01.732064
 "
 void tcp_select_initial_window(const struct sock *sk, int __space,
 			       __u32 mss, __u32 *rcv_wnd,
 			       __u32 *window_clamp, int wscale_ok,
-			       __u8 *rcv_wscale, __u32 init_rcv_wnd);",1401,../linux/include/net/tcp.h,False,ignore, int __space,ignore,ignore,ignore,ignore,ignore,ignore,u,u,False,0:00:01.355550
+			       __u8 *rcv_wscale, __u32 init_rcv_wnd);",1401,../linux/include/net/tcp.h,False,ignore, int __space,ignore,ignore,ignore,ignore,ignore,ignore,u,u,False,0:00:01.432664
+"
+bool zone_watermark_ok(struct zone *z, unsigned int order,
+		unsigned long mark, int highest_zoneidx,
+		unsigned int alloc_flags);",952,../linux/include/linux/mmzone.h,False,ignore, unsigned int order,ignore,ignore,ignore,u,u,u,u,u,True,0:00:03.116179
+"
+void udp_v6_rehash(struct sock *sk);",15,../linux/net/ipv6/udp_impl.h,False,struct sock *sk,u,u,u,u,u,u,u,u,u,False,0:00:01.417909
+"int comedi_pcmcia_enable(struct comedi_device *dev,
+			 int (*conf_check)(struct pcmcia_device *p_dev,
+					   void *priv_data));",21,../linux/drivers/comedi/comedi_pcmcia.h,False,struct comedi_device *dev,ignore,u,u,u,u,u,u,u,u,True,0:00:01.170994
+"irqreturn_t cqhci_irq(struct mmc_host *mmc, u32 intmask, int cmd_error,
+		      int data_error);",313,../linux/drivers/mmc/host/cqhci.h,False,ignore, u32 intmask,ignore,ignore,u,u,u,u,u,u,True,0:00:01.447175
+"
+unsigned int aac_intr_normal(struct aac_dev *dev, u32 Index,
+			int isAif, int isFastResponse,
+			struct hw_fib *aif_fib);",2727,../linux/drivers/scsi/aacraid/aacraid.h,False,ignore,ignore,ignore, int isFastResponse,ignore,u,u,u,u,u,True,0:00:01.209770
+"int nv04_sw_new(struct nvkm_device *, enum nvkm_subdev_type, int inst, struct nvkm_sw **);",14,../linux/drivers/gpu/drm/nouveau/include/nvkm/engine/sw.h,False,ignore,ignore,ignore, struct nvkm_sw **,u,u,u,u,u,u,False,0:00:01.213828
+"
+void r600_power_level_enable(struct radeon_device *rdev,
+			     enum r600_power_level index, bool enable);",197,../linux/drivers/gpu/drm/radeon/r600_dpm.h,False,struct radeon_device *rdev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.616321
+"void intel_context_remove_breadcrumbs(struct intel_context *ce,
+				      struct intel_breadcrumbs *b);",48,../linux/drivers/gpu/drm/i915/gt/intel_breadcrumbs.h,False,struct intel_context *ce,ignore,u,u,u,u,u,u,u,u,True,0:00:01.654930
+"
+void gf100_gr_init_tex_hww_esr(struct gf100_gr *, int, int);",208,../linux/drivers/gpu/drm/nouveau/nvkm/engine/gr/gf100.h,False,ignore, int,ignore,u,u,u,u,u,u,u,True,0:00:01.725611
+"
+void dm_rh_recovery_prepare(struct dm_region_hash *rh);",87,../linux/include/linux/dm-region-hash.h,False,struct dm_region_hash *rh,u,u,u,u,u,u,u,u,u,True,0:00:01.302440
+"
+void i40e_dcb_hw_rx_cmd_monitor_config(struct i40e_hw *hw,
+				       u8 num_tc, u8 num_ports);",251,../linux/drivers/net/ethernet/intel/i40e/i40e_dcb.h,False,ignore,"
+				       u8 num_tc",ignore,u,u,u,u,u,u,u,False,0:00:01.276428
+"
+unsigned long i915_gem_shrink(struct i915_gem_ww_ctx *ww,
+			      struct drm_i915_private *i915,
+			      unsigned long target,
+			      unsigned long *nr_scanned,
+			      unsigned flags);",19,../linux/drivers/gpu/drm/i915/gem/i915_gem_shrinker.h,False,ignore,ignore,ignore,ignore,"
+			      unsigned flags",u,u,u,u,u,True,0:00:01.606160
+"
+int drm_lspcon_set_mode(const struct drm_device *dev, struct i2c_adapter *adapter,
+			enum drm_lspcon_mode reqd_mode);",119,../linux/include/drm/drm_dp_dual_mode_helper.h,False,const struct drm_device *dev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.258495
+"
+void ath5k_hw_set_ledstate(struct ath5k_hw *ah, unsigned int state);",1587,../linux/drivers/net/wireless/ath/ath5k/ath5k.h,False,struct ath5k_hw *ah,ignore,u,u,u,u,u,u,u,u,False,0:00:01.305475
+"
+int radeon_vm_bo_update(struct radeon_device *rdev,
+			struct radeon_bo_va *bo_va,
+			struct ttm_resource *mem);",2895,../linux/drivers/gpu/drm/radeon/radeon.h,False,struct radeon_device *rdev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.528374
+"int curs507a_new(struct nouveau_drm *, int, s32, struct nv50_wndw **);",4,../linux/drivers/gpu/drm/nouveau/dispnv50/curs.h,False,ignore,ignore, s32,ignore,u,u,u,u,u,u,True,0:00:01.333086
+"
+bfa_status_t bfa_flash_update_part(struct bfa_flash_s *flash,
+			enum bfa_flash_part_type type, u8 instance,
+			void *buf, u32 len, u32 offset,
+			bfa_cb_flash_t cbfn, void *cbarg);",505,../linux/drivers/scsi/bfa/bfa_ioc.h,False,ignore,"
+			enum bfa_flash_part_type type",ignore,ignore,ignore,ignore,ignore,ignore,u,u,True,0:00:02.221730
+"
+int vlan_dev_change_flags(const struct net_device *dev, u32 flag, u32 mask);",131,../linux/net/8021q/vlan.h,False,ignore,ignore, u32 mask,u,u,u,u,u,u,u,False,0:00:01.206165
+"
+int fjes_hw_raise_interrupt(struct fjes_hw *, int, enum REG_ICTL_MASK);",333,../linux/drivers/net/fjes/fjes_hw.h,False,ignore,ignore, enum REG_ICTL_MASK,u,u,u,u,u,u,u,True,0:00:01.587626
+"
+int nv50_disp_oimm_new_(const struct nv50_disp_chan_func *,
+			struct nv50_disp *, int ctrl, int user,
+			const struct nvkm_oclass *, void *argv, u32 argc,
+			struct nvkm_object **);",73,../linux/drivers/gpu/drm/nouveau/nvkm/engine/disp/channv50.h,False,ignore,"
+			struct nv50_disp *",ignore,ignore,ignore,ignore,ignore,ignore,u,u,False,0:00:01.182276
+"
+int iw_handler_get_thrspy(struct net_device *dev, struct iw_request_info *info,
+			  union iwreq_data *wrqu, char *extra);",463,../linux/include/net/iw_handler.h,False,ignore, struct iw_request_info *info,ignore,ignore,u,u,u,u,u,u,False,0:00:01.209068
+"int nvkm_vmm_pfn_map(struct nvkm_vmm *, u8 page, u64 addr, u64 size, u64 *pfn);",185,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/mmu/vmm.h,False,ignore,ignore,ignore,ignore, u64 *pfn,u,u,u,u,u,False,0:00:01.201217
+"
+int vmx_get_vmx_msr(struct nested_vmx_msrs *msrs, u32 msr_index, u64 *pdata);",31,../linux/arch/x86/kvm/vmx/nested.h,False,struct nested_vmx_msrs *msrs,ignore,ignore,u,u,u,u,u,u,u,False,0:00:03.064673
+"
+int llc_conn_ev_rx_i_rsp_fbit_set_1(struct sock *sk, struct sk_buff *skb);",175,../linux/include/net/llc_c_ev.h,False,ignore, struct sk_buff *skb,u,u,u,u,u,u,u,u,False,0:00:01.274244
+"
+void bnx2fc_init_mp_task(struct bnx2fc_cmd *io_req,
+			 struct fcoe_task_ctx_entry *task);",541,../linux/drivers/scsi/bnx2fc/bnx2fc.h,False,ignore,"
+			 struct fcoe_task_ctx_entry *task",u,u,u,u,u,u,u,u,False,0:00:01.236734
+"
+int aac_rx_deliver_producer(struct fib * fib);",2739,../linux/drivers/scsi/aacraid/aacraid.h,False,struct fib * fib,u,u,u,u,u,u,u,u,u,False,0:00:01.230783
+"
+void   rfcomm_session_getaddr(struct rfcomm_session *s, bdaddr_t *src,
+								bdaddr_t *dst);",276,../linux/include/net/bluetooth/rfcomm.h,False,ignore,ignore,"
+								bdaddr_t *dst",u,u,u,u,u,u,u,False,0:00:01.332719
+"
+void zd_usb_disable_rx(struct zd_usb *usb);",248,../linux/drivers/net/wireless/zydas/zd1211rw/zd_usb.h,False,struct zd_usb *usb,u,u,u,u,u,u,u,u,u,False,0:00:01.349877
+"
+long drm_ioctl_kernel(struct file *, drm_ioctl_t, void *, u32);",170,../linux/include/drm/drm_ioctl.h,False,ignore,ignore,ignore, u32,u,u,u,u,u,u,True,0:00:01.380989
+"
+u8 rtl_cam_add_one_entry(struct ieee80211_hw *hw, u8 *mac_addr,
+				u32 ul_key_id, u32 ul_entry_idx, u32 ul_enc_alg,
+				u32 ul_default_key, u8 *key_content);",18,../linux/drivers/net/wireless/realtek/rtlwifi/cam.h,False,ignore,ignore,ignore,ignore,ignore,ignore, u8 *key_content,u,u,u,False,0:00:01.297303
+"
+void dyn_event_seq_stop(struct seq_file *m, void *v);",99,../linux/kernel/trace/trace_dynevent.h,False,struct seq_file *m,ignore,u,u,u,u,u,u,u,u,False,0:00:01.211484
+"int mlx5_wq_qp_create(struct mlx5_core_dev *mdev, struct mlx5_wq_param *param,
+		      void *qpc, struct mlx5_wq_qp *wq,
+		      struct mlx5_wq_ctrl *wq_ctrl);",86,../linux/drivers/net/ethernet/mellanox/mlx5/core/wq.h,False,struct mlx5_core_dev *mdev,ignore,ignore,ignore,ignore,u,u,u,u,u,False,0:00:01.356564
+"int hinic_rss_set_hash_engine(struct hinic_dev *nic_dev, u8 template_id,
+			      u8 type);",803,../linux/drivers/net/ethernet/huawei/hinic/hinic_port.h,False,ignore, u8 template_id,ignore,u,u,u,u,u,u,u,False,0:00:01.222328
+"
+void mpi_free_limb_space(mpi_ptr_t a);",142,../linux/lib/mpi/mpi-internal.h,False,mpi_ptr_t a,u,u,u,u,u,u,u,u,u,False,0:00:01.106571
+"
+int nfc_llcp_send_snl_sdreq(struct nfc_llcp_local *local,
+			    struct hlist_head *tlv_list, size_t tlvs_len);",242,../linux/net/nfc/llcp.h,False,struct nfc_llcp_local *local,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.280143
+"
+void osd_req_op_extent_osd_data_bvecs(struct ceph_osd_request *osd_req,
+				      unsigned int which,
+				      struct bio_vec *bvecs, u32 num_bvecs,
+				      u32 bytes);",445,../linux/include/linux/ceph/osd_client.h,False,ignore,ignore,ignore, u32 num_bvecs,ignore,u,u,u,u,u,False,0:00:01.391428
+"int ct_alsa_mix_create(struct ct_atc *atc,
+		       enum CTALSADEVS device,
+		       const char *device_name);",61,../linux/sound/pci/ctxfi/ctmixer.h,False,struct ct_atc *atc,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.320210
+"
+void mthca_free_srq_wqe(struct mthca_srq *srq, u32 wqe_addr);",510,../linux/drivers/infiniband/hw/mthca/mthca_dev.h,False,ignore, u32 wqe_addr,u,u,u,u,u,u,u,u,False,0:00:01.320460
+"
+void r8712_SwitchBandwidth(struct _adapter *pAdapter);",262,../linux/drivers/staging/rtl8712/rtl871x_mp.h,False,struct _adapter *pAdapter,u,u,u,u,u,u,u,u,u,True,0:00:01.382033
+"
+dnode_secno hpfs_de_as_down_as_possible(struct super_block *, dnode_secno dno);",252,../linux/fs/hpfs/hpfs_fn.h,False,ignore, dnode_secno dno,u,u,u,u,u,u,u,u,False,0:00:01.090755
+"
+int netpoll_setup(struct netpoll *np);",61,../linux/include/linux/netpoll.h,False,struct netpoll *np,u,u,u,u,u,u,u,u,u,False,0:00:01.324696
+"int __init_srcu_struct(struct srcu_struct *ssp, const char *name,
+		       struct lock_class_key *key);",28,../linux/include/linux/srcu.h,False,struct srcu_struct *ssp,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.031400
+"void ath10k_hw_fill_survey_time(struct ath10k *ar, struct survey_info *survey,
+				u32 cc, u32 rcc, u32 cc_prev, u32 rcc_prev);",396,../linux/drivers/net/wireless/ath/ath10k/hw.h,False,ignore, struct survey_info *survey,ignore,ignore,ignore,ignore,u,u,u,u,False,0:00:01.373593
+"u32 nvbios_rammapEe(struct nvkm_bios *, int idx,
+		    u8 *ver, u8 *hdr, u8 *cnt, u8 *len);",9,../linux/drivers/gpu/drm/nouveau/include/nvkm/subdev/bios/rammap.h,False,ignore,ignore,ignore, u8 *hdr,ignore,ignore,u,u,u,u,False,0:00:01.178383
+"
+int pnp_register_port_resource(struct pnp_dev *dev, unsigned int option_flags,
+			       resource_size_t min, resource_size_t max,
+			       resource_size_t align, resource_size_t size,
+			       unsigned char flags);",86,../linux/drivers/pnp/base.h,False,ignore,ignore,ignore,ignore,ignore,ignore,"
+			       unsigned char flags",u,u,u,True,0:00:01.273144
+"
+void video_mux(struct cx231xx *dev, int index);",913,../linux/drivers/media/usb/cx231xx/cx231xx.h,False,struct cx231xx *dev,ignore,u,u,u,u,u,u,u,u,True,0:00:01.880928
+"
+u32 cx231xx_get_video_line(struct cx231xx *dev, struct cx231xx_dmaqueue *dma_q,
+			   u8 sav_eav, u8 *p_buffer, u32 buffer_size);",811,../linux/drivers/media/usb/cx231xx/cx231xx.h,False,struct cx231xx *dev,ignore,ignore,ignore,ignore,u,u,u,u,u,True,0:00:01.644435
+"
+void f2fs_update_dentry(nid_t ino, umode_t mode, struct f2fs_dentry_ptr *d,
+			const struct fscrypt_str *name, f2fs_hash_t name_hash,
+			unsigned int bit_pos);",3354,../linux/fs/f2fs/f2fs.h,False,ignore,ignore, struct f2fs_dentry_ptr *d,ignore,ignore,ignore,u,u,u,u,True,0:00:01.605754
+"
+void b43legacy_phy_lo_mark_all_unused(struct b43legacy_wldev *dev);",187,../linux/drivers/net/wireless/broadcom/b43legacy/phy.h,False,struct b43legacy_wldev *dev,u,u,u,u,u,u,u,u,u,False,0:00:01.356324
+"
+void write_cam(struct adapter *padapter, u8 id, u16 ctrl, u8 *mac, u8 *key);",505,../linux/drivers/staging/rtl8723bs/include/rtw_mlme_ext.h,False,ignore,ignore, u16 ctrl,ignore,ignore,u,u,u,u,u,True,0:00:01.645647
+"
+int pci_epc_set_msix(struct pci_epc *epc, u8 func_no, u8 vfunc_no,
+		     u16 interrupts, enum pci_barno, u32 offset);",229,../linux/include/linux/pci-epc.h,False,ignore,ignore,ignore,"
+		     u16 interrupts",ignore,ignore,u,u,u,u,False,0:00:01.101904
+"
+bool esas2r_ioreq_aborted(struct esas2r_adapter *a, struct esas2r_request *rq,
+			  u8 status);",1103,../linux/drivers/scsi/esas2r/esas2r.h,False,ignore,ignore,"
+			  u8 status",u,u,u,u,u,u,u,True,0:00:01.290220
+"void sk_forced_mem_schedule(struct sock *sk, int size);",302,../linux/include/net/tcp.h,False,ignore, int size,u,u,u,u,u,u,u,u,False,0:00:01.395889
+"
+int ath6kl_hif_poll_mboxmsg_rx(struct ath6kl_device *dev,
+			       u32 *lk_ahd, int timeout);",264,../linux/drivers/net/wireless/ath/ath6kl/hif.h,False,struct ath6kl_device *dev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.378518
+"
+s32 e1000e_get_speed_and_duplex_copper(struct e1000_hw *hw, u16 *speed,
+				       u16 *duplex);",19,../linux/drivers/net/ethernet/intel/e1000e/mac.h,False,struct e1000_hw *hw,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.519084
+"int wcn36xx_smd_update_scan_params(struct wcn36xx *wcn, u8 *channels, size_t channel_count);",68,../linux/drivers/net/wireless/ath/wcn36xx/smd.h,False,ignore,ignore, size_t channel_count,u,u,u,u,u,u,u,False,0:00:01.343195
+"
+bool r600_is_uvd_state(u32 class, u32 class2);",138,../linux/drivers/gpu/drm/radeon/r600_dpm.h,False,ignore, u32 class2,u,u,u,u,u,u,u,u,True,0:00:01.614611
+"
+u8 SetHalDefVar8723B(struct adapter *padapter, enum hal_def_variable variable,
+		     void *pval);",230,../linux/drivers/staging/rtl8723bs/include/rtl8723b_hal.h,False,ignore, enum hal_def_variable variable,ignore,u,u,u,u,u,u,u,True,0:00:01.823381
+"
+int  nv04_devinit_pll_set(struct nvkm_devinit *, u32, u32);",17,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/devinit/nv04.h,False,ignore,ignore, u32,u,u,u,u,u,u,u,True,0:00:01.344113
+"
+void sk_msg_return_zero(struct sock *sk, struct sk_msg *msg, int bytes);",122,../linux/include/linux/skmsg.h,False,ignore, struct sk_msg *msg,ignore,u,u,u,u,u,u,u,False,0:00:01.343836
+"
+int is_autofs_dentry(struct dentry *);",154,../linux/fs/autofs/autofs_i.h,False,struct dentry *,u,u,u,u,u,u,u,u,u,False,0:00:01.040821
+"
+int aq_nic_set_link_ksettings(struct aq_nic_s *self,
+			      const struct ethtool_link_ksettings *cmd);",197,../linux/drivers/net/ethernet/aquantia/atlantic/aq_nic.h,False,ignore,"
+			      const struct ethtool_link_ksettings *cmd",u,u,u,u,u,u,u,u,False,0:00:01.327853
+"
+int dmz_merge_valid_blocks(struct dmz_metadata *zmd, struct dm_zone *from_zone,
+			   struct dm_zone *to_zone, sector_t chunk_block);",267,../linux/drivers/md/dm-zoned.h,False,struct dmz_metadata *zmd,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.706374
+"
+int mlx4_map_cmd(struct mlx4_dev *dev, u16 op, struct mlx4_icm *icm, u64 virt);",248,../linux/drivers/net/ethernet/mellanox/mlx4/fw.h,False,ignore,ignore,ignore, u64 virt,u,u,u,u,u,u,False,0:00:01.276382
+"u16 hpi_instream_ancillary_reset(u32 h_instream, u16 bytes_per_frame,
+	u16 mode, u16 alignment, u16 idle_bit);",1299,../linux/sound/pci/asihpi/hpi.h,False,ignore,ignore,"
+	u16 mode",ignore,ignore,u,u,u,u,u,True,0:00:01.686121
+"
+int dma_fence_signal_timestamp_locked(struct dma_fence *fence,
+				      ktime_t timestamp);",372,../linux/include/linux/dma-fence.h,False,struct dma_fence *fence,ignore,u,u,u,u,u,u,u,u,False,0:00:01.152019
+"
+int fjes_hw_stop_debug(struct fjes_hw *);",354,../linux/drivers/net/fjes/fjes_hw.h,False,struct fjes_hw *,u,u,u,u,u,u,u,u,u,False,0:00:01.253625
+"int __ieee80211_suspend(struct ieee80211_hw *hw,
+			struct cfg80211_wowlan *wowlan);",2146,../linux/net/mac80211/ieee80211_i.h,False,struct ieee80211_hw *hw,ignore,u,u,u,u,u,u,u,u,False,0:00:01.502422
+"
+long i915_ioc32_compat_ioctl(struct file *filp, unsigned int cmd,
+			     unsigned long arg);",11,../linux/drivers/gpu/drm/i915/i915_ioc32.h,False,ignore, unsigned int cmd,ignore,u,u,u,u,u,u,u,True,0:00:01.387846
+"
+int analogix_dp_send_psr_spd(struct analogix_dp_device *dp,
+			     struct dp_sdp *vsc, bool blocking);",254,../linux/drivers/gpu/drm/bridge/analogix/analogix_dp_core.h,False,struct analogix_dp_device *dp,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.410682
+"
+int i40e_vc_process_vf_msg(struct i40e_pf *pf, s16 vf_id, u32 v_opcode,
+			   u32 v_retval, u8 *msg, u16 msglen);",120,../linux/drivers/net/ethernet/intel/i40e/i40e_virtchnl_pf.h,False,ignore,ignore,ignore,ignore,ignore, u16 msglen,u,u,u,u,False,0:00:01.397452
+"
+void rtl92d_phy_set_bb_reg(struct ieee80211_hw *hw,
+			   u32 regaddr, u32 bitmask, u32 data);",104,../linux/drivers/net/wireless/realtek/rtlwifi/rtl8192de/phy.h,False,struct ieee80211_hw *hw,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.337470
+"
+void nfp_net_pci_remove(struct nfp_pf *pf);",150,../linux/drivers/net/ethernet/netronome/nfp/nfp_main.h,False,struct nfp_pf *pf,u,u,u,u,u,u,u,u,u,False,0:00:01.329924
+"int nvkm_msvld_new_(const struct nvkm_falcon_func *, struct nvkm_device *, enum nvkm_subdev_type,
+		    int, struct nvkm_engine **);",6,../linux/drivers/gpu/drm/nouveau/nvkm/engine/msvld/priv.h,False,ignore,ignore,ignore,ignore, struct nvkm_engine **,u,u,u,u,u,False,0:00:01.199806
+"
+void bnx2x_stats_init(struct bnx2x *bp);",544,../linux/drivers/net/ethernet/broadcom/bnx2x/bnx2x_stats.h,False,struct bnx2x *bp,u,u,u,u,u,u,u,u,u,False,0:00:01.249525
+"
+void t4_read_rss_vf_config(struct adapter *adapter, unsigned int index,
+			   u32 *vfl, u32 *vfh, bool sleep_ok);",1909,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4.h,False,ignore,ignore,ignore,ignore, bool sleep_ok,u,u,u,u,u,False,0:00:01.471624
+"int mlx4_SET_MCAST_FLTR(struct mlx4_dev *dev, u8 port, u64 mac, u64 clear, u8 mode);",753,../linux/drivers/net/ethernet/mellanox/mlx4/mlx4_en.h,False,ignore,ignore,ignore, u64 clear,ignore,u,u,u,u,u,False,0:00:01.241310
+"enum sci_status sci_controller_complete_io(
+	struct isci_host *ihost,
+	struct isci_remote_device *idev,
+	struct isci_request *ireq);",504,../linux/drivers/scsi/isci/host.h,False,"
+	struct isci_host *ihost",ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.207577
+"
+int ttm_bo_kmap(struct ttm_buffer_object *bo, unsigned long start_page,
+		unsigned long num_pages, struct ttm_bo_kmap_obj *map);",469,../linux/include/drm/ttm/ttm_bo_api.h,False,ignore, unsigned long start_page,ignore,ignore,u,u,u,u,u,u,True,0:00:01.249026
+"
+void bnxt_report_link(struct bnxt *bp);",2296,../linux/drivers/net/ethernet/broadcom/bnxt/bnxt.h,False,struct bnxt *bp,u,u,u,u,u,u,u,u,u,False,0:00:01.663492
+"
+ifdef CONFIG_PM
+int gspca_suspend(struct usb_interface *intf, pm_message_t message);",234,../linux/drivers/media/usb/gspca/gspca.h,False,struct usb_interface *intf,ignore,u,u,u,u,u,u,u,u,False,0:00:01.222310
+"
+int wmi_addba_rx_resp_edma(struct wil6210_priv *wil, u8 mid, u8 cid,
+			   u8 tid, u8 token, u16 status, bool amsdu,
+			   u16 agg_wsize, u16 timeout);",1442,../linux/drivers/net/wireless/ath/wil6210/wil6210.h,False,ignore,ignore,ignore,"
+			   u8 tid",ignore,ignore,ignore,ignore,ignore,u,True,0:00:02.150843
+"static inline int security_socket_post_create(struct socket *sock,
+					      int family,
+					      int type,
+					      int protocol, int kern)
+",1458,../linux/include/linux/security.h,False,ignore,ignore,ignore,ignore, int kern,u,u,u,u,u,True,0:00:02.169725
+"
+int tipc_node_get_mtu(struct net *net, u32 addr, u32 sel, bool connected);",110,../linux/net/tipc/node.h,False,struct net *net,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.384847
+"
+int enclosure_add_device(struct enclosure_device *enclosure, int component,
+			 struct device *dev);",127,../linux/include/linux/enclosure.h,False,struct enclosure_device *enclosure,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.012667
+"
+void intel_rps_boost(struct i915_request *rq);",24,../linux/drivers/gpu/drm/i915/gt/intel_rps.h,False,struct i915_request *rq,u,u,u,u,u,u,u,u,u,True,0:00:01.794643
+"
+int xenbus_transaction_end(struct xenbus_transaction t, int abort);",168,../linux/include/xen/xenbus.h,False,struct xenbus_transaction t,ignore,u,u,u,u,u,u,u,u,False,0:00:01.052107
+"int befs_check_inode(struct super_block *sb, befs_inode *raw_inode,
+		     befs_blocknr_t inode);",6,../linux/fs/befs/inode.h,False,ignore, befs_inode *raw_inode,ignore,u,u,u,u,u,u,u,True,0:00:01.060888
+"void nv50_dac_power(struct nvkm_ior *, bool, bool, bool, bool, bool);",105,../linux/drivers/gpu/drm/nouveau/nvkm/engine/disp/ior.h,False,ignore, bool,ignore,ignore,ignore,ignore,u,u,u,u,True,0:00:01.260673
+"
+int iwlagn_suspend(struct iwl_priv *priv, struct cfg80211_wowlan *wowlan);",138,../linux/drivers/net/wireless/intel/iwlwifi/dvm/agn.h,False,struct iwl_priv *priv,ignore,u,u,u,u,u,u,u,u,False,0:00:01.365909
+"uint16_t jffs2_compress(struct jffs2_sb_info *c, struct jffs2_inode_info *f,
+			unsigned char *data_in, unsigned char **cpage_out,
+			uint32_t *datalen, uint32_t *cdatalen);",74,../linux/fs/jffs2/compr.h,False,ignore,ignore,ignore, unsigned char **cpage_out,ignore,ignore,u,u,u,u,False,0:00:01.054843
+"
+int mlx4_FREE_RES_wrapper(struct mlx4_dev *dev, int slave,
+			  struct mlx4_vhcr *vhcr,
+			  struct mlx4_cmd_mailbox *inbox,
+			  struct mlx4_cmd_mailbox *outbox,
+			  struct mlx4_cmd_info *cmd);",1072,../linux/drivers/net/ethernet/mellanox/mlx4/mlx4.h,False,ignore,ignore,ignore,ignore,"
+			  struct mlx4_cmd_mailbox *outbox",ignore,u,u,u,u,False,0:00:01.277201
+"
+int snd_hda_override_amp_caps(struct hda_codec *codec, hda_nid_t nid, int dir,
+			      unsigned int caps);",488,../linux/sound/pci/hda/hda_local.h,False,ignore, hda_nid_t nid,ignore,ignore,u,u,u,u,u,u,True,0:00:01.933388
+"int i915_gem_object_attach_phys(struct drm_i915_gem_object *obj, int align);",85,../linux/drivers/gpu/drm/i915/gem/i915_gem_object.h,False,ignore, int align,u,u,u,u,u,u,u,u,True,0:00:01.459886
+"
+void nvkm_vmm_unmap_locked(struct nvkm_vmm *, struct nvkm_vma *, bool pfn);",172,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/mmu/vmm.h,False,ignore,ignore, bool pfn,u,u,u,u,u,u,u,True,0:00:01.710275
+"
+void wlc_phy_stf_chain_get(struct brcms_phy_pub *pih, u8 *txchain, u8 *rxchain);",235,../linux/drivers/net/wireless/broadcom/brcm80211/brcmsmac/phy/phy_hal.h,False,ignore,ignore, u8 *rxchain,u,u,u,u,u,u,u,False,0:00:01.274068
+"void pie_calculate_probability(struct pie_params *params, struct pie_vars *vars,
+			       u32 backlog);",132,../linux/include/net/pie.h,False,ignore,ignore,"
+			       u32 backlog",u,u,u,u,u,u,u,False,0:00:01.277411
+"
+void i830_disable_pipe(struct drm_i915_private *dev_priv, enum pipe pipe);",537,../linux/drivers/gpu/drm/i915/display/intel_display.h,False,ignore, enum pipe pipe,u,u,u,u,u,u,u,u,True,0:00:04.247598
+"
+else
+static inline u32 int_sqrt64(u64 x)
+",172,../linux/include/linux/math.h,False,u64 x,u,u,u,u,u,u,u,u,u,True,0:00:00.890394
+"
+u32 hfsplus_calc_btree_clump_size(u32 block_size, u32 node_size, u64 sectors,
+				  int file_id);",383,../linux/fs/hfsplus/hfsplus_fs.h,False,u32 block_size,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.086718
+"
+void pciserial_remove_ports(struct serial_private *priv);",35,../linux/include/linux/8250_pci.h,False,struct serial_private *priv,u,u,u,u,u,u,u,u,u,False,0:00:01.135087
+"
+void cxgb4_free_atid(struct tid_info *t, unsigned int atid);",246,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4_uld.h,False,struct tid_info *t,ignore,u,u,u,u,u,u,u,u,False,0:00:01.471011
+"
+int t4_set_trace_filter(struct adapter *adapter, const struct trace_params *tp,
+			int filter_index, int enable);",2063,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4.h,False,ignore,ignore,ignore, int enable,u,u,u,u,u,u,False,0:00:01.457647
+"
+void ath5k_ani_set_ofdm_weak_signal_detection(struct ath5k_hw *ah, bool on);",113,../linux/drivers/net/wireless/ath/ath5k/ani.h,False,ignore, bool on,u,u,u,u,u,u,u,u,False,0:00:01.291741
+"
+s32 i2c_smbus_read_byte_data(const struct i2c_client *client, u8 command);",154,../linux/include/linux/i2c.h,False,ignore, u8 command,u,u,u,u,u,u,u,u,True,0:00:01.549509
+"
+int netlink_policy_dump_get_policy_idx(struct netlink_policy_dump_state *state,
+				       const struct nla_policy *policy,
+				       unsigned int maxtype);",1955,../linux/include/net/netlink.h,False,struct netlink_policy_dump_state *state,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.237591
+"
+ssize_t hdmi_infoframe_pack_only(const union hdmi_infoframe *frame,
+				 void *buffer, size_t size);",432,../linux/include/linux/hdmi.h,False,ignore,ignore, size_t size,u,u,u,u,u,u,u,True,0:00:01.217695
+"
+int __nla_parse(struct nlattr **tb, int maxtype, const struct nlattr *head,
+		int len, const struct nla_policy *policy, unsigned int validate,
+		struct netlink_ext_ack *extack);",505,../linux/include/net/netlink.h,False,ignore,ignore, const struct nlattr *head,ignore,ignore,ignore,ignore,u,u,u,True,0:00:01.368564
+"int mwifiex_add_card(void *card, struct completion *fw_done,
+		     struct mwifiex_if_ops *if_ops, u8 iface_type,
+		     struct device *dev);",1485,../linux/drivers/net/wireless/marvell/mwifiex/main.h,False,ignore,ignore,ignore, u8 iface_type,ignore,u,u,u,u,u,False,0:00:01.343214
+"
+void tty_termios_encode_baud_rate(struct ktermios *termios, speed_t ibaud,
+		speed_t obaud);",343,../linux/include/linux/tty.h,False,ignore,ignore,"
+		speed_t obaud",u,u,u,u,u,u,u,True,0:00:01.097915
+"
+u32 mmc_select_voltage(struct mmc_host *host, u32 ocr);",47,../linux/drivers/mmc/core/core.h,False,ignore, u32 ocr,u,u,u,u,u,u,u,u,False,0:00:01.227631
+"
+int sst_dsp_register_poll(struct sst_dsp  *ctx, u32 offset, u32 mask,
+		 u32 target, u32 time, char *operation);",58,../linux/sound/soc/intel/common/sst-dsp.h,False,ignore,ignore,ignore,ignore, u32 time,ignore,u,u,u,u,True,0:00:01.361666
+"
+void ima_putc(struct seq_file *m, void *data, int datalen);",151,../linux/security/integrity/ima/ima.h,False,ignore, void *data,ignore,u,u,u,u,u,u,u,False,0:00:01.117256
+"void ip6_sk_dst_store_flow(struct sock *sk, struct dst_entry *dst,
+			   const struct flowi6 *fl6);",242,../linux/include/net/ip6_route.h,False,ignore, struct dst_entry *dst,ignore,u,u,u,u,u,u,u,False,0:00:01.476735
+"int asix_rx_fixup_internal(struct usbnet *dev, struct sk_buff *skb,
+			   struct asix_rx_fixup_info *rx);",204,../linux/drivers/net/usb/asix.h,False,struct usbnet *dev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.468448
+"
+int il_scan_cancel_timeout(struct il_priv *il, unsigned long ms);",1769,../linux/drivers/net/wireless/intel/iwlegacy/common.h,False,ignore, unsigned long ms,u,u,u,u,u,u,u,u,False,0:00:01.374914
+"
+int hfi1_set_ctxt_pkey(struct hfi1_devdata *dd, struct hfi1_ctxtdata *ctxt,
+		       u16 pkey);",1392,../linux/drivers/infiniband/hw/hfi1/chip.h,False,struct hfi1_devdata *dd,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.792189
+"
+int qlcnic_83xx_get_nic_info(struct qlcnic_adapter *, struct qlcnic_info *, u8);",570,../linux/drivers/net/ethernet/qlogic/qlcnic/qlcnic_83xx_hw.h,False,ignore, struct qlcnic_info *,ignore,u,u,u,u,u,u,u,False,0:00:01.326937
+"
+XZ_EXTERN enum xz_ret xz_dec_bcj_reset(struct xz_dec_bcj *s, uint8_t id);",147,../linux/lib/xz/xz_private.h,False,ignore, uint8_t id,u,u,u,u,u,u,u,u,True,0:00:01.080393
+"
+int regulatory_hint_indoor(bool is_indoor, u32 portid);",44,../linux/net/wireless/reg.h,False,bool is_indoor,ignore,u,u,u,u,u,u,u,u,False,0:00:01.503602
+"
+int cudbg_collect_hma_meminfo(struct cudbg_init *pdbg_init,
+			      struct cudbg_buffer *dbg_buff,
+			      struct cudbg_error *cudbg_err);",160,../linux/drivers/net/ethernet/chelsio/cxgb4/cudbg_lib.h,False,ignore,ignore,"
+			      struct cudbg_error *cudbg_err",u,u,u,u,u,u,u,False,0:00:01.389643
+"
+void mlx5e_page_dma_unmap(struct mlx5e_rq *rq, struct mlx5e_dma_info *dma_info);",59,../linux/drivers/net/ethernet/mellanox/mlx5/core/en/txrx.h,False,ignore, struct mlx5e_dma_info *dma_info,u,u,u,u,u,u,u,u,False,0:00:01.472073
+"u8 mlx5e_rx_res_rss_get_hash_fields(struct mlx5e_rx_res *res, enum mlx5_traffic_types tt);",53,../linux/drivers/net/ethernet/mellanox/mlx5/core/en/rx_res.h,False,ignore, enum mlx5_traffic_types tt,u,u,u,u,u,u,u,u,False,0:00:01.395501
+"
+int most_register_interface(struct most_interface *iface);",285,../linux/include/linux/most.h,False,struct most_interface *iface,u,u,u,u,u,u,u,u,u,False,0:00:01.133114
+"
+void nvme_start_freeze(struct nvme_ctrl *ctrl);",692,../linux/drivers/nvme/host/nvme.h,False,struct nvme_ctrl *ctrl,u,u,u,u,u,u,u,u,u,True,0:00:02.430815
+"
+int gm107_fb_new(struct nvkm_device *, enum nvkm_subdev_type, int inst, struct nvkm_fb **);",85,../linux/drivers/gpu/drm/nouveau/include/nvkm/subdev/fb.h,False,struct nvkm_device *,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.225895
+"
+unsigned int t4_get_tp_ch_map(struct adapter *adapter, int pidx);",1914,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4.h,False,ignore, int pidx,u,u,u,u,u,u,u,u,False,0:00:01.427053
+"ZSTDLIB_API const ZSTD_DDict* ZSTD_initStaticDDict(
+                                        void* workspace, size_t workspaceSize,
+                                        const void* dict, size_t dictSize,
+                                        ZSTD_dictLoadMethod_e dictLoadMethod,
+                                        ZSTD_dictContentType_e dictContentType);",1491,../linux/include/linux/zstd_lib.h,False,ignore,ignore,ignore,ignore,ignore,"
+                                        ZSTD_dictContentType_e dictContentType",u,u,u,u,True,0:00:00.951814
+"
+void evergreen_ring_ib_execute(struct radeon_device *rdev, struct radeon_ib *ib);",516,../linux/drivers/gpu/drm/radeon/radeon_asic.h,False,struct radeon_device *rdev,ignore,u,u,u,u,u,u,u,u,True,0:00:02.287555
+"
+void qedi_reset_host_mtu(struct qedi_ctx *qedi, u16 mtu);",58,../linux/drivers/scsi/qedi/qedi_gbl.h,False,struct qedi_ctx *qedi,ignore,u,u,u,u,u,u,u,u,False,0:00:01.297825
+"
+int hid_sensor_power_state(struct hid_sensor_common *st, bool state);",20,../linux/drivers/iio/common/hid-sensors/hid-sensor-trigger.h,False,ignore, bool state,u,u,u,u,u,u,u,u,True,0:00:01.180997
+"
+int cx25840_ir_irq_handler(struct v4l2_subdev *sd, u32 status, bool *handled);",189,../linux/drivers/media/i2c/cx25840/cx25840-core.h,False,ignore, u32 status,ignore,u,u,u,u,u,u,u,True,0:00:01.437983
+"int __ipoib_vlan_add(struct ipoib_dev_priv *ppriv, struct ipoib_dev_priv *priv,
+		     u16 pkey, int child_type);",597,../linux/drivers/infiniband/ulp/ipoib/ipoib.h,False,ignore,ignore,"
+		     u16 pkey",ignore,u,u,u,u,u,u,False,0:00:01.302895
+"
+void mpt3sas_destroy_debugfs(struct MPT3SAS_ADAPTER *ioc);",2015,../linux/drivers/scsi/mpt3sas/mpt3sas_base.h,False,struct MPT3SAS_ADAPTER *ioc,u,u,u,u,u,u,u,u,u,True,0:00:01.203845
+"int nvc0_bo_move_copy(struct nouveau_channel *, struct ttm_buffer_object *,
+		      struct ttm_resource *, struct ttm_resource *);",157,../linux/drivers/gpu/drm/nouveau/nouveau_bo.h,False,ignore, struct ttm_buffer_object *,ignore,ignore,u,u,u,u,u,u,True,0:00:01.249908
+"
+int vidioc_s_fmt_vid_out_mplane(struct file *file, void *priv, struct v4l2_format *f);",19,../linux/drivers/media/test-drivers/vivid/vivid-vid-out.h,False,ignore, void *priv,ignore,u,u,u,u,u,u,u,True,0:00:01.630150
+"void nfs_fattr_init_names(struct nfs_fattr *fattr,
+		struct nfs4_string *owner_name,
+		struct nfs4_string *group_name);",55,../linux/fs/nfs/nfs4idmap.h,False,ignore,"
+		struct nfs4_string *owner_name",ignore,u,u,u,u,u,u,u,False,0:00:01.418201
+void il4965_temperature_calib(struct il_priv *il);,255,../linux/drivers/net/wireless/intel/iwlegacy/4965.h,False,struct il_priv *il,u,u,u,u,u,u,u,u,u,False,0:00:01.339610
+"
+void sym_fw_bind_script(struct sym_hcb *np, u32 *start, int len);",1035,../linux/drivers/scsi/sym53c8xx_2/sym_hipd.h,False,struct sym_hcb *np,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.224035
+"ifdef __KERNEL__
+int cifs_from_utf16(char *to, const __le16 *from, int tolen, int fromlen,
+		    const struct nls_table *cp, int map_type);",93,../linux/fs/cifs/cifs_unicode.h,False,ignore,ignore,ignore,ignore,"
+		    const struct nls_table *cp",ignore,u,u,u,u,False,0:00:01.270923
+"int cx231xx_do_vbi_copy(struct cx231xx *dev, struct cx231xx_dmaqueue *dma_q,
+			u8 *p_buffer, u32 bytes_to_copy);",47,../linux/drivers/media/usb/cx231xx/cx231xx-vbi.h,False,ignore, struct cx231xx_dmaqueue *dma_q,ignore,ignore,u,u,u,u,u,u,True,0:00:01.403183
+"int ath6kl_wmi_send_probe_response_cmd(struct wmi *wmi, u8 if_idx, u32 freq,
+				       const u8 *dst, const u8 *data,
+				       u16 data_len);",2708,../linux/drivers/net/wireless/ath/ath6kl/wmi.h,False,struct wmi *wmi,ignore,ignore,ignore,ignore,ignore,u,u,u,u,False,0:00:01.349739
+"
+int llc_sap_ev_rx_ui(struct llc_sap *sap, struct sk_buff *skb);",56,../linux/include/net/llc_s_ev.h,False,struct llc_sap *sap,ignore,u,u,u,u,u,u,u,u,False,0:00:01.271543
+"int fw_core_add_address_handler(struct fw_address_handler *handler,
+				const struct fw_address_region *region);",349,../linux/include/linux/firewire.h,False,ignore,"
+				const struct fw_address_region *region",u,u,u,u,u,u,u,u,True,0:00:01.284729
+"
+mac_t bfa_ioc_get_mfg_mac(struct bfa_ioc_s *ioc);",964,../linux/drivers/scsi/bfa/bfa_ioc.h,False,struct bfa_ioc_s *ioc,u,u,u,u,u,u,u,u,u,True,0:00:02.234581
+"
+void ar9003_hw_set_chain_masks(struct ath_hw *ah, u8 rx, u8 tx);",1131,../linux/drivers/net/wireless/ath/ath9k/hw.h,False,struct ath_hw *ah,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.337034
+"
+void virtio_gpu_cmd_set_scanout(struct virtio_gpu_device *vgdev,
+				uint32_t scanout_id, uint32_t resource_id,
+				uint32_t width, uint32_t height,
+				uint32_t x, uint32_t y);",341,../linux/drivers/gpu/drm/virtio/virtgpu_drv.h,False,ignore,ignore,ignore,ignore,ignore,ignore, uint32_t y,u,u,u,True,0:00:01.507747
+"int ocfs2_refcounted_xattr_delete_need(struct inode *inode,
+				       struct ocfs2_caching_info *ref_ci,
+				       struct buffer_head *ref_root_bh,
+				       struct ocfs2_xattr_value_root *xv,
+				       int *meta_add, int *credits);",68,../linux/fs/ocfs2/refcounttree.h,False,ignore,ignore,"
+				       struct buffer_head *ref_root_bh",ignore,ignore,ignore,u,u,u,u,False,0:00:01.544707
+"
+void nvkm_wrvgac(struct nvkm_device *, int head, u8 index, u8 value);",19,../linux/drivers/gpu/drm/nouveau/include/nvkm/subdev/vga.h,False,ignore,ignore, u8 index,ignore,u,u,u,u,u,u,True,0:00:01.260932
+"
+void wlc_lcnphy_start_tx_tone(struct brcms_phy *pi, s32 f_kHz, u16 max_val,
+			      bool iqcalmode);",972,../linux/drivers/net/wireless/broadcom/brcm80211/brcmsmac/phy/phy_int.h,False,ignore, s32 f_kHz,ignore,ignore,u,u,u,u,u,u,True,0:00:01.949711
+"
+ssize_t ksys_read(unsigned int fd, char __user *buf, size_t count);",1289,../linux/include/linux/syscalls.h,False,ignore,ignore, size_t count,u,u,u,u,u,u,u,True,0:00:01.206509
+"
+int nvkm_nvsw_new(struct nvkm_sw_chan *, const struct nvkm_oclass *,
+		  void *data, u32 size, struct nvkm_object **pobject);",20,../linux/drivers/gpu/drm/nouveau/nvkm/engine/sw/nvsw.h,False,ignore, const struct nvkm_oclass *,ignore,ignore,ignore,u,u,u,u,u,True,0:00:01.249786
+"
+int call_switchdev_notifiers(unsigned long val, struct net_device *dev,
+			     struct switchdev_notifier_info *info,
+			     struct netlink_ext_ack *extack);",289,../linux/include/net/switchdev.h,False,ignore,ignore,"
+			     struct switchdev_notifier_info *info",ignore,u,u,u,u,u,u,False,0:00:01.289436
+"void cik_sdma_vm_copy_pages(struct radeon_device *rdev,
+			    struct radeon_ib *ib,
+			    uint64_t pe, uint64_t src,
+			    unsigned count);",833,../linux/drivers/gpu/drm/radeon/radeon_asic.h,False,ignore,ignore,ignore,ignore,"
+			    unsigned count",u,u,u,u,u,False,0:00:01.236668
+"
+void hw_atl_tdm_cpu_id_set(struct aq_hw_s *aq_hw, u32 cpuid, u32 dca);",581,../linux/drivers/net/ethernet/aquantia/atlantic/hw_atl/hw_atl_llh.h,False,struct aq_hw_s *aq_hw,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.477062
+"
+void efx_port_dummy_op_void(struct efx_nic *efx);",62,../linux/drivers/net/ethernet/sfc/efx_common.h,False,struct efx_nic *efx,u,u,u,u,u,u,u,u,u,False,0:00:01.357177
+"
+void rsxx_creg_destroy(struct rsxx_cardinfo *card);",406,../linux/drivers/block/rsxx/rsxx_priv.h,False,struct rsxx_cardinfo *card,u,u,u,u,u,u,u,u,u,False,0:00:01.100140
+"ifdef KVM_ARCH_NR_OBJS_PER_MEMORY_CACHE
+int kvm_mmu_topup_memory_cache(struct kvm_mmu_memory_cache *mc, int min);",983,../linux/include/linux/kvm_host.h,False,struct kvm_mmu_memory_cache *mc,ignore,u,u,u,u,u,u,u,u,False,0:00:01.344154
+"
+int br_sysfs_addbr(struct net_device *dev);",1939,../linux/net/bridge/br_private.h,False,struct net_device *dev,u,u,u,u,u,u,u,u,u,False,0:00:01.315226
+"
+void intel_ddi_fdi_post_disable(struct intel_atomic_state *state,
+				struct intel_encoder *intel_encoder,
+				const struct intel_crtc_state *old_crtc_state,
+				const struct drm_connector_state *old_conn_state);",29,../linux/drivers/gpu/drm/i915/display/intel_ddi.h,False,ignore,ignore,ignore,"
+				const struct drm_connector_state *old_conn_state",u,u,u,u,u,u,True,0:00:02.467192
+"int qed_roce_query_qp(struct qed_hwfn *p_hwfn,
+		      struct qed_rdma_qp *qp,
+		      struct qed_rdma_query_qp_out_params *out_params);",26,../linux/drivers/net/ethernet/qlogic/qed/qed_roce.h,False,ignore,"
+		      struct qed_rdma_qp *qp",ignore,u,u,u,u,u,u,u,False,0:00:01.279925
+"
+u32 rtl8192_phy_QueryRFReg(struct net_device *dev,
+			   enum rf90_radio_path_e e_rfpath,
+			   u32 reg_addr, u32 bitmask);",57,../linux/drivers/staging/rtl8192u/r819xU_phy.h,False,ignore,"
+			   enum rf90_radio_path_e e_rfpath",ignore,ignore,u,u,u,u,u,u,True,0:00:01.549632
+"
+int mlx5dr_cmd_create_flow_table(struct mlx5_core_dev *mdev,
+				 struct mlx5dr_cmd_create_flow_table_attr *attr,
+				 u64 *fdb_rx_icm_addr,
+				 u32 *table_id);",1168,../linux/drivers/net/ethernet/mellanox/mlx5/core/steering/dr_types.h,False,struct mlx5_core_dev *mdev,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.414991
+"
+int aq_filters_vlans_update(struct aq_nic_s *aq_nic);",32,../linux/drivers/net/ethernet/aquantia/atlantic/aq_filters.h,False,struct aq_nic_s *aq_nic,u,u,u,u,u,u,u,u,u,False,0:00:01.212622
+"
+void memunmap(void *addr);",146,../linux/include/linux/io.h,False,void *addr,u,u,u,u,u,u,u,u,u,True,0:00:01.118765
+"int  nv40_grctx_init(struct nvkm_device *, u32 *size);",46,../linux/drivers/gpu/drm/nouveau/nvkm/engine/gr/nv40.h,False,struct nvkm_device *,ignore,u,u,u,u,u,u,u,u,True,0:00:01.722876
+"
+int nbp_vlan_delete(struct net_bridge_port *port, u16 vid);",1441,../linux/net/bridge/br_private.h,False,ignore, u16 vid,u,u,u,u,u,u,u,u,False,0:00:01.346521
+"
+int nfs_mknod(struct user_namespace *, struct inode *, struct dentry *, umode_t,
+	      dev_t);",385,../linux/fs/nfs/internal.h,False,ignore,ignore,ignore,ignore,"
+	      dev_t",u,u,u,u,u,False,0:00:01.405414
+"
+int mlx4_flow_steer_promisc_remove(struct mlx4_dev *dev, u8 port,
+				   enum mlx4_net_trans_promisc_mode mode);",1370,../linux/include/linux/mlx4/device.h,False,ignore, u8 port,ignore,u,u,u,u,u,u,u,False,0:00:01.229836
+"int drm_mode_crtc_set_gamma_size(struct drm_crtc *crtc,
+				 int gamma_size);",62,../linux/include/drm/drm_color_mgmt.h,False,ignore,"
+				 int gamma_size",u,u,u,u,u,u,u,u,True,0:00:01.352801
+"u32 vxge_hw_fifo_free_txdl_count_get(
+			struct __vxge_hw_fifo *fifo_handle);",2028,../linux/drivers/net/ethernet/neterion/vxge/vxge-traffic.h,False,"
+			struct __vxge_hw_fifo *fifo_handle",u,u,u,u,u,u,u,u,u,False,0:00:01.226379
+"u32 nvbios_vmap_entry(struct nvkm_bios *, int idx, u8 *ver, u8 *len);",21,../linux/drivers/gpu/drm/nouveau/include/nvkm/subdev/bios/vmap.h,False,ignore,ignore, u8 *ver,ignore,u,u,u,u,u,u,False,0:00:01.180345
+"void ixgb_write_eeprom(struct ixgb_hw *hw, u16 reg, u16 data);",76,../linux/drivers/net/ethernet/intel/ixgb/ixgb_ee.h,False,ignore, u16 reg,ignore,u,u,u,u,u,u,u,False,0:00:01.131114
+"
+void ena_com_mmio_reg_read_request_destroy(struct ena_com_dev *ena_dev);",393,../linux/drivers/net/ethernet/amazon/ena/ena_com.h,False,struct ena_com_dev *ena_dev,u,u,u,u,u,u,u,u,u,True,0:00:01.686223
+"
+int i915_gem_get_aperture_ioctl(struct drm_device *dev, void *data,
+				struct drm_file *file);",21,../linux/drivers/gpu/drm/i915/gem/i915_gem_ioctls.h,False,struct drm_device *dev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.810169
+"
+int lapb_data_transmit(struct lapb_cb *lapb, struct sk_buff *);",116,../linux/include/net/lapb.h,False,ignore, struct sk_buff *,u,u,u,u,u,u,u,u,False,0:00:01.270863
+"
+void tipc_nametbl_unsubscribe(struct tipc_subscription *s);",138,../linux/net/tipc/name_table.h,False,struct tipc_subscription *s,u,u,u,u,u,u,u,u,u,False,0:00:01.300781
+"
+void rtl88e_set_fw_ap_off_load_cmd(struct ieee80211_hw *hw,
+				   u8 ap_offload_enable);",229,../linux/drivers/net/wireless/realtek/rtlwifi/rtl8188ee/fw.h,False,ignore,"
+				   u8 ap_offload_enable",u,u,u,u,u,u,u,u,False,0:00:01.306044
+"void rtw_set_ps_mode(struct adapter *adapter, u8 ps_mode, u8 smart_ps,
+		     u8 bcn_ant_mode);",119,../linux/drivers/staging/r8188eu/include/rtw_pwrctrl.h,False,ignore, u8 ps_mode,ignore,ignore,u,u,u,u,u,u,True,0:00:01.458074
+"
+int wl1271_acx_mem_map(struct wl1271 *wl,
+		       struct acx_header *mem_map, size_t len);",1036,../linux/drivers/net/wireless/ti/wlcore/acx.h,False,struct wl1271 *wl,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.343436
+"
+bool vmci_is_context_owner(u32 context_id, kuid_t uid);",39,../linux/include/linux/vmw_vmci_api.h,False,ignore, kuid_t uid,u,u,u,u,u,u,u,u,True,0:00:01.319543
+"
+int snd_ice1724_put_route_val(struct snd_ice1712 *ice, unsigned int val,
+								int shift);",476,../linux/sound/pci/ice1712/ice1712.h,False,struct snd_ice1712 *ice,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.608099
+"
+void mlx5_cleanup_srq_table(struct mlx5_ib_dev *dev);",67,../linux/drivers/infiniband/hw/mlx5/srq.h,False,struct mlx5_ib_dev *dev,u,u,u,u,u,u,u,u,u,False,0:00:01.377517
+"
+int write_nic_byte_E(struct net_device *dev, int x, u8 y);",1099,../linux/drivers/staging/rtl8192u/r8192U.h,False,struct net_device *dev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:02.110205
+"
+int mei_hbm_cl_disconnect_rsp(struct mei_device *dev, struct mei_cl *cl);",47,../linux/drivers/misc/mei/hbm.h,False,struct mei_device *dev,ignore,u,u,u,u,u,u,u,u,True,0:00:01.314885
+"
+int si_dpm_enable(struct radeon_device *rdev);",754,../linux/drivers/gpu/drm/radeon/radeon_asic.h,False,struct radeon_device *rdev,u,u,u,u,u,u,u,u,u,True,0:00:02.450979
+"
+int __v4l2_ctrl_modify_range(struct v4l2_ctrl *ctrl,
+			     s64 min, s64 max, u64 step, s64 def);",901,../linux/include/media/v4l2-ctrls.h,False,ignore,ignore,ignore, u64 step,ignore,u,u,u,u,u,True,0:00:01.524791
+"void iwl_fw_runtime_init(struct iwl_fw_runtime *fwrt, struct iwl_trans *trans,
+			const struct iwl_fw *fw,
+			const struct iwl_fw_runtime_ops *ops, void *ops_ctx,
+			const struct iwl_dump_sanitize_ops *sanitize_ops,
+			void *sanitize_ctx,
+			struct dentry *dbgfs_dir);",168,../linux/drivers/net/wireless/intel/iwlwifi/fw/runtime.h,False,ignore,ignore,ignore,ignore,ignore,ignore,ignore,"
+			struct dentry *dbgfs_dir",u,u,True,0:00:01.418409
+"
+int pnfs_mark_layout_stateid_invalid(struct pnfs_layout_hdr *lo,
+		struct list_head *lseg_list);",290,../linux/fs/nfs/pnfs.h,False,struct pnfs_layout_hdr *lo,ignore,u,u,u,u,u,u,u,u,False,0:00:01.435859
+"
+void bss_cap_update_on_sta_join(struct adapter *padapter, struct sta_info *psta);",28,../linux/drivers/staging/rtl8723bs/include/rtw_ap.h,False,ignore, struct sta_info *psta,u,u,u,u,u,u,u,u,False,0:00:01.266130
+"int skl_ipc_init_instance(struct sst_generic_ipc *ipc,
+		struct skl_ipc_init_instance_msg *msg, void *param_data);",123,../linux/sound/soc/intel/skylake/skl-sst-ipc.h,False,struct sst_generic_ipc *ipc,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.304069
+"void r8712_usb_write_mem(struct intf_hdl *pintfhdl, u32 addr,
+			 u32 cnt, u8 *wmem);",21,../linux/drivers/staging/rtl8712/usb_ops.h,False,ignore,ignore,"
+			 u32 cnt",ignore,u,u,u,u,u,u,True,0:00:01.365784
+"
+void hw_atl_itr_irq_map_en_tx_set(struct aq_hw_s *aq_hw, u32 irq_map_en_tx,
+				  u32 tx);",124,../linux/drivers/net/ethernet/aquantia/atlantic/hw_atl/hw_atl_llh.h,False,ignore, u32 irq_map_en_tx,ignore,u,u,u,u,u,u,u,True,0:00:01.485083
+"
+void adf_dev_shutdown(struct adf_accel_dev *accel_dev);",62,../linux/drivers/crypto/qat/qat_common/adf_common_drv.h,False,struct adf_accel_dev *accel_dev,u,u,u,u,u,u,u,u,u,True,0:00:01.212588
+"
+void tipc_bcast_dec_bearer_dst_cnt(struct net *net, int bearer_id);",86,../linux/net/tipc/bcast.h,False,ignore, int bearer_id,u,u,u,u,u,u,u,u,False,0:00:01.291541
+"
+int drm_sched_job_add_implicit_dependencies(struct drm_sched_job *job,
+					    struct drm_gem_object *obj,
+					    bool write);",466,../linux/include/drm/gpu_scheduler.h,False,ignore,ignore,"
+					    bool write",u,u,u,u,u,u,u,True,0:00:01.480275
+"
+int ncsi_start_dev(struct ncsi_dev *nd);",35,../linux/include/net/ncsi.h,False,struct ncsi_dev *nd,u,u,u,u,u,u,u,u,u,False,0:00:01.333586
+"
+__be32 nfsd4_check_resp_size(struct nfsd4_compoundres *, u32);",761,../linux/fs/nfsd/xdr4.h,False,struct nfsd4_compoundres *,ignore,u,u,u,u,u,u,u,u,False,0:00:01.440607
+"int skx_get_nvdimm_info(struct dimm_info *dimm, struct skx_imc *imc,
+			int chan, int dimmno, const char *mod_str);",181,../linux/drivers/edac/skx_common.h,False,ignore,ignore,ignore, int dimmno,ignore,u,u,u,u,u,True,0:00:01.288886
+"
+void mc13xxx_unlock(struct mc13xxx *mc13xxx);",13,../linux/include/linux/mfd/mc13xxx.h,False,struct mc13xxx *mc13xxx,u,u,u,u,u,u,u,u,u,True,0:00:01.126311
+"
+int nv40_pci_new(struct nvkm_device *, enum nvkm_subdev_type, int inst, struct nvkm_pci **);",42,../linux/drivers/gpu/drm/nouveau/include/nvkm/subdev/pci.h,False,ignore,ignore, int inst,ignore,u,u,u,u,u,u,True,0:00:01.236172
+"
+void ipvlan_link_delete(struct net_device *dev, struct list_head *head);",170,../linux/drivers/net/ipvlan/ipvlan.h,False,struct net_device *dev,ignore,u,u,u,u,u,u,u,u,False,0:00:01.308043
+"
+int nd_pmem_namespace_label_update(struct nd_region *nd_region,
+		struct nd_namespace_pmem *nspm, resource_size_t size);",225,../linux/drivers/nvdimm/label.h,False,ignore,ignore, resource_size_t size,u,u,u,u,u,u,u,True,0:00:01.598822
+"
+int snd_soc_component_update_bits(struct snd_soc_component *component,
+				  unsigned int reg, unsigned int mask,
+				  unsigned int val);",352,../linux/include/sound/soc-component.h,False,struct snd_soc_component *component,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.434038
+"
+int hugetlb_mempolicy_sysctl_handler(struct ctl_table *, int, void *, size_t *,
+		loff_t *);",133,../linux/include/linux/hugetlb.h,False,ignore,ignore,ignore,ignore,"
+		loff_t *",u,u,u,u,u,False,0:00:01.237558
+"
+int bch_print_cache_set_feature_ro_compat(struct cache_set *c, char *buf, int size);",109,../linux/drivers/md/bcache/features.h,False,ignore,ignore, int size,u,u,u,u,u,u,u,True,0:00:01.174324
+"
+void r8712_read_port(struct _adapter *adapter, u32 addr, u32 cnt, u8 *pmem);",225,../linux/drivers/staging/rtl8712/rtl871x_io.h,False,ignore,ignore, u32 cnt,ignore,u,u,u,u,u,u,True,0:00:01.282588
+"s32 FillH2CCmd8723B(struct adapter *padapter, u8 ElementID, u32 CmdLen, u8 *pCmdBuffer);",181,../linux/drivers/staging/rtl8723bs/include/rtl8723b_cmd.h,False,ignore,ignore, u32 CmdLen,ignore,u,u,u,u,u,u,True,0:00:01.458102
+"
+void efuse_shadow_read(struct ieee80211_hw *hw, u8 type,
+		       u16 offset, u32 *value);",81,../linux/drivers/net/wireless/realtek/rtlwifi/efuse.h,False,ignore,ignore,ignore, u32 *value,u,u,u,u,u,u,False,0:00:01.310590
+"
+int nr_validate_nr(struct sock *, unsigned short);",227,../linux/include/net/netrom.h,False,ignore, unsigned short,u,u,u,u,u,u,u,u,False,0:00:01.262162
+"void snd_usb_audioformat_attributes_quirk(struct snd_usb_audio *chip,
+					  struct audioformat *fp,
+					  int stream);",48,../linux/sound/usb/quirks.h,False,ignore,ignore,"
+					  int stream",u,u,u,u,u,u,u,True,0:00:01.373324
+"
+int ipc_update_perm(struct ipc64_perm *in, struct kern_ipc_perm *out);",180,../linux/ipc/util.h,False,struct ipc64_perm *in,ignore,u,u,u,u,u,u,u,u,True,0:00:01.337072
+"
+void dvb_dmx_swfilter_packets(struct dvb_demux *demux, const u8 *buf,
+			      size_t count);",295,../linux/include/media/dvb_demux.h,False,struct dvb_demux *demux,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.323216
+"
+int bond_alb_init_slave(struct bonding *bond, struct slave *slave);",154,../linux/include/net/bond_alb.h,False,ignore, struct slave *slave,u,u,u,u,u,u,u,u,False,0:00:01.294236
+"
+int intel_hdmi_compute_config(struct intel_encoder *encoder,
+			      struct intel_crtc_state *pipe_config,
+			      struct drm_connector_state *conn_state);",29,../linux/drivers/gpu/drm/i915/display/intel_hdmi.h,False,ignore,ignore,"
+			      struct drm_connector_state *conn_state",u,u,u,u,u,u,u,True,0:00:02.100503
+"
+void ibmasm_receive_heartbeat(struct service_processor *sp,  void *message, size_t size);",175,../linux/drivers/misc/ibmasm/ibmasm.h,False,ignore,ignore, size_t size,u,u,u,u,u,u,u,False,0:00:01.046407
+"static inline int mr_fill_mroute(struct mr_table *mrt, struct sk_buff *skb,
+				 struct mr_mfc *c, struct rtmsg *rtm)
+",337,../linux/include/linux/mroute_base.h,False,ignore,ignore,ignore, struct rtmsg *rtm,u,u,u,u,u,u,False,0:00:01.311492
+"
+int most_register_component(struct most_component *comp);",310,../linux/include/linux/most.h,False,struct most_component *comp,u,u,u,u,u,u,u,u,u,True,0:00:01.414004
+"
+void EXhalbtc8723b1ant_BtInfoNotify(
+	struct btc_coexist *pBtCoexist, u8 *tmpBuf, u8 length
+);",180,../linux/drivers/staging/rtl8723bs/hal/HalBtc8723b1Ant.h,False,ignore,ignore," u8 length
+",u,u,u,u,u,u,u,True,0:00:01.598122
+"void iptunnel_xmit(struct sock *sk, struct rtable *rt, struct sk_buff *skb,
+		   __be32 src, __be32 dst, u8 proto,
+		   u8 tos, u8 ttl, __be16 df, bool xnet);",418,../linux/include/net/ip_tunnels.h,False,ignore,ignore,ignore,ignore,ignore,ignore,ignore, u8 ttl,ignore,ignore,False,0:00:01.337443
+"
+int uverbs_async_event_release(struct inode *inode, struct file *filp);",222,../linux/drivers/infiniband/core/uverbs.h,False,ignore, struct file *filp,u,u,u,u,u,u,u,u,False,0:00:01.299559
+"
+void hw_atl_reg_tx_intr_moder_ctrl_set(struct aq_hw_s *aq_hw,
+				       u32 tx_intr_moderation_ctl,
+				       u32 queue);",297,../linux/drivers/net/ethernet/aquantia/atlantic/hw_atl/hw_atl_llh.h,False,ignore,ignore,"
+				       u32 queue",u,u,u,u,u,u,u,True,0:00:01.471591
+"int ath6kl_htc_rxmsg_pending_handler(struct htc_target *target,
+				     u32 msg_look_ahead, int *n_pkts);",632,../linux/drivers/net/wireless/ath/ath6kl/htc.h,False,ignore,ignore, int *n_pkts,u,u,u,u,u,u,u,False,0:00:01.273833
+"
+int t4_sge_alloc_eth_txq(struct adapter *adap, struct sge_eth_txq *txq,
+			 struct net_device *dev, struct netdev_queue *netdevq,
+			 unsigned int iqid, u8 dbqt);",1626,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4.h,False,ignore,ignore,ignore, struct netdev_queue *netdevq,ignore,ignore,u,u,u,u,False,0:00:01.435812
+"
+void fm10k_dbg_intfc_init(struct fm10k_intfc *interface);",545,../linux/drivers/net/ethernet/intel/fm10k/fm10k.h,False,struct fm10k_intfc *interface,u,u,u,u,u,u,u,u,u,False,0:00:01.205262
+void i915_perf_init(struct drm_i915_private *i915);,20,../linux/drivers/gpu/drm/i915/i915_perf.h,False,struct drm_i915_private *i915,u,u,u,u,u,u,u,u,u,True,0:00:02.181209
+"
+int vmw_kms_fbdev_init_data(struct vmw_private *dev_priv,
+			    unsigned unit,
+			    u32 max_width,
+			    u32 max_height,
+			    struct drm_connector **p_con,
+			    struct drm_crtc **p_crtc,
+			    struct drm_display_mode **p_mode);",447,../linux/drivers/gpu/drm/vmwgfx/vmwgfx_kms.h,False,struct vmw_private *dev_priv,ignore,ignore,ignore,ignore,ignore,ignore,u,u,u,True,0:00:01.734289
+u8 r8712_set_802_11_disassociate(struct _adapter *padapter);,33,../linux/drivers/staging/rtl8712/rtl871x_ioctl_set.h,False,struct _adapter *padapter,u,u,u,u,u,u,u,u,u,True,0:00:01.332244
+"static inline int cgroup_bpf_prog_detach(const union bpf_attr *attr,
+					 enum bpf_prog_type ptype)
+",467,../linux/include/linux/bpf-cgroup.h,False,ignore,"
+					 enum bpf_prog_type ptype",u,u,u,u,u,u,u,u,False,0:00:01.269005
+"
+void Hal_ReadAntennaDiversity88E(struct adapter *pAdapter,u8 *PROMContent,
+				 bool AutoLoadFail);",335,../linux/drivers/staging/r8188eu/include/rtl8188e_hal.h,False,ignore,ignore,"
+				 bool AutoLoadFail",u,u,u,u,u,u,u,True,0:00:01.686026
+"
+int ext4_bread_batch(struct inode *inode, ext4_lblk_t block, int bh_count,
+		     bool wait, struct buffer_head **bhs);",2979,../linux/fs/ext4/ext4.h,False,ignore,ignore, int bh_count,ignore,ignore,u,u,u,u,u,False,0:00:01.434516
+"
+int cw1200_core_probe(const struct hwbus_ops *hwbus_ops,
+		      struct hwbus_priv *hwbus,
+		      struct device *pdev,
+		      struct cw1200_common **pself,
+		      int ref_clk, const u8 *macaddr,
+		      const char *sdd_path, bool have_5ghz);",294,../linux/drivers/net/wireless/st/cw1200/cw1200.h,False,const struct hwbus_ops *hwbus_ops,ignore,ignore,ignore,ignore,ignore,ignore,ignore,u,u,False,0:00:01.310582
+"
+void bfa_lps_flogi(struct bfa_lps_s *lps, void *uarg, u8 alpa,
+		   u16 pdusz, wwn_t pwwn, wwn_t nwwn,
+		   bfa_boolean_t auth_en);",666,../linux/drivers/scsi/bfa/bfa_svc.h,False,ignore,ignore,ignore,ignore,ignore, wwn_t nwwn,ignore,u,u,u,True,0:00:02.418993
+"int  nv50_ram_ctor(const struct nvkm_ram_func *, struct nvkm_fb *,
+		   struct nvkm_ram *);",15,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/fb/ram.h,False,ignore, struct nvkm_fb *,ignore,u,u,u,u,u,u,u,True,0:00:01.426966
+"
+u32 nvbios_connTp(struct nvkm_bios *bios, u8 *ver, u8 *hdr, u8 *cnt, u8 *len,
+		  struct nvbios_connT *info);",32,../linux/drivers/gpu/drm/nouveau/include/nvkm/subdev/bios/conn.h,False,struct nvkm_bios *bios,ignore,ignore,ignore,ignore,ignore,u,u,u,u,True,0:00:01.243249
+"
+int inv_mpu6050_switch_engine(struct inv_mpu6050_state *st, bool en,
+			      unsigned int mask);",463,../linux/drivers/iio/imu/inv_mpu6050/inv_mpu_iio.h,False,struct inv_mpu6050_state *st,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.180652
+"
+int mlx4_get_vf_stats(struct mlx4_dev *dev, int port, int vf_idx,
+		      struct ifla_vf_stats *vf_stats);",308,../linux/include/linux/mlx4/cmd.h,False,ignore,ignore, int vf_idx,ignore,u,u,u,u,u,u,False,0:00:01.355232
+int snd_hda_gen_spec_init(struct hda_gen_spec *spec);,305,../linux/sound/pci/hda/hda_generic.h,False,struct hda_gen_spec *spec,u,u,u,u,u,u,u,u,u,True,0:00:02.604655
+"
+int bnx2x_dcbnl_update_applist(struct bnx2x *bp, bool delall);",200,../linux/drivers/net/ethernet/broadcom/bnx2x/bnx2x_dcb.h,False,struct bnx2x *bp,ignore,u,u,u,u,u,u,u,u,False,0:00:01.288508
+"
+void blk_mq_try_issue_list_directly(struct blk_mq_hw_ctx *hctx,
+				    struct list_head *list);",71,../linux/block/blk-mq.h,False,ignore,"
+				    struct list_head *list",u,u,u,u,u,u,u,u,False,0:00:01.252082
+"
+void dvb_dmx_swfilter_204(struct dvb_demux *demux, const u8 *buf,
+			  size_t count);",332,../linux/include/media/dvb_demux.h,False,ignore,ignore,"
+			  size_t count",u,u,u,u,u,u,u,True,0:00:01.326316
+"
+void tipc_bcast_dec_bearer_dst_cnt(struct net *net, int bearer_id);",86,../linux/net/tipc/bcast.h,False,struct net *net,ignore,u,u,u,u,u,u,u,u,False,0:00:01.288637
+"
+int do_unbind_con_driver(const struct consw *csw, int first, int last,
+			 int deflt);",120,../linux/include/linux/vt_kern.h,False,ignore,ignore,ignore,"
+			 int deflt",u,u,u,u,u,u,False,0:00:01.147182
+"
+int unregister_netdevice_notifier_net(struct net *net,
+				      struct notifier_block *nb);",2818,../linux/include/linux/netdevice.h,False,ignore,"
+				      struct notifier_block *nb",u,u,u,u,u,u,u,u,False,0:00:01.714875
+"
+int ipmi_set_my_address(struct ipmi_user *user,
+			unsigned int  channel,
+			unsigned char address);",141,../linux/include/linux/ipmi.h,False,struct ipmi_user *user,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.138142
+"
+int nvkm_falcon_clear_interrupt(struct nvkm_falcon *, u32);",133,../linux/drivers/gpu/drm/nouveau/include/nvkm/engine/falcon.h,False,ignore, u32,u,u,u,u,u,u,u,u,True,0:00:01.268582
+"int qlge_sem_spinlock(struct qlge_adapter *qdev, u32 sem_mask);",2246,../linux/drivers/staging/qlge/qlge.h,False,ignore, u32 sem_mask,u,u,u,u,u,u,u,u,False,0:00:01.356571
+"
+int dm_btree_remove(struct dm_btree_info *info, dm_block_t root,
+		    uint64_t *keys, dm_block_t *new_root);",141,../linux/drivers/md/persistent-data/dm-btree.h,False,ignore, dm_block_t root,ignore,ignore,u,u,u,u,u,u,False,0:00:01.101859
+"
+int dlm_recover_master_copy(struct dlm_ls *ls, struct dlm_rcom *rc);",40,../linux/fs/dlm/lock.h,False,struct dlm_ls *ls,ignore,u,u,u,u,u,u,u,u,False,0:00:01.083794
+int jpeg_v1_0_early_init(void *handle);,26,../linux/drivers/gpu/drm/amd/amdgpu/jpeg_v1_0.h,False,void *handle,u,u,u,u,u,u,u,u,u,True,0:00:01.547419
+"int __bcm_phy_write_rdb(struct phy_device *phydev, u16 rdb, u16 val);",54,../linux/drivers/net/phy/bcm-phy-lib.h,False,struct phy_device *phydev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.384500
+"
+void rtl8821ae_set_fw_pwrmode_cmd(struct ieee80211_hw *hw, u8 mode);",272,../linux/drivers/net/wireless/realtek/rtlwifi/rtl8821ae/fw.h,False,ignore, u8 mode,u,u,u,u,u,u,u,u,False,0:00:01.323988
+"void ath9k_ani_reset(struct ath_hw *ah, bool is_scanning);",1152,../linux/drivers/net/wireless/ath/ath9k/hw.h,False,ignore, bool is_scanning,u,u,u,u,u,u,u,u,False,0:00:01.303452
+"
+int uart_set_options(struct uart_port *port, struct console *co, int baud,
+		     int parity, int bits, int flow);",397,../linux/include/linux/serial_core.h,False,ignore,ignore, int baud,ignore,ignore,ignore,u,u,u,u,False,0:00:01.130488
+"
+void gf100_pmu_reset(struct nvkm_pmu *);",42,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/pmu/priv.h,False,struct nvkm_pmu *,u,u,u,u,u,u,u,u,u,False,0:00:01.196805
+"
+int ath6kl_wmi_listeninterval_cmd(struct wmi *wmi, u8 if_idx,
+				  u16 listen_interval,
+				  u16 listen_beacons);",2589,../linux/drivers/net/wireless/ath/ath6kl/wmi.h,False,struct wmi *wmi,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.340735
+"void mlx5e_tc_match_to_reg_match(struct mlx5_flow_spec *spec,
+				 enum mlx5e_tc_attr_to_reg type,
+				 u32 data,
+				 u32 mask);",232,../linux/drivers/net/ethernet/mellanox/mlx5/core/en_tc.h,False,ignore,"
+				 enum mlx5e_tc_attr_to_reg type",ignore,ignore,u,u,u,u,u,u,False,0:00:01.545569
+"
+int cgroup_path_ns_locked(struct cgroup *cgrp, char *buf, size_t buflen,
+			  struct cgroup_namespace *ns);",234,../linux/kernel/cgroup/cgroup-internal.h,False,ignore,ignore, size_t buflen,ignore,u,u,u,u,u,u,False,0:00:01.407105
+"
+void rt2x00mac_get_ringparam(struct ieee80211_hw *hw,
+			     u32 *tx, u32 *tx_max, u32 *rx, u32 *rx_max);",1491,../linux/drivers/net/wireless/ralink/rt2x00/rt2x00.h,False,ignore,ignore, u32 *tx_max,ignore,ignore,u,u,u,u,u,False,0:00:01.339369
+"
+void mlx5_fill_page_frag_array_perm(struct mlx5_frag_buf *buf, __be64 *pas, u8 perm);",1029,../linux/include/linux/mlx5/driver.h,False,ignore, __be64 *pas,ignore,u,u,u,u,u,u,u,False,0:00:01.336607
+"
+int virtio_transport_dgram_bind(struct vsock_sock *vsk,
+				struct sockaddr_vm *addr);",129,../linux/include/linux/virtio_vsock.h,False,ignore,"
+				struct sockaddr_vm *addr",u,u,u,u,u,u,u,u,False,0:00:01.320755
+"int vx_send_msg(struct vx_core *chip, struct vx_rmh *rmh);",254,../linux/include/sound/vx_core.h,False,struct vx_core *chip,ignore,u,u,u,u,u,u,u,u,False,0:00:01.089962
+"
+ZSTDLIB_API size_t ZSTD_compress2( ZSTD_CCtx* cctx,
+                                   void* dst, size_t dstCapacity,
+                             const void* src, size_t srcSize);",503,../linux/include/linux/zstd_lib.h,False,ignore,ignore,ignore,ignore, size_t srcSize,u,u,u,u,u,True,0:00:01.966466
+"u32 rtl92c_phy_query_bb_reg(struct ieee80211_hw *hw,
+				   u32 regaddr, u32 bitmask);",162,../linux/drivers/net/wireless/realtek/rtlwifi/rtl8192c/phy_common.h,False,ignore,"
+				   u32 regaddr",ignore,u,u,u,u,u,u,u,False,0:00:01.305794
+"
+gro_result_t napi_gro_receive(struct napi_struct *napi, struct sk_buff *skb);",4010,../linux/include/linux/netdevice.h,False,ignore, struct sk_buff *skb,u,u,u,u,u,u,u,u,False,0:00:01.700059
+"
+int media_entity_get_fwnode_pad(struct media_entity *entity,
+				struct fwnode_handle *fwnode,
+				unsigned long direction_flags);",881,../linux/include/media/media-entity.h,False,ignore,"
+				struct fwnode_handle *fwnode",ignore,u,u,u,u,u,u,u,True,0:00:01.302330
+"
+void mvs_tag_clear(struct mvs_info *mvi, u32 tag);",426,../linux/drivers/scsi/mvsas/mv_sas.h,False,struct mvs_info *mvi,ignore,u,u,u,u,u,u,u,u,True,0:00:01.596654
+"
+int mv88e6165_phy_read(struct mv88e6xxx_chip *chip, struct mii_bus *bus,
+		       int addr, int reg, u16 *val);",17,../linux/drivers/net/dsa/mv88e6xxx/phy.h,False,ignore,ignore,ignore, int reg,ignore,u,u,u,u,u,False,0:00:01.295854
+"
+int il4965_set_dynamic_key(struct il_priv *il,
+			   struct ieee80211_key_conf *key, u8 sta_id);",120,../linux/drivers/net/wireless/intel/iwlegacy/4965.h,False,ignore,ignore, u8 sta_id,u,u,u,u,u,u,u,False,0:00:01.378181
+"
+int amdgpu_bo_create_vm(struct amdgpu_device *adev,
+			struct amdgpu_bo_param *bp,
+			struct amdgpu_bo_vm **ubo_ptr);",294,../linux/drivers/gpu/drm/amd/amdgpu/amdgpu_object.h,False,struct amdgpu_device *adev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.615911
+"
+void update_IOT_info(struct adapter *padapter);",544,../linux/drivers/staging/rtl8723bs/include/rtw_mlme_ext.h,False,struct adapter *padapter,u,u,u,u,u,u,u,u,u,True,0:00:01.639320
+"
+int ipmi_request_supply_msgs(struct ipmi_user     *user,
+			     struct ipmi_addr     *addr,
+			     long                 msgid,
+			     struct kernel_ipmi_msg *msg,
+			     void                 *user_msg_data,
+			     void                 *supplied_smi,
+			     struct ipmi_recv_msg *supplied_recv,
+			     int                  priority);",190,../linux/include/linux/ipmi.h,False,ignore,ignore,ignore,ignore,ignore,ignore,"
+			     struct ipmi_recv_msg *supplied_recv",ignore,u,u,True,0:00:02.001523
+"
+void mlx5_wq_cyc_wqe_dump(struct mlx5_wq_cyc *wq, u16 ix, u8 nstrides);",81,../linux/drivers/net/ethernet/mellanox/mlx5/core/wq.h,False,ignore,ignore, u8 nstrides,u,u,u,u,u,u,u,False,0:00:01.350644
+"
+int dlm_hash2nodeid(struct dlm_ls *ls, uint32_t hash);",15,../linux/fs/dlm/dir.h,False,struct dlm_ls *ls,ignore,u,u,u,u,u,u,u,u,True,0:00:01.119440
+"
+int __init acpi_table_parse_entries_array(char *id, unsigned long table_size,
+			      struct acpi_subtable_proc *proc, int proc_num,
+			      unsigned int max_entries);",241,../linux/include/linux/acpi.h,False,ignore, unsigned long table_size,ignore,ignore,ignore,u,u,u,u,u,True,0:00:01.242231
+"
+u8 drm_dp_dsc_sink_max_slice_count(const u8 dsc_dpcd[DP_DSC_RECEIVER_CAP_SIZE],
+				   bool is_edp);",1790,../linux/include/drm/drm_dp_helper.h,False,const u8 dsc_dpcd[DP_DSC_RECEIVER_CAP_SIZE],ignore,u,u,u,u,u,u,u,u,True,0:00:01.704434
+"
+int ath6kl_wmi_powermode_cmd(struct wmi *wmi, u8 if_idx, u8 pwr_mode);",2592,../linux/drivers/net/wireless/ath/ath6kl/wmi.h,False,struct wmi *wmi,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.340771
+"
+int kvm_read_guest(struct kvm *kvm, gpa_t gpa, void *data, unsigned long len);",879,../linux/include/linux/kvm_host.h,False,ignore, gpa_t gpa,ignore,ignore,u,u,u,u,u,u,True,0:00:03.069340
+"int dm_setup_md_queue(struct mapped_device *md, struct dm_table *t);",86,../linux/drivers/md/dm.h,False,struct mapped_device *md,ignore,u,u,u,u,u,u,u,u,False,0:00:01.235095
+"
+void btc_apply_voltage_dependency_rules(struct radeon_clock_voltage_dependency_table *table,
+					u32 clock, u16 max_voltage, u16 *voltage);",50,../linux/drivers/gpu/drm/radeon/btc_dpm.h,False,struct radeon_clock_voltage_dependency_table *table,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.590859
+"
+void flush_tlb_one_user(unsigned long addr);",212,../linux/arch/x86/include/asm/tlbflush.h,False,unsigned long addr,u,u,u,u,u,u,u,u,u,True,0:00:01.320170
+"void vhost_poll_init(struct vhost_poll *poll, vhost_work_fn_t fn,
+		     __poll_t mask, struct vhost_dev *dev);",43,../linux/drivers/vhost/vhost.h,False,ignore,ignore,"
+		     __poll_t mask",ignore,u,u,u,u,u,u,True,0:00:01.733415
+"int gen_new_estimator(struct gnet_stats_basic_sync *bstats,
+		      struct gnet_stats_basic_sync __percpu *cpu_bstats,
+		      struct net_rate_estimator __rcu **rate_est,
+		      spinlock_t *lock,
+		      bool running, struct nlattr *opt);",73,../linux/include/net/gen_stats.h,False,ignore,ignore,"
+		      struct net_rate_estimator __rcu **rate_est",ignore,ignore,ignore,u,u,u,u,False,0:00:01.292443
+"u32 snd_hda_jack_pin_sense(struct hda_codec *codec, hda_nid_t nid, int dev_id);",109,../linux/sound/pci/hda/hda_jack.h,False,ignore,ignore, int dev_id,u,u,u,u,u,u,u,True,0:00:01.322830
+"
+int gb_audio_gb_get_topology(struct gb_connection *connection,
+			     struct gb_audio_topology **topology);",180,../linux/drivers/staging/greybus/audio_codec.h,False,ignore,"
+			     struct gb_audio_topology **topology",u,u,u,u,u,u,u,u,False,0:00:01.118009
+"int snd_timer_new(struct snd_card *card, char *id, struct snd_timer_id *tid, struct snd_timer **rtimer);",114,../linux/include/sound/timer.h,False,struct snd_card *card,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.568695
+"
+void iwl_set_rxon_channel(struct iwl_priv *priv, struct ieee80211_channel *ch,
+			 struct iwl_rxon_context *ctx);",99,../linux/drivers/net/wireless/intel/iwlwifi/dvm/agn.h,False,struct iwl_priv *priv,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.331253
+"
+void br_opt_toggle(struct net_bridge *br, enum net_bridge_opts opt, bool on);",720,../linux/net/bridge/br_private.h,False,ignore,ignore, bool on,u,u,u,u,u,u,u,False,0:00:01.306927
+"
+int __iavf_maybe_stop_tx(struct iavf_ring *tx_ring, int size);",450,../linux/drivers/net/ethernet/intel/iavf/iavf_txrx.h,False,struct iavf_ring *tx_ring,ignore,u,u,u,u,u,u,u,u,False,0:00:01.341140
+"int radeon_semaphore_create(struct radeon_device *rdev,
+			    struct radeon_semaphore **semaphore);",596,../linux/drivers/gpu/drm/radeon/radeon.h,False,struct radeon_device *rdev,ignore,u,u,u,u,u,u,u,u,True,0:00:01.308689
+"static inline int static_call_text_reserved(void *start, void *end)
+",321,../linux/include/linux/static_call.h,False,void *start,ignore,u,u,u,u,u,u,u,u,True,0:00:01.030220
+"int mwifiex_process_mgmt_packet(struct mwifiex_private *priv,
+				struct sk_buff *skb);",1087,../linux/drivers/net/wireless/marvell/mwifiex/main.h,False,struct mwifiex_private *priv,ignore,u,u,u,u,u,u,u,u,False,0:00:01.317354
+"
+void mlx5e_reporter_icosq_suspend_recovery(struct mlx5e_channel *c);",32,../linux/drivers/net/ethernet/mellanox/mlx5/core/en/health.h,False,struct mlx5e_channel *c,u,u,u,u,u,u,u,u,u,False,0:00:01.393579
+"
+ZSTDLIB_API size_t ZSTD_compressBegin_usingCDict(ZSTD_CCtx* cctx, const ZSTD_CDict* cdict);",2272,../linux/include/linux/zstd_lib.h,False,ignore, const ZSTD_CDict* cdict,u,u,u,u,u,u,u,u,True,0:00:01.949466
+"
+int t3_init_hw(struct adapter *adapter, u32 fw_params);",687,../linux/drivers/net/ethernet/chelsio/cxgb3/common.h,False,ignore, u32 fw_params,u,u,u,u,u,u,u,u,True,0:00:01.936631
+"
+void gf108_grctx_generate_unkn(struct gf100_gr *);",100,../linux/drivers/gpu/drm/nouveau/nvkm/engine/gr/ctxgf100.h,False,struct gf100_gr *,u,u,u,u,u,u,u,u,u,False,0:00:01.226871
+bool mlxsw_core_temp_warn_enabled(const struct mlxsw_core *mlxsw_core);,39,../linux/drivers/net/ethernet/mellanox/mlxsw/core.h,False,const struct mlxsw_core *mlxsw_core,u,u,u,u,u,u,u,u,u,False,0:00:01.356637
+"
+void bfa_lps_fdisc(struct bfa_lps_s *lps, void *uarg, u16 pdusz,
+		   wwn_t pwwn, wwn_t nwwn);",668,../linux/drivers/scsi/bfa/bfa_svc.h,False,struct bfa_lps_s *lps,ignore,ignore,ignore,ignore,u,u,u,u,u,False,0:00:01.252908
+"
+void mlxsw_sp_port_vlan_destroy(struct mlxsw_sp_port_vlan *mlxsw_sp_port_vlan);",648,../linux/drivers/net/ethernet/mellanox/mlxsw/spectrum.h,False,struct mlxsw_sp_port_vlan *mlxsw_sp_port_vlan,u,u,u,u,u,u,u,u,u,False,0:00:01.521519
+"
+int mmc_send_cid(struct mmc_host *host, u32 *cid);",35,../linux/drivers/mmc/core/mmc_ops.h,False,struct mmc_host *host,ignore,u,u,u,u,u,u,u,u,True,0:00:01.324931
+"
+int ga102_fifo_new(struct nvkm_device *, enum nvkm_subdev_type, int inst, struct nvkm_fifo **);",79,../linux/drivers/gpu/drm/nouveau/include/nvkm/engine/fifo.h,False,ignore,ignore,ignore, struct nvkm_fifo **,u,u,u,u,u,u,False,0:00:01.178590
+"
+bool acpi_device_is_battery(struct acpi_device *adev);",115,../linux/drivers/acpi/internal.h,False,struct acpi_device *adev,u,u,u,u,u,u,u,u,u,True,0:00:01.552959
+"
+void hw_atl_glb_mdio_iface2_set(struct aq_hw_s *hw, u32 value);",828,../linux/drivers/net/ethernet/aquantia/atlantic/hw_atl/hw_atl_llh.h,False,struct aq_hw_s *hw,ignore,u,u,u,u,u,u,u,u,False,0:00:01.204595
+"
+int acpi_processor_notify_smm(struct module *calling_module);",259,../linux/include/acpi/processor.h,False,struct module *calling_module,u,u,u,u,u,u,u,u,u,False,0:00:01.047862
+"int __hci_req_setup_ext_adv_instance(struct hci_request *req, u8 instance);",88,../linux/net/bluetooth/hci_request.h,False,ignore, u8 instance,u,u,u,u,u,u,u,u,False,0:00:01.335241
+"
+int mwifiex_adhoc_start(struct mwifiex_private *priv,
+			struct cfg80211_ssid *adhoc_ssid);",1187,../linux/drivers/net/wireless/marvell/mwifiex/main.h,False,struct mwifiex_private *priv,ignore,u,u,u,u,u,u,u,u,False,0:00:01.311238
+"int __platform_register_drivers(struct platform_driver * const *drivers,
+				unsigned int count, struct module *owner);",303,../linux/include/linux/platform_device.h,False,struct platform_driver * const *drivers,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.385101
+"
+void wl1271_scan_complete_work(struct work_struct *work);",21,../linux/drivers/net/wireless/ti/wlcore/scan.h,False,struct work_struct *work,u,u,u,u,u,u,u,u,u,False,0:00:01.315121
+"
+bool intel_vgpu_active(struct drm_i915_private *i915);",32,../linux/drivers/gpu/drm/i915/i915_vgpu.h,False,struct drm_i915_private *i915,u,u,u,u,u,u,u,u,u,False,0:00:01.310871
+"
+void rate_control_deinitialize(struct ieee80211_local *local);",91,../linux/net/mac80211/rate.h,False,struct ieee80211_local *local,u,u,u,u,u,u,u,u,u,False,0:00:01.510619
+"
+int amdgpu_bo_sync_wait_resv(struct amdgpu_device *adev, struct dma_resv *resv,
+			     enum amdgpu_sync_mode sync_mode, void *owner,
+			     bool intr);",324,../linux/drivers/gpu/drm/amd/amdgpu/amdgpu_object.h,False,ignore,ignore,ignore,ignore,"
+			     bool intr",u,u,u,u,u,True,0:00:01.601968
+"
+void rtl92s_phy_rf6052_set_ofdmtxpower(struct ieee80211_hw *hw,
+				       u8 *p_pwrlevel, u8 chnl);",14,../linux/drivers/net/wireless/realtek/rtlwifi/rtl8192se/rf.h,False,ignore,ignore, u8 chnl,u,u,u,u,u,u,u,False,0:00:01.285375
+"
+int qed_roce_init_hw(struct qed_hwfn *p_hwfn, struct qed_ptt *p_ptt);",20,../linux/drivers/net/ethernet/qlogic/qed/qed_roce.h,False,struct qed_hwfn *p_hwfn,ignore,u,u,u,u,u,u,u,u,False,0:00:01.251640
+"
+void HTOnAssocRsp(struct ieee80211_device *ieee);",2361,../linux/drivers/staging/rtl8192u/ieee80211/ieee80211.h,False,struct ieee80211_device *ieee,u,u,u,u,u,u,u,u,u,True,0:00:01.653667
+"
+void ioat_cleanup_event(struct tasklet_struct *t);",395,../linux/drivers/dma/ioat/dma.h,False,struct tasklet_struct *t,u,u,u,u,u,u,u,u,u,True,0:00:01.371821
+"int btrfs_free_reserved_extent(struct btrfs_fs_info *fs_info,
+			       u64 start, u64 len, int delalloc);",2749,../linux/fs/btrfs/ctree.h,False,struct btrfs_fs_info *fs_info,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:02.545103
+"
+bool tcp_peer_is_proven(struct request_sock *req, struct dst_entry *dst);",395,../linux/include/net/tcp.h,False,ignore, struct dst_entry *dst,u,u,u,u,u,u,u,u,False,0:00:01.322377
+"long kvm_arch_dev_ioctl(struct file *filp,
+			unsigned int ioctl, unsigned long arg);",995,../linux/include/linux/kvm_host.h,False,ignore,ignore, unsigned long arg,u,u,u,u,u,u,u,False,0:00:05.269475
+"
+int mmc_poll_for_busy(struct mmc_card *card, unsigned int timeout_ms,
+		      bool retry_crc_err, enum mmc_busy_cmd busy_cmd);",47,../linux/drivers/mmc/core/mmc_ops.h,False,ignore,ignore,ignore, enum mmc_busy_cmd busy_cmd,u,u,u,u,u,u,True,0:00:01.335771
+"loff_t btrfs_remap_file_range(struct file *file_in, loff_t pos_in,
+			      struct file *file_out, loff_t pos_out,
+			      loff_t len, unsigned int remap_flags);",9,../linux/fs/btrfs/reflink.h,False,ignore,ignore,"
+			      struct file *file_out",ignore,ignore,ignore,u,u,u,u,False,0:00:01.265848
+"
+int extent_buffer_under_io(const struct extent_buffer *eb);",273,../linux/fs/btrfs/extent_io.h,False,const struct extent_buffer *eb,u,u,u,u,u,u,u,u,u,True,0:00:02.894102
+"
+int vlv_punit_write(struct drm_i915_private *i915, u32 addr, u32 val);",115,../linux/drivers/gpu/drm/i915/vlv_sideband.h,False,ignore, u32 addr,ignore,u,u,u,u,u,u,u,True,0:00:01.436399
+"
+void mlx5dr_icm_pool_destroy(struct mlx5dr_icm_pool *pool);",1211,../linux/drivers/net/ethernet/mellanox/mlx5/core/steering/dr_types.h,False,struct mlx5dr_icm_pool *pool,u,u,u,u,u,u,u,u,u,False,0:00:01.351222
+"
+void gk20a_clk_fini(struct nvkm_clk *);",150,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/clk/gk20a.h,False,struct nvkm_clk *,u,u,u,u,u,u,u,u,u,False,0:00:01.296897
+"int uobj_destroy(struct ib_uobject *uobj, struct uverbs_attr_bundle *attrs);",50,../linux/drivers/infiniband/core/rdma_core.h,False,ignore, struct uverbs_attr_bundle *attrs,u,u,u,u,u,u,u,u,False,0:00:01.311332
+"
+int prism2_hostapd(struct ap_data *ap, struct prism2_hostapd_param *param);",74,../linux/drivers/net/wireless/intersil/hostap/hostap.h,False,struct ap_data *ap,ignore,u,u,u,u,u,u,u,u,True,0:00:01.931593
+"
+int nv50_disp_ovly_new_(const struct nv50_disp_chan_func *,
+			const struct nv50_disp_chan_mthd *,
+			struct nv50_disp *, int chid,
+			const struct nvkm_oclass *, void *argv, u32 argc,
+			struct nvkm_object **);",88,../linux/drivers/gpu/drm/nouveau/nvkm/engine/disp/channv50.h,False,ignore,ignore,"
+			struct nv50_disp *",ignore,ignore,ignore,ignore,ignore,u,u,False,0:00:01.176530
+"
+void bfa_fcs_driver_info_init(struct bfa_fcs_s *fcs,
+			      struct bfa_fcs_driver_info_s *driver_info);",786,../linux/drivers/scsi/bfa/bfa_fcs.h,False,ignore,"
+			      struct bfa_fcs_driver_info_s *driver_info",u,u,u,u,u,u,u,u,True,0:00:01.458455
+"
+int bnxt_re_create_srq(struct ib_srq *srq,
+		       struct ib_srq_init_attr *srq_init_attr,
+		       struct ib_udata *udata);",172,../linux/drivers/infiniband/hw/bnxt_re/ib_verbs.h,False,ignore,"
+		       struct ib_srq_init_attr *srq_init_attr",ignore,u,u,u,u,u,u,u,False,0:00:01.380934
+"
+void bfa_ioc_mbox_regisr(struct bfa_ioc_s *ioc, enum bfi_mclass mc,
+		bfa_ioc_mbox_mcfunc_t cbfn, void *cbarg);",845,../linux/drivers/scsi/bfa/bfa_ioc.h,False,ignore, enum bfi_mclass mc,ignore,ignore,u,u,u,u,u,u,True,0:00:02.217431
+"
+int reiserfs_inherit_default_acl(struct reiserfs_transaction_handle *th,
+				 struct inode *dir, struct dentry *dentry,
+				 struct inode *inode);",56,../linux/fs/reiserfs/acl.h,False,struct reiserfs_transaction_handle *th,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.186411
+"
+int rtl8xxxu_gen2_h2c_cmd(struct rtl8xxxu_priv *priv,
+			  struct h2c_cmd *h2c, int len);",1500,../linux/drivers/net/wireless/realtek/rtl8xxxu/rtl8xxxu.h,False,struct rtl8xxxu_priv *priv,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.415195
+"
+unsigned int azx_get_pos_posbuf(struct azx *chip, struct azx_dev *azx_dev);",187,../linux/sound/pci/hda/hda_controller.h,False,struct azx *chip,ignore,u,u,u,u,u,u,u,u,True,0:00:01.567786
+"
+int init_initiator_midpath_unsolicited_fcoe_task(
+	struct fcoe_task_params *task_params,
+	struct fcoe_tx_mid_path_params *mid_path_fc_header,
+	struct scsi_sgl_task_params *tx_sgl_task_params,
+	struct scsi_sgl_task_params *rx_sgl_task_params,
+	u8 fw_to_place_fc_header);",59,../linux/drivers/scsi/qedf/drv_fcoe_fw_funcs.h,False,ignore,ignore,"
+	struct scsi_sgl_task_params *tx_sgl_task_params",ignore,ignore,u,u,u,u,u,False,0:00:01.198112
+"
+int si476x_core_cmd_zif_pin_cfg(struct si476x_core *,
+				enum si476x_iqclk_config,
+				enum si476x_iqfs_config,
+				enum si476x_iout_config,
+				enum si476x_qout_config);",395,../linux/include/linux/mfd/si476x-core.h,False,ignore,ignore,ignore,ignore,"
+				enum si476x_qout_config",u,u,u,u,u,True,0:00:01.402026
+"
+int mlx5_eswitch_set_vport_vlan(struct mlx5_eswitch *esw,
+				u16 vport, u16 vlan, u8 qos);",358,../linux/drivers/net/ethernet/mellanox/mlx5/core/eswitch.h,False,struct mlx5_eswitch *esw,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.428531
+"
+void intel_psr_invalidate(struct drm_i915_private *dev_priv,
+			  unsigned frontbuffer_bits,
+			  enum fb_op_origin origin);",29,../linux/drivers/gpu/drm/i915/display/intel_psr.h,False,ignore,ignore,"
+			  enum fb_op_origin origin",u,u,u,u,u,u,u,True,0:00:02.008772
+"
+int go7007_v4l2_ctrl_init(struct go7007 *go);",292,../linux/drivers/media/usb/go7007/go7007-priv.h,False,struct go7007 *go,u,u,u,u,u,u,u,u,u,False,0:00:01.242067
+"
+int __ipv6_dev_ac_dec(struct inet6_dev *idev, const struct in6_addr *addr);",282,../linux/include/net/addrconf.h,False,ignore, const struct in6_addr *addr,u,u,u,u,u,u,u,u,False,0:00:01.303274
+"
+int reiserfs_inherit_default_acl(struct reiserfs_transaction_handle *th,
+				 struct inode *dir, struct dentry *dentry,
+				 struct inode *inode);",56,../linux/fs/reiserfs/acl.h,False,ignore,ignore,ignore,"
+				 struct inode *inode",u,u,u,u,u,u,False,0:00:01.078316
+"
+void rt2x00queue_align_frame(struct sk_buff *skb);",108,../linux/drivers/net/wireless/ralink/rt2x00/rt2x00lib.h,False,struct sk_buff *skb,u,u,u,u,u,u,u,u,u,False,0:00:01.316683
+"
+void iser_login_rsp(struct ib_cq *cq, struct ib_wc *wc);",516,../linux/drivers/infiniband/ulp/iser/iscsi_iser.h,False,ignore, struct ib_wc *wc,u,u,u,u,u,u,u,u,False,0:00:01.328620
+"u32 ODM_Read4Byte(struct odm_dm_struct *pDM_Odm, u32 RegAddr);",23,../linux/drivers/staging/r8188eu/include/odm_interface.h,False,ignore, u32 RegAddr,u,u,u,u,u,u,u,u,True,0:00:01.318996
+"
+bool rtl8723be_rx_query_desc(struct ieee80211_hw *hw,
+			     struct rtl_stats *status,
+			     struct ieee80211_rx_status *rx_status,
+			     u8 *pdesc, struct sk_buff *skb);",635,../linux/drivers/net/wireless/realtek/rtlwifi/rtl8723be/trx.h,False,ignore,ignore,ignore,"
+			     u8 *pdesc",ignore,u,u,u,u,u,False,0:00:01.294575
+"
+int qla4xxx_get_flash(struct scsi_qla_host *ha, dma_addr_t dma_addr,
+		      uint32_t offset, uint32_t len);",28,../linux/drivers/scsi/qla4xxx/ql4_glbl.h,False,ignore,ignore,"
+		      uint32_t offset",ignore,u,u,u,u,u,u,False,0:00:01.363662
+"
+void nvme_cancel_tagset(struct nvme_ctrl *ctrl);",659,../linux/drivers/nvme/host/nvme.h,False,struct nvme_ctrl *ctrl,u,u,u,u,u,u,u,u,u,True,0:00:02.423473
+"
+int smc_wr_reg_send(struct smc_link *link, struct ib_mr *mr);",136,../linux/net/smc/smc_wr.h,False,ignore, struct ib_mr *mr,u,u,u,u,u,u,u,u,False,0:00:01.337822
+"int rndis_filter_set_device_mac(struct netvsc_device *ndev,
+				const char *mac);",269,../linux/drivers/net/hyperv/hyperv_net.h,False,ignore,"
+				const char *mac",u,u,u,u,u,u,u,u,True,0:00:01.525590
+"
+void free_scratch(struct i915_address_space *vm);",559,../linux/drivers/gpu/drm/i915/gt/intel_gtt.h,False,struct i915_address_space *vm,u,u,u,u,u,u,u,u,u,True,0:00:01.619643
+"
+void irq_matrix_debug_show(struct seq_file *sf, struct irq_matrix *m, int ind);",1240,../linux/include/linux/irq.h,False,ignore,ignore, int ind,u,u,u,u,u,u,u,True,0:00:01.424003
+"
+int zd_mac_init_hw(struct ieee80211_hw *hw);",298,../linux/drivers/net/wireless/zydas/zd1211rw/zd_mac.h,False,struct ieee80211_hw *hw,u,u,u,u,u,u,u,u,u,False,0:00:01.318301
+"
+int crypto_engine_stop(struct crypto_engine *engine);",114,../linux/include/crypto/engine.h,False,struct crypto_engine *engine,u,u,u,u,u,u,u,u,u,False,0:00:01.011831
+"
+int swiotlb_init_with_tbl(char *tlb, unsigned long nslabs, int verbose);",39,../linux/include/linux/swiotlb.h,False,ignore,ignore, int verbose,u,u,u,u,u,u,u,True,0:00:01.402876
+"
+int nci_conn_max_data_pkt_payload_size(struct nci_dev *ndev, __u8 conn_id);",367,../linux/include/net/nfc/nci_core.h,False,struct nci_dev *ndev,ignore,u,u,u,u,u,u,u,u,False,0:00:01.255980
+"
+int native_cpu_up(unsigned int cpunum, struct task_struct *tidle);",133,../linux/arch/x86/include/asm/smp.h,False,unsigned int cpunum,ignore,u,u,u,u,u,u,u,u,False,0:00:01.170928
+"int hinic_mbox_to_pf(struct hinic_hwdev *hwdev, enum hinic_mod_type mod,
+		     u8 cmd, void *buf_in, u16 in_size, void *buf_out,
+		     u16 *out_size, u32 timeout);",162,../linux/drivers/net/ethernet/huawei/hinic/hinic_hw_mbox.h,False,ignore,ignore,ignore,ignore,ignore,ignore,ignore, u32 timeout,u,u,False,0:00:01.217877
+"
+int snd_cs8427_iec958_active(struct snd_i2c_device *cs8427, int active);",183,../linux/include/sound/cs8427.h,False,struct snd_i2c_device *cs8427,ignore,u,u,u,u,u,u,u,u,True,0:00:01.224488
+"
+int snd_hda_codec_amp_init(struct hda_codec *codec, hda_nid_t nid, int ch,
+			   int direction, int idx, int mask, int val);",123,../linux/sound/pci/hda/hda_local.h,False,ignore,ignore,ignore,ignore,ignore, int mask,ignore,u,u,u,True,0:00:01.920590
+"u32 intel_uncore_read_with_mcr_steering_fw(struct intel_uncore *uncore,
+					   i915_reg_t reg,
+					   int slice, int subslice);",212,../linux/drivers/gpu/drm/i915/intel_uncore.h,False,ignore,ignore,ignore, int subslice,u,u,u,u,u,u,True,0:00:02.161470
+"
+int drm_atomic_set_property(struct drm_atomic_state *state,
+			    struct drm_file *file_priv,
+			    struct drm_mode_object *obj,
+			    struct drm_property *prop,
+			    uint64_t prop_value);",252,../linux/drivers/gpu/drm/drm_crtc_internal.h,False,ignore,ignore,ignore,"
+			    struct drm_property *prop",ignore,u,u,u,u,u,True,0:00:01.511873
+"
+void nfp_cpp_area_release(struct nfp_cpp_area *area);",221,../linux/drivers/net/ethernet/netronome/nfp/nfpcore/nfp_cpp.h,False,struct nfp_cpp_area *area,u,u,u,u,u,u,u,u,u,False,0:00:01.014463
+"
+int x25_parse_facilities(struct sk_buff *, struct x25_facilities *,
+			 struct x25_dte_facilities *, unsigned long *);",212,../linux/include/net/x25.h,False,ignore,ignore,ignore, unsigned long *,u,u,u,u,u,u,False,0:00:01.273195
+"int snd_hda_ctl_add(struct hda_codec *codec, hda_nid_t nid,
+		    struct snd_kcontrol *kctl);",544,../linux/sound/pci/hda/hda_local.h,False,ignore, hda_nid_t nid,ignore,u,u,u,u,u,u,u,False,0:00:01.156287
+"
+int drm_framebuffer_check_src_coords(uint32_t src_x, uint32_t src_y,
+				     uint32_t src_w, uint32_t src_h,
+				     const struct drm_framebuffer *fb);",205,../linux/drivers/gpu/drm/drm_crtc_internal.h,False,ignore,ignore,ignore, uint32_t src_h,ignore,u,u,u,u,u,True,0:00:01.484891
+"void nvkm_devinit_ctor(const struct nvkm_devinit_func *, struct nvkm_device *,
+		       enum nvkm_subdev_type, int inst, struct nvkm_devinit *);",18,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/devinit/priv.h,False,ignore,ignore,ignore,ignore, struct nvkm_devinit *,u,u,u,u,u,False,0:00:01.176258
+"
+void TsInitAddBA(struct rtllib_device *ieee, struct tx_ts_record *pTS,
+		 u8 Policy, u8 bOverwritePending);",2104,../linux/drivers/staging/rtl8192e/rtllib.h,False,struct rtllib_device *ieee,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.361250
+"void hwrm_update_token(struct bnxt *bp, u16 seq, enum bnxt_hwrm_wait_state s);",56,../linux/drivers/net/ethernet/broadcom/bnxt/bnxt_hwrm.h,False,struct bnxt *bp,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.338430
+"blk_status_t btrfs_submit_compressed_write(struct btrfs_inode *inode, u64 start,
+				  unsigned int len, u64 disk_start,
+				  unsigned int compressed_len,
+				  struct page **compressed_pages,
+				  unsigned int nr_pages,
+				  unsigned int write_flags,
+				  struct cgroup_subsys_state *blkcg_css);",97,../linux/fs/btrfs/compression.h,False,ignore, u64 start,ignore,ignore,ignore,ignore,ignore,ignore,ignore,u,True,0:00:01.686521
+"int nvkm_uvmm_new(const struct nvkm_oclass *, void *argv, u32 argc,
+		  struct nvkm_object **);",12,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/mmu/uvmm.h,False,ignore, void *argv,ignore,ignore,u,u,u,u,u,u,False,0:00:01.268211
+"int wndwc67e_new(struct nouveau_drm *, enum drm_plane_type, int, s32,
+		 struct nv50_wndw **);",138,../linux/drivers/gpu/drm/nouveau/dispnv50/wndw.h,False,struct nouveau_drm *,ignore,ignore,ignore,ignore,u,u,u,u,u,True,0:00:01.323947
+"
+long reiserfs_ioctl(struct file *filp, unsigned int cmd, unsigned long arg);",3411,../linux/fs/reiserfs/reiserfs.h,False,ignore,ignore, unsigned long arg,u,u,u,u,u,u,u,True,0:00:01.136039
+"
+int i40e_xsk_wakeup(struct net_device *dev, u32 queue_id, u32 flags);",34,../linux/drivers/net/ethernet/intel/i40e/i40e_xsk.h,False,ignore,ignore, u32 flags,u,u,u,u,u,u,u,False,0:00:01.379261
+"
+int amdgpu_bo_create_kernel(struct amdgpu_device *adev,
+			    unsigned long size, int align,
+			    u32 domain, struct amdgpu_bo **bo_ptr,
+			    u64 *gpu_addr, void **cpu_addr);",285,../linux/drivers/gpu/drm/amd/amdgpu/amdgpu_object.h,False,ignore,ignore,ignore,ignore, struct amdgpu_bo **bo_ptr,ignore,ignore,u,u,u,False,0:00:01.548542
+"
+int llc_conn_ev_rx_sabme_cmd_pbit_set_x(struct sock *sk, struct sk_buff *skb);",148,../linux/include/net/llc_c_ev.h,False,struct sock *sk,ignore,u,u,u,u,u,u,u,u,False,0:00:01.272575
+"
+signed long dma_fence_default_wait(struct dma_fence *fence,
+				   bool intr, signed long timeout);",374,../linux/include/linux/dma-fence.h,False,ignore,"
+				   bool intr",ignore,u,u,u,u,u,u,u,True,0:00:01.383133
+"
+int bnxt_qplib_update_sgid(struct bnxt_qplib_sgid_tbl *sgid_tbl,
+			   struct bnxt_qplib_gid *gid, u16 gid_idx,
+			   const u8 *smac);",256,../linux/drivers/infiniband/hw/bnxt_re/qplib_sp.h,False,struct bnxt_qplib_sgid_tbl *sgid_tbl,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.324544
+"int pcf50633_gpio_power_supply_set(struct pcf50633 *,
+					int gpio, int regulator, int on);",44,../linux/include/linux/mfd/pcf50633/gpio.h,False,ignore,"
+					int gpio",ignore,ignore,u,u,u,u,u,u,True,0:00:01.217799
+int usx2y_async_seq04_init(struct usx2ydev *usx2y);,82,../linux/sound/usb/usx2y/usbusx2y.h,False,struct usx2ydev *usx2y,u,u,u,u,u,u,u,u,u,False,0:00:01.095854
+"
+int ath10k_bmi_read_memory(struct ath10k *ar, u32 address,
+			   void *buffer, u32 length);",237,../linux/drivers/net/wireless/ath/ath10k/bmi.h,False,ignore, u32 address,ignore,ignore,u,u,u,u,u,u,False,0:00:01.377402
+"
+unsigned qib_free_all_qps(struct rvt_dev_info *rdi);",270,../linux/drivers/infiniband/hw/qib/qib_verbs.h,False,struct rvt_dev_info *rdi,u,u,u,u,u,u,u,u,u,False,0:00:01.318987
+"
+int ncsi_vlan_rx_kill_vid(struct net_device *dev, __be16 proto, u16 vid);",32,../linux/include/net/ncsi.h,False,struct net_device *dev,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.344025
+"
+int pcxhr_get_external_clock(struct pcxhr_mgr *mgr,
+			     enum pcxhr_clock_type clock_type,
+			     int *sample_rate);",196,../linux/sound/pci/pcxhr/pcxhr.h,False,ignore,ignore,"
+			     int *sample_rate",u,u,u,u,u,u,u,True,0:00:01.417516
+"
+u8 rtw_joinbss_cmd(struct adapter  *padapter, struct wlan_network* pnetwork);",753,../linux/drivers/staging/r8188eu/include/rtw_cmd.h,False,ignore, struct wlan_network* pnetwork,u,u,u,u,u,u,u,u,True,0:00:01.609007
+"
+int tc_setup_cb_add(struct tcf_block *block, struct tcf_proto *tp,
+		    enum tc_setup_type type, void *type_data, bool err_stop,
+		    u32 *flags, unsigned int *in_hw_count, bool rtnl_held);",542,../linux/include/net/pkt_cls.h,False,ignore, struct tcf_proto *tp,ignore,ignore,ignore,ignore,ignore,ignore,u,u,False,0:00:01.379536
+"
+int vnic_wq_disable(struct vnic_wq *wq);",185,../linux/drivers/net/ethernet/cisco/enic/vnic_wq.h,False,struct vnic_wq *wq,u,u,u,u,u,u,u,u,u,True,0:00:01.173174
+"
+int vb2_core_expbuf(struct vb2_queue *q, int *fd, unsigned int type,
+		unsigned int index, unsigned int plane, unsigned int flags);",933,../linux/include/media/videobuf2-core.h,False,ignore,ignore,ignore,"
+		unsigned int index",ignore,ignore,u,u,u,u,False,0:00:01.244442
+"
+void qxl_io_memslot_add(struct qxl_device *qdev, uint8_t id);",361,../linux/drivers/gpu/drm/qxl/qxl_drv.h,False,ignore, uint8_t id,u,u,u,u,u,u,u,u,True,0:00:01.418621
+"
+void qlcnic_83xx_free_mbx_intr(struct qlcnic_adapter *);",594,../linux/drivers/net/ethernet/qlogic/qlcnic/qlcnic_83xx_hw.h,False,struct qlcnic_adapter *,u,u,u,u,u,u,u,u,u,False,0:00:01.322041
+"
+unsigned int nilfs_page_count_clean_buffers(struct page *, unsigned int,
+					    unsigned int);",47,../linux/fs/nilfs2/page.h,False,ignore, unsigned int,ignore,u,u,u,u,u,u,u,True,0:00:01.363040
+"
+int v4l2_m2m_ioctl_stateless_decoder_cmd(struct file *file, void *priv,
+					 struct v4l2_decoder_cmd *dc);",868,../linux/include/media/v4l2-mem2mem.h,False,ignore,ignore,"
+					 struct v4l2_decoder_cmd *dc",u,u,u,u,u,u,u,True,0:00:01.524911
+"
+int mlx4_qp_reserve_range(struct mlx4_dev *dev, int cnt, int align,
+			  int *base, u8 flags, u8 usage);",1131,../linux/include/linux/mlx4/device.h,False,ignore,ignore,ignore,ignore,ignore, u8 usage,u,u,u,u,False,0:00:01.231684
+"int __lbs_cmd(struct lbs_private *priv, uint16_t command,
+	      struct cmd_header *in_cmd, int in_cmd_size,
+	      int (*callback)(struct lbs_private *, unsigned long, struct cmd_header *),
+	      unsigned long callback_arg);",48,../linux/drivers/net/wireless/marvell/libertas/cmd.h,False,ignore,ignore,ignore,ignore,"
+	      int (*callback",u,u,u,u,u,False,0:00:01.469469
+"
+int hugetlb_sysctl_handler(struct ctl_table *, int, void *, size_t *, loff_t *);",127,../linux/include/linux/hugetlb.h,False,ignore, int,ignore,ignore,ignore,u,u,u,u,u,True,0:00:02.838046
+"
+void clear_filter(struct adapter *adap, struct filter_entry *f);",45,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4_filter.h,False,struct adapter *adap,ignore,u,u,u,u,u,u,u,u,False,0:00:01.369623
+"
+void handle_start_link(struct work_struct *work);",745,../linux/drivers/infiniband/hw/hfi1/chip.h,False,struct work_struct *work,u,u,u,u,u,u,u,u,u,False,0:00:01.764446
+"
+int cfg80211_external_auth_request(struct net_device *netdev,
+				   struct cfg80211_external_auth_params *params,
+				   gfp_t gfp);",8210,../linux/include/net/cfg80211.h,False,struct net_device *netdev,ignore,ignore,u,u,u,u,u,u,u,False,0:00:02.058999
+"int addrconf_ifid_802154_6lowpan(u8 *eui, struct net_device *dev);",17,../linux/net/6lowpan/6lowpan_i.h,False,u8 *eui,ignore,u,u,u,u,u,u,u,u,False,0:00:01.293922
+"
+int qla4xxx_get_chap(struct scsi_qla_host *ha, char *username,
+		     char *password, uint16_t idx);",167,../linux/drivers/scsi/qla4xxx/ql4_glbl.h,False,ignore, char *username,ignore,ignore,u,u,u,u,u,u,False,0:00:01.354690
+"
+int qla4xxx_mailbox_command(struct scsi_qla_host *ha, uint8_t inCount,
+		uint8_t outCount, uint32_t *mbx_cmd, uint32_t *mbx_sts);",81,../linux/drivers/scsi/qla4xxx/ql4_glbl.h,False,ignore, uint8_t inCount,ignore,ignore,ignore,u,u,u,u,u,False,0:00:01.361367
+"int nf_nat_icmp_reply_translation(struct sk_buff *skb, struct nf_conn *ct,
+				  enum ip_conntrack_info ctinfo,
+				  unsigned int hooknum);",87,../linux/include/net/netfilter/nf_nat.h,False,ignore,ignore,ignore,"
+				  unsigned int hooknum",u,u,u,u,u,u,False,0:00:01.353770
+"
+u8 hal_btcoex_LpsVal(struct adapter *);",51,../linux/drivers/staging/rtl8723bs/include/hal_btcoex.h,False,struct adapter *,u,u,u,u,u,u,u,u,u,True,0:00:01.486732
+"
+int snd_pcm_hw_rule_noresample(struct snd_pcm_runtime *runtime,
+			       unsigned int base_rate);",1014,../linux/include/sound/pcm.h,False,ignore,"
+			       unsigned int base_rate",u,u,u,u,u,u,u,u,True,0:00:01.625501
+"
+int tcp_md5_hash_key(struct tcp_md5sig_pool *hp,
+		     const struct tcp_md5sig_key *key);",1684,../linux/include/net/tcp.h,False,struct tcp_md5sig_pool *hp,ignore,u,u,u,u,u,u,u,u,False,0:00:01.413703
+"
+int mlx5dr_ste_set_action_decap_l3_list(struct mlx5dr_ste_ctx *ste_ctx,
+					void *data,
+					u32 data_sz,
+					u8 *hw_action,
+					u32 hw_action_sz,
+					u16 *used_hw_action_num);",317,../linux/drivers/net/ethernet/mellanox/mlx5/core/steering/dr_types.h,False,ignore,"
+					void *data",ignore,ignore,ignore,ignore,u,u,u,u,False,0:00:01.388915
+"irqreturn_t xenvif_interrupt(int irq, void *dev_id);",414,../linux/drivers/net/xen-netback/common.h,False,ignore, void *dev_id,u,u,u,u,u,u,u,u,False,0:00:01.253490
+"
+int v4l2_m2m_ioctl_dqbuf(struct file *file, void *fh,
+				struct v4l2_buffer *buf);",850,../linux/include/media/v4l2-mem2mem.h,False,ignore, void *fh,ignore,u,u,u,u,u,u,u,False,0:00:01.229298
+"static inline int security_sb_clone_mnt_opts(const struct super_block *oldsb,
+					      struct super_block *newsb,
+					      unsigned long kern_flags,
+					      unsigned long *set_kern_flags)
+",710,../linux/include/linux/security.h,False,ignore,ignore,ignore,"
+					      unsigned long *set_kern_flags",u,u,u,u,u,u,True,0:00:02.171382
+"
+long vfio_pci_core_ioctl(struct vfio_device *core_vdev, unsigned int cmd,
+		unsigned long arg);",221,../linux/include/linux/vfio_pci_core.h,False,ignore,ignore,"
+		unsigned long arg",u,u,u,u,u,u,u,False,0:00:01.121258
+"
+void exhalbtc_set_ant_num(struct rtl_priv *rtlpriv, u8 type, u8 ant_num);",781,../linux/drivers/net/wireless/realtek/rtlwifi/btcoexist/halbtcoutsrc.h,False,ignore,ignore, u8 ant_num,u,u,u,u,u,u,u,False,0:00:01.318331
+"
+bool v4l2_detect_gtf(unsigned frame_height, unsigned hfreq, unsigned vsync,
+		u32 polarities, bool interlaced, struct v4l2_fract aspect,
+		struct v4l2_dv_timings *fmt);",180,../linux/include/media/v4l2-dv-timings.h,False,ignore,ignore,ignore,ignore,ignore,ignore,"
+		struct v4l2_dv_timings *fmt",u,u,u,False,0:00:01.113843
+"
+int mipi_dsi_dcs_set_column_address(struct mipi_dsi_device *dsi, u16 start,
+				    u16 end);",282,../linux/include/drm/drm_mipi_dsi.h,False,ignore, u16 start,ignore,u,u,u,u,u,u,u,False,0:00:01.196434
+"
+int qat_hal_init_rd_xfer(struct icp_qat_fw_loader_handle *handle,
+			 unsigned char ae, unsigned long ctx_mask,
+			 enum icp_qat_uof_regtype reg_type,
+			 unsigned short reg_num, unsigned int regdata);",174,../linux/drivers/crypto/qat/qat_common/adf_common_drv.h,False,ignore,ignore, unsigned long ctx_mask,ignore,ignore,ignore,u,u,u,u,True,0:00:01.446106
+"
+int nau8824_enable_jack_detect(struct snd_soc_component *component,
+	struct snd_soc_jack *jack);",471,../linux/sound/soc/codecs/nau8824.h,False,ignore,"
+	struct snd_soc_jack *jack",u,u,u,u,u,u,u,u,True,0:00:01.458607
+static inline void ftrace_graph_init_task(struct task_struct *t) ,1032,../linux/include/linux/ftrace.h,False,struct task_struct *t,u,u,u,u,u,u,u,u,u,False,0:00:01.195708
+"int hinic_register_pf_mbox_cb(struct hinic_hwdev *hwdev,
+			      enum hinic_mod_type mod,
+			      hinic_pf_mbox_cb callback);",140,../linux/drivers/net/ethernet/huawei/hinic/hinic_hw_mbox.h,False,ignore,ignore,"
+			      hinic_pf_mbox_cb callback",u,u,u,u,u,u,u,False,0:00:01.223166
+"
+int __update_load_avg_se(u64 now, struct cfs_rq *cfs_rq, struct sched_entity *se);",4,../linux/kernel/sched/pelt.h,False,ignore,ignore, struct sched_entity *se,u,u,u,u,u,u,u,True,0:00:01.493497
+"
+void br_switchdev_mdb_notify(struct net_device *dev,
+			     struct net_bridge_mdb_entry *mp,
+			     struct net_bridge_port_group *pg,
+			     int type);",1984,../linux/net/bridge/br_private.h,False,ignore,ignore,"
+			     struct net_bridge_port_group *pg",ignore,u,u,u,u,u,u,False,0:00:01.318397
+"
+int f2fs_fill_dentries(struct dir_context *ctx, struct f2fs_dentry_ptr *d,
+			unsigned int start_pos, struct fscrypt_str *fstr);",3331,../linux/fs/f2fs/f2fs.h,False,ignore, struct f2fs_dentry_ptr *d,ignore,ignore,u,u,u,u,u,u,True,0:00:01.600860
+"
+int snd_hda_codec_set_pin_target(struct hda_codec *codec, hda_nid_t nid,
+				 unsigned int val);",435,../linux/sound/pci/hda/hda_local.h,False,ignore,ignore,"
+				 unsigned int val",u,u,u,u,u,u,u,True,0:00:01.932883
+"
+int ocfs2_try_open_lock(struct inode *inode, int write);",129,../linux/fs/ocfs2/dlmglue.h,False,struct inode *inode,ignore,u,u,u,u,u,u,u,u,True,0:00:01.967808
+"
+int mlxsw_sp_sb_tc_pool_bind_set(struct mlxsw_core_port *mlxsw_core_port,
+				 unsigned int sb_index, u16 tc_index,
+				 enum devlink_sb_pool_type pool_type,
+				 u16 pool_index, u32 threshold,
+				 struct netlink_ext_ack *extack);",558,../linux/drivers/net/ethernet/mellanox/mlxsw/spectrum.h,False,ignore,ignore, u16 tc_index,ignore,ignore,ignore,ignore,u,u,u,False,0:00:01.450541
+"
+int carl9170_bcn_ctrl(struct ar9170 *ar, const unsigned int vif_id,
+		       const u32 mode, const u32 addr, const u32 len);",54,../linux/drivers/net/wireless/ath/carl9170/cmd.h,False,ignore,ignore,"
+		       const u32 mode",ignore,ignore,u,u,u,u,u,False,0:00:01.318048
+"
+void b43_dma_handle_txstatus(struct b43_wldev *dev,
+			     const struct b43_txstatus *status);",296,../linux/drivers/net/wireless/broadcom/b43/dma.h,False,struct b43_wldev *dev,ignore,u,u,u,u,u,u,u,u,False,0:00:01.344679
+"
+int t4_free_mac_filt(struct adapter *adap, unsigned int mbox,
+		     unsigned int viid, unsigned int naddr,
+		     const u8 **addr, bool sleep_ok);",2022,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4.h,False,ignore,ignore,"
+		     unsigned int viid",ignore,ignore,ignore,u,u,u,u,False,0:00:01.448268
+"
+void amdgpu_ih_decode_iv_helper(struct amdgpu_device *adev,
+				struct amdgpu_ih_ring *ih,
+				struct amdgpu_iv_entry *entry);",96,../linux/drivers/gpu/drm/amd/amdgpu/amdgpu_ih.h,False,struct amdgpu_device *adev,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.396190
+"
+u32 ocfs2_hamming_encode(u32 parity, void *data, unsigned int d,
+			 unsigned int nr);",75,../linux/fs/ocfs2/blockcheck.h,False,u32 parity,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.110497
+"
+bool snd_midi_event_encode_byte(struct snd_midi_event *dev, unsigned char c,
+				struct snd_seq_event *ev);",33,../linux/include/sound/seq_midi_event.h,False,struct snd_midi_event *dev,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.041983
+"
+void t4_get_port_stats(struct adapter *adap, int idx, struct port_stats *p);",1932,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4.h,False,struct adapter *adap,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.450570
+"
+int mccic_irq(struct mcam_camera *cam, unsigned int irqs);",235,../linux/drivers/media/platform/marvell-ccic/mcam-core.h,False,ignore, unsigned int irqs,u,u,u,u,u,u,u,u,True,0:00:01.609926
+"u16 hpi_aesebu_receiver_set_format(u32 h_control, u16 source);",1499,../linux/sound/pci/asihpi/hpi.h,False,ignore, u16 source,u,u,u,u,u,u,u,u,True,0:00:01.697423
+"
+int p9dirent_read(struct p9_client *clnt, char *buf, int len,
+		  struct p9_dirent *dirent);",210,../linux/include/net/9p/client.h,False,ignore,ignore, int len,ignore,u,u,u,u,u,u,True,0:00:01.213168
+"
+void intel_edp_backlight_on(const struct intel_crtc_state *crtc_state,
+			    const struct drm_connector_state *conn_state);",65,../linux/drivers/gpu/drm/i915/display/intel_dp.h,False,const struct intel_crtc_state *crtc_state,ignore,u,u,u,u,u,u,u,u,True,0:00:02.367551
+"
+int cfg80211_wext_giwretry(struct net_device *dev,
+			   struct iw_request_info *info,
+			   struct iw_param *retry, char *extra);",49,../linux/include/net/cfg80211-wext.h,False,struct net_device *dev,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.914522
+"
+i40e_status i40e_aq_get_vsi_params(struct i40e_hw *hw,
+				struct i40e_vsi_context *vsi_ctx,
+				struct i40e_asq_cmd_details *cmd_details);",131,../linux/drivers/net/ethernet/intel/i40e/i40e_prototype.h,False,ignore,"
+				struct i40e_vsi_context *vsi_ctx",ignore,u,u,u,u,u,u,u,False,0:00:01.404361
+"
+unsigned int nf_nat_setup_info(struct nf_conn *ct,
+			       const struct nf_nat_range2 *range,
+			       enum nf_nat_manip_type maniptype);",40,../linux/include/net/netfilter/nf_nat.h,False,ignore,ignore,"
+			       enum nf_nat_manip_type maniptype",u,u,u,u,u,u,u,False,0:00:01.323724
+"
+int nfs_unlink(struct inode *, struct dentry *);",380,../linux/fs/nfs/internal.h,False,ignore, struct dentry *,u,u,u,u,u,u,u,u,False,0:00:01.396407
+"
+void htc_sta_drain(struct htc_target *target, u8 idx);",213,../linux/drivers/net/wireless/ath/ath9k/htc_hst.h,False,struct htc_target *target,ignore,u,u,u,u,u,u,u,u,False,0:00:01.318698
+"
+int numa_zonelist_order_handler(struct ctl_table *, int,
+		void *, size_t *, loff_t *);",1082,../linux/include/linux/mmzone.h,False,ignore,ignore,ignore, size_t *,ignore,u,u,u,u,u,False,0:00:01.349439
+"
+int drm_dp_find_vcpi_slots(struct drm_dp_mst_topology_mgr *mgr,
+			   int pbn);",817,../linux/include/drm/drm_dp_mst_helper.h,False,ignore,"
+			   int pbn",u,u,u,u,u,u,u,u,True,0:00:02.306705
+"i40e_status i40e_aq_get_rss_lut(struct i40e_hw *hw, u16 seid,
+				bool pf_lut, u8 *lut, u16 lut_size);",41,../linux/drivers/net/ethernet/intel/i40e/i40e_prototype.h,False,ignore,ignore,"
+				bool pf_lut",ignore,ignore,u,u,u,u,u,False,0:00:01.397832
+"ssize_t drm_dp_mst_dpcd_read(struct drm_dp_aux *aux,
+			     unsigned int offset, void *buffer, size_t size);",836,../linux/include/drm/drm_dp_mst_helper.h,False,ignore,"
+			     unsigned int offset",ignore,ignore,u,u,u,u,u,u,True,0:00:02.282599
+"
+void cfg80211_report_obss_beacon_khz(struct wiphy *wiphy, const u8 *frame,
+				     size_t len, int freq, int sig_dbm);",7715,../linux/include/net/cfg80211.h,False,ignore,ignore,ignore, int freq,ignore,u,u,u,u,u,False,0:00:02.063717
+"
+netdev_tx_t hostap_mgmt_start_xmit(struct sk_buff *skb,
+				   struct net_device *dev);",92,../linux/drivers/net/wireless/intersil/hostap/hostap_80211.h,False,struct sk_buff *skb,ignore,u,u,u,u,u,u,u,u,False,0:00:01.224685
+"
+void btrfs_del_inode_ref_in_log(struct btrfs_trans_handle *trans,
+				struct btrfs_root *root,
+				const char *name, int name_len,
+				struct btrfs_inode *inode, u64 dirid);",79,../linux/fs/btrfs/tree-log.h,False,ignore,ignore,ignore, int name_len,ignore,ignore,u,u,u,u,True,0:00:02.508383
+"
+u32 nvbios_P0260Xp(struct nvkm_bios *, int idx, u8 *ver, u8 *hdr,
+		   struct nvbios_P0260X *);",20,../linux/drivers/gpu/drm/nouveau/include/nvkm/subdev/bios/P0260.h,False,ignore, int idx,ignore,ignore,ignore,u,u,u,u,u,True,0:00:01.256500
+"u32 ODM_GetRFReg(struct odm_dm_struct *pDM_Odm, enum rf_radio_path eRFPath,
+		 u32 RegAddr, u32 BitMask);",45,../linux/drivers/staging/r8188eu/include/odm_interface.h,False,ignore,ignore,ignore, u32 BitMask,u,u,u,u,u,u,True,0:00:01.308535
+"int xfs_trans_alloc_inode(struct xfs_inode *ip, struct xfs_trans_res *resv,
+		unsigned int dblocks, unsigned int rblocks, bool force,
+		struct xfs_trans **tpp);",253,../linux/fs/xfs/xfs_trans.h,False,ignore,ignore,ignore,ignore,ignore,"
+		struct xfs_trans **tpp",u,u,u,u,False,0:00:01.735595
+"static inline int security_path_rename(const struct path *old_dir,
+				       struct dentry *old_dentry,
+				       const struct path *new_dir,
+				       struct dentry *new_dentry,
+				       unsigned int flags)
+",1830,../linux/include/linux/security.h,False,ignore,"
+				       struct dentry *old_dentry",ignore,ignore,ignore,u,u,u,u,u,True,0:00:02.165364
+"void vivid_rds_gen_fill(struct vivid_rds_gen *rds, unsigned freq,
+		    bool use_alternate);",38,../linux/drivers/media/test-drivers/vivid/vivid-rds-gen.h,False,ignore,ignore,"
+		    bool use_alternate",u,u,u,u,u,u,u,True,0:00:00.983715
+"int ib_get_eth_speed(struct ib_device *dev, u32 port_num, u16 *speed,
+		     u8 *width);",4409,../linux/include/rdma/ib_verbs.h,False,ignore, u32 port_num,ignore,ignore,u,u,u,u,u,u,False,0:00:01.370421
+"
+void pcie_aspm_exit_link_state(struct pci_dev *pdev);",561,../linux/drivers/pci/pci.h,False,struct pci_dev *pdev,u,u,u,u,u,u,u,u,u,True,0:00:01.365773
+"
+void csio_hw_tp_wr_bits_indirect(struct csio_hw *, unsigned int,
+				 unsigned int, unsigned int);",632,../linux/drivers/scsi/csiostor/csio_hw.h,False,ignore, unsigned int,ignore,ignore,u,u,u,u,u,u,True,0:00:01.818791
+"int qlcnic_82xx_hw_read_wx_2M(struct qlcnic_adapter *adapter, ulong, int *);",166,../linux/drivers/net/ethernet/qlogic/qlcnic/qlcnic_hw.h,False,ignore,ignore, int *,u,u,u,u,u,u,u,False,0:00:01.312041
+"
+int qla4xxx_process_ddb_changed(struct scsi_qla_host *ha, uint32_t fw_ddb_index,
+		uint32_t state, uint32_t conn_error);",74,../linux/drivers/scsi/qla4xxx/ql4_glbl.h,False,ignore,ignore,"
+		uint32_t state",ignore,u,u,u,u,u,u,False,0:00:01.339200
+"
+size_t pdu_read(struct p9_fcall *pdu, void *data, size_t size);",16,../linux/net/9p/protocol.h,False,ignore,ignore, size_t size,u,u,u,u,u,u,u,True,0:00:01.214937
+"int input_mt_assign_slots(struct input_dev *dev, int *slots,
+			  const struct input_mt_pos *pos, int num_pos,
+			  int dmax);",124,../linux/include/linux/input/mt.h,False,ignore,ignore,ignore,ignore,"
+			  int dmax",u,u,u,u,u,True,0:00:01.187590
+"
+int bdev_dax_pgoff(struct block_device *, sector_t, size_t, pgoff_t *pgoff);",107,../linux/include/linux/dax.h,False,ignore,ignore, size_t,ignore,u,u,u,u,u,u,False,0:00:01.110258
+void wsm_lock_tx(struct cw1200_common *priv);,1789,../linux/drivers/net/wireless/st/cw1200/wsm.h,False,struct cw1200_common *priv,u,u,u,u,u,u,u,u,u,False,0:00:01.338730
+"
+int v9fs_dir_release(struct inode *inode, struct file *filp);",56,../linux/fs/9p/v9fs_vfs.h,False,struct inode *inode,ignore,u,u,u,u,u,u,u,u,False,0:00:01.206806
+"
+int neigh_ifdown(struct neigh_table *tbl, struct net_device *dev);",344,../linux/include/net/neighbour.h,False,struct neigh_table *tbl,ignore,u,u,u,u,u,u,u,u,False,0:00:01.349326
+"
+ZSTDLIB_API void   ZSTD_copyDCtx(ZSTD_DCtx* dctx, const ZSTD_DCtx* preparedDCtx);",2385,../linux/include/linux/zstd_lib.h,False,ignore, const ZSTD_DCtx* preparedDCtx,u,u,u,u,u,u,u,u,True,0:00:01.257486
+"
+void ocfs2_resmap_claimed_bits(struct ocfs2_reservation_map *resmap,
+			       struct ocfs2_alloc_reservation *resv,
+			       u32 cstart, u32 clen);",146,../linux/fs/ocfs2/reservations.h,False,ignore,ignore,ignore, u32 clen,u,u,u,u,u,u,True,0:00:01.629503
+"
+int x86_decode_emulated_instruction(struct kvm_vcpu *vcpu, int emulation_type,
+				    void *insn, int insn_len);",330,../linux/arch/x86/kvm/x86.h,False,ignore,ignore,ignore, int insn_len,u,u,u,u,u,u,False,0:00:05.283036
+"int security_xfrm_policy_alloc(struct xfrm_sec_ctx **ctxp,
+			       struct xfrm_user_sec_ctx *sec_ctx, gfp_t gfp);",1682,../linux/include/linux/security.h,False,ignore,ignore, gfp_t gfp,u,u,u,u,u,u,u,True,0:00:02.160426
+"void setPLL_single(struct nvkm_devinit *, u32, struct nvkm_pll_vals *);",19,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/devinit/nv04.h,False,ignore, u32,ignore,u,u,u,u,u,u,u,True,0:00:01.346608
+"
+int lpfc_issue_els_plogi(struct lpfc_vport *, uint32_t, uint8_t);",154,../linux/drivers/scsi/lpfc/lpfc_crtn.h,False,ignore, uint32_t,ignore,u,u,u,u,u,u,u,True,0:00:02.929300
+"
+void rds_rdma_send_complete(struct rds_message *rm, int wc_status);",941,../linux/net/rds/rds.h,False,struct rds_message *rm,ignore,u,u,u,u,u,u,u,u,False,0:00:01.346404
+"
+void nf_ct_netns_put(struct net *net, u8 nfproto);",184,../linux/include/net/netfilter/nf_conntrack.h,False,ignore, u8 nfproto,u,u,u,u,u,u,u,u,False,0:00:01.333575
+"
+ifdef CONFIG_RFS_ACCEL
+bool efx_farch_filter_rfs_expire_one(struct efx_nic *efx, u32 flow_id,
+				     unsigned int index);",357,../linux/drivers/net/ethernet/sfc/nic.h,False,ignore, u32 flow_id,ignore,u,u,u,u,u,u,u,False,0:00:01.423706
+"
+int agp_remove_client(pid_t id);",98,../linux/drivers/char/agp/compat_ioctl.h,False,pid_t id,u,u,u,u,u,u,u,u,u,True,0:00:01.282138
+"
+int amdgpu_sa_bo_new(struct amdgpu_sa_manager *sa_manager,
+		     struct amdgpu_sa_bo **sa_bo,
+		     unsigned size, unsigned align);",359,../linux/drivers/gpu/drm/amd/amdgpu/amdgpu_object.h,False,ignore,"
+		     struct amdgpu_sa_bo **sa_bo",ignore,ignore,u,u,u,u,u,u,False,0:00:01.262610
+"
+void folio_end_writeback(struct folio *folio);",874,../linux/include/linux/pagemap.h,False,struct folio *folio,u,u,u,u,u,u,u,u,u,True,0:00:02.592790
+"
+int p9_client_read(struct p9_fid *fid, u64 offset, struct iov_iter *to, int *err);",204,../linux/include/net/9p/client.h,False,ignore, u64 offset,ignore,ignore,u,u,u,u,u,u,False,0:00:01.182199
+"
+uint16_t lpfc_sli4_next_xritag(struct lpfc_hba *);",1098,../linux/drivers/scsi/lpfc/lpfc_sli4.h,False,struct lpfc_hba *,u,u,u,u,u,u,u,u,u,True,0:00:04.885665
+"
+int fc_seq_send(struct fc_lport *lport, struct fc_seq *sp, struct fc_frame *fp);",996,../linux/include/scsi/libfc.h,False,ignore,ignore, struct fc_frame *fp,u,u,u,u,u,u,u,True,0:00:01.620032
+"
+void cec_transmit_done_ts(struct cec_adapter *adap, u8 status,
+			  u8 arb_lost_cnt, u8 nack_cnt, u8 low_drive_cnt,
+			  u8 error_cnt, ktime_t ts);",310,../linux/include/media/cec.h,False,struct cec_adapter *adap,ignore,ignore,ignore,ignore,ignore,ignore,u,u,u,False,0:00:01.154278
+"
+void igb_reinit_locked(struct igb_adapter *);",722,../linux/drivers/net/ethernet/intel/igb/igb.h,False,struct igb_adapter *,u,u,u,u,u,u,u,u,u,False,0:00:01.497880
+"
+static inline void dwc3_otg_update(struct dwc3 *dwc, bool ignore_idstatus)
+",1579,../linux/drivers/usb/dwc3/core.h,False,ignore, bool ignore_idstatus,u,u,u,u,u,u,u,u,True,0:00:01.389221
+"
+void jpeg_v2_0_dec_ring_emit_vm_flush(struct amdgpu_ring *ring,
+				unsigned vmid, uint64_t pd_addr);",55,../linux/drivers/gpu/drm/amd/amdgpu/jpeg_v2_0.h,False,ignore,"
+				unsigned vmid",ignore,u,u,u,u,u,u,u,True,0:00:01.542843
+"void intel_vgpu_trigger_virtual_event(struct intel_vgpu *vgpu,
+	enum intel_gvt_event_type event);",216,../linux/drivers/gpu/drm/i915/gvt/interrupt.h,False,struct intel_vgpu *vgpu,ignore,u,u,u,u,u,u,u,u,True,0:00:01.535147
+"void rtl8723be_get_hw_reg(struct ieee80211_hw *hw, u8 variable, u8 *val);",6,../linux/drivers/net/wireless/realtek/rtlwifi/rtl8723be/hw.h,False,struct ieee80211_hw *hw,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.328303
+"void r8712_eeprom_write16(struct _adapter *padapter, u16 reg, u16 data);",83,../linux/drivers/staging/rtl8712/rtl871x_eeprom.h,False,ignore,ignore, u16 data,u,u,u,u,u,u,u,True,0:00:01.317210
+"
+void tcp_chrono_stop(struct sock *sk, const enum tcp_chrono type);",1774,../linux/include/net/tcp.h,False,ignore, const enum tcp_chrono type,u,u,u,u,u,u,u,u,False,0:00:01.402086
+"
+int dquot_quota_sync(struct super_block *sb, int type);",106,../linux/include/linux/quotaops.h,False,ignore, int type,u,u,u,u,u,u,u,u,True,0:00:01.746076
+"
+int snd_hda_mixer_amp_volume_put(struct snd_kcontrol *kcontrol,
+				 struct snd_ctl_elem_value *ucontrol);",100,../linux/sound/pci/hda/hda_local.h,False,struct snd_kcontrol *kcontrol,ignore,u,u,u,u,u,u,u,u,True,0:00:01.925877
+"int gv100_gsp_new(struct nvkm_device *, enum nvkm_subdev_type, int, struct nvkm_gsp **);",11,../linux/drivers/gpu/drm/nouveau/include/nvkm/subdev/gsp.h,False,ignore,ignore, int,ignore,u,u,u,u,u,u,False,0:00:01.171066
+"
+void ath5k_beacon_config(struct ath5k_hw *ah);",98,../linux/drivers/net/wireless/ath/ath5k/base.h,False,struct ath5k_hw *ah,u,u,u,u,u,u,u,u,u,False,0:00:01.315014
+"
+bool nft_rbtree_lookup(const struct net *net, const struct nft_set *set,
+		       const u32 *key, const struct nft_set_ext **ext);",96,../linux/include/net/netfilter/nf_tables_core.h,False,ignore,ignore,ignore, const struct nft_set_ext **ext,u,u,u,u,u,u,False,0:00:01.250817
+"
+int thermal_zone_device_set_policy(struct thermal_zone_device *, char *);",123,../linux/drivers/thermal/thermal_core.h,False,struct thermal_zone_device *,ignore,u,u,u,u,u,u,u,u,False,0:00:01.185329
+"u16 hpi_sample_clock_set_local_rate(u32 h_control, u32 sample_rate);",1584,../linux/sound/pci/asihpi/hpi.h,False,u32 h_control,ignore,u,u,u,u,u,u,u,u,True,0:00:01.679325
+void amdgpu_acpi_get_backlight_caps(struct amdgpu_dm_backlight_caps *caps);,1407,../linux/drivers/gpu/drm/amd/amdgpu/amdgpu.h,False,struct amdgpu_dm_backlight_caps *caps,u,u,u,u,u,u,u,u,u,False,0:00:01.287464
+"
+int wl1251_acx_group_address_tbl(struct wl1251 *wl, bool enable,
+				 void *mc_list, u32 mc_list_len);",1452,../linux/drivers/net/wireless/ti/wl1251/acx.h,False,struct wl1251 *wl,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.308200
+"
+int wrmsrl_safe_on_cpu(unsigned int cpu, u32 msr_no, u64 q);",341,../linux/arch/x86/include/asm/msr.h,False,ignore,ignore, u64 q,u,u,u,u,u,u,u,True,0:00:01.001886
+"
+int aq_mss_set_ingress_sa_record(struct aq_hw_s *hw,
+				 const struct aq_mss_ingress_sa_record *rec,
+				 u16 table_index);",207,../linux/drivers/net/ethernet/aquantia/atlantic/macsec/macsec_api.h,False,ignore,"
+				 const struct aq_mss_ingress_sa_record *rec",ignore,u,u,u,u,u,u,u,True,0:00:01.639844
+"int ocfs2_node_num_to_slot(struct ocfs2_super *osb, unsigned int node_num);",21,../linux/fs/ocfs2/slot_map.h,False,struct ocfs2_super *osb,ignore,u,u,u,u,u,u,u,u,True,0:00:01.606334
+"
+int __orinoco_hw_set_multicast_list(struct orinoco_private *priv,
+				    struct net_device *dev,
+				    int mc_count, int promisc);",46,../linux/drivers/net/wireless/intersil/orinoco/hw.h,False,ignore,"
+				    struct net_device *dev",ignore,ignore,u,u,u,u,u,u,True,0:00:01.523947
+"u16 hpi_instream_ancillary_write(u32 h_instream,
+	const struct hpi_anc_frame *p_anc_frame_buffer,
+	u32 anc_frame_buffer_size_in_bytes,
+	u32 number_of_ancillary_frames_to_write);",1306,../linux/sound/pci/asihpi/hpi.h,False,ignore,"
+	const struct hpi_anc_frame *p_anc_frame_buffer",ignore,ignore,u,u,u,u,u,u,True,0:00:01.682209
+"u32 mt7601u_rr(struct mt7601u_dev *dev, u32 offset);",282,../linux/drivers/net/wireless/mediatek/mt7601u/mt7601u.h,False,ignore, u32 offset,u,u,u,u,u,u,u,u,False,0:00:01.349810
+"
+int viafb_i2c_writebyte(u8 adap, u8 slave_addr, u8 index, u8 data);",21,../linux/include/linux/via_i2c.h,False,u8 adap,ignore,ignore,ignore,u,u,u,u,u,u,True,0:00:01.253088
+"
+vm_fault_t vmf_insert_pfn_pmd_prot(struct vm_fault *vmf, pfn_t pfn,
+				   pgprot_t pgprot, bool write);",41,../linux/include/linux/huge_mm.h,False,struct vm_fault *vmf,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.165746
+"
+void qlcnic_set_sds_ring_count(struct qlcnic_adapter *, u8);",1640,../linux/drivers/net/ethernet/qlogic/qlcnic/qlcnic.h,False,struct qlcnic_adapter *,ignore,u,u,u,u,u,u,u,u,False,0:00:01.381777
+"int snd_usb_ctl_msg(struct usb_device *dev, unsigned int pipe,
+		    __u8 request, __u8 requesttype, __u16 value, __u16 index,
+		    void *data, __u16 size);",11,../linux/sound/usb/helper.h,False,ignore,ignore,ignore,ignore, __u16 value,ignore,ignore,ignore,u,u,True,0:00:01.115986
+"
+u64 btrfs_alloc_from_cluster(struct btrfs_block_group *block_group,
+			     struct btrfs_free_cluster *cluster, u64 bytes,
+			     u64 min_start, u64 *max_extent_size);",129,../linux/fs/btrfs/free-space-cache.h,False,ignore,ignore,ignore,"
+			     u64 min_start",ignore,u,u,u,u,u,True,0:00:02.100586
+"int uvd_v1_0_ring_test(struct radeon_device *rdev, struct radeon_ring *ring);",939,../linux/drivers/gpu/drm/radeon/radeon_asic.h,False,struct radeon_device *rdev,ignore,u,u,u,u,u,u,u,u,True,0:00:01.409010
+"
+int mlx5_query_qcam_reg(struct mlx5_core_dev *mdev, u32 *qcam,
+			u8 feature_group, u8 access_reg_group);",188,../linux/drivers/net/ethernet/mellanox/mlx5/core/mlx5_core.h,False,ignore,ignore,ignore, u8 access_reg_group,u,u,u,u,u,u,False,0:00:01.372099
+"
+void i40e_rm_vlan_all_mac(struct i40e_vsi *vsi, s16 vid);",1212,../linux/drivers/net/ethernet/intel/i40e/i40e.h,False,ignore, s16 vid,u,u,u,u,u,u,u,u,False,0:00:01.719498
+int subsys_interface_register(struct subsys_interface *sif);,69,../linux/include/linux/device.h,False,struct subsys_interface *sif,u,u,u,u,u,u,u,u,u,True,0:00:01.222017
+"void __warn(const char *file, int line, void *caller, unsigned taint,
+	    struct pt_regs *regs, struct warn_args *args);",116,../linux/include/asm-generic/bug.h,False,ignore, int line,ignore,ignore,ignore,ignore,u,u,u,u,True,0:00:01.219302
+"
+bool xlog_is_buffer_cancelled(struct xlog *log, xfs_daddr_t blkno, uint len);",122,../linux/fs/xfs/libxfs/xfs_log_recover.h,False,ignore, xfs_daddr_t blkno,ignore,u,u,u,u,u,u,u,True,0:00:01.951006
+"
+void radeon_benchmark(struct radeon_device *rdev, int test_number);",1804,../linux/drivers/gpu/drm/radeon/radeon.h,False,struct radeon_device *rdev,ignore,u,u,u,u,u,u,u,u,True,0:00:01.327982
+"
+void drm_bridge_chain_mode_set(struct drm_bridge *bridge,
+			       const struct drm_display_mode *mode,
+			       const struct drm_display_mode *adjusted_mode);",874,../linux/include/drm/drm_bridge.h,False,ignore,"
+			       const struct drm_display_mode *mode",ignore,u,u,u,u,u,u,u,True,0:00:01.366876
+"
+void gm200_grctx_generate_r406500(struct gf100_gr *);",137,../linux/drivers/gpu/drm/nouveau/nvkm/engine/gr/ctxgf100.h,False,struct gf100_gr *,u,u,u,u,u,u,u,u,u,False,0:00:01.231830
+"
+void gk104_fifo_runlist_commit(struct gk104_fifo *, int runl,
+			       struct nvkm_memory *, int);",140,../linux/drivers/gpu/drm/nouveau/nvkm/engine/fifo/gk104.h,False,ignore,ignore,ignore, int,u,u,u,u,u,u,True,0:00:01.533473
+"
+int remap_io_sg(struct vm_area_struct *vma,
+		unsigned long addr, unsigned long size,
+		struct scatterlist *sgl, resource_size_t iobase);",1980,../linux/drivers/gpu/drm/i915/i915_drv.h,False,ignore,ignore,ignore,"
+		struct scatterlist *sgl",ignore,u,u,u,u,u,True,0:00:01.431871
+"int hw_atl_utils_fw_downld_dwords(struct aq_hw_s *self, u32 a,
+				  u32 *p, u32 cnt);",623,../linux/drivers/net/ethernet/aquantia/atlantic/hw_atl/hw_atl_utils.h,False,ignore, u32 a,ignore,ignore,u,u,u,u,u,u,False,0:00:01.229205
+u32 rtw_init_cmd_priv(struct cmd_priv *pcmdpriv);,87,../linux/drivers/staging/r8188eu/include/rtw_cmd.h,False,struct cmd_priv *pcmdpriv,u,u,u,u,u,u,u,u,u,False,0:00:01.260922
+"
+void attribute_container_add_device(struct device *dev,
+				    int (*fn)(struct attribute_container *,
+					      struct device *,
+					      struct device *));",47,../linux/include/linux/attribute_container.h,False,ignore,"
+				    int (*fn",u,u,u,u,u,u,u,u,True,0:00:01.116294
+"void nf_send_unreach6(struct net *net, struct sk_buff *skb_in, unsigned char code,
+		      unsigned int hooknum);",8,../linux/include/net/netfilter/ipv6/nf_reject.h,False,ignore,ignore, unsigned char code,ignore,u,u,u,u,u,u,False,0:00:01.340507
+"
+s32  igb_vfta_set(struct e1000_hw *hw, u32 vid, u32 vind,
+		  bool vlan_on, bool vlvf_bypass);",40,../linux/drivers/net/ethernet/intel/igb/e1000_mac.h,False,ignore,ignore,ignore,"
+		  bool vlan_on",ignore,u,u,u,u,u,True,0:00:01.542493
+"
+void ex_btc8821a2ant_pnp_notify(struct btc_coexist *btcoexist, u8 pnp_state);",209,../linux/drivers/net/wireless/realtek/rtlwifi/btcoexist/halbtc8821a2ant.h,False,ignore, u8 pnp_state,u,u,u,u,u,u,u,u,False,0:00:01.331477
+"u32 hfi1_num_netdev_contexts(struct hfi1_devdata *dd, u32 available_contexts,
+			     struct cpumask *cpu_mask);",88,../linux/drivers/infiniband/hw/hfi1/netdev.h,False,ignore, u32 available_contexts,ignore,u,u,u,u,u,u,u,False,0:00:01.385743
+"
+int wl12xx_acx_set_ba_receiver_session(struct wl1271 *wl, u8 tid_index,
+				       u16 ssn, bool enable, u8 peer_hlid,
+				       u8 win_size);",1102,../linux/drivers/net/wireless/ti/wlcore/acx.h,False,ignore,ignore,ignore, bool enable,ignore,ignore,u,u,u,u,False,0:00:01.363149
+"
+int __unix_stream_recvmsg(struct sock *sk, struct msghdr *msg, size_t size,
+			  int flags);",90,../linux/include/net/af_unix.h,False,struct sock *sk,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.288848
+"
+void drm_fb_xrgb8888_to_rgb565(void *dst, void *vaddr,
+			       struct drm_framebuffer *fb,
+			       struct drm_rect *clip, bool swab);",22,../linux/include/drm/drm_format_helper.h,False,ignore,ignore,"
+			       struct drm_framebuffer *fb",ignore,ignore,u,u,u,u,u,True,0:00:01.139060
+"
+int efx_mcdi_reset(struct efx_nic *efx, enum reset_type method);",363,../linux/drivers/net/ethernet/sfc/mcdi.h,False,ignore, enum reset_type method,u,u,u,u,u,u,u,u,False,0:00:01.379771
+"
+int change_huge_pmd(struct vm_area_struct *vma, pmd_t *pmd, unsigned long addr,
+		    pgprot_t newprot, unsigned long cp_flags);",39,../linux/include/linux/huge_mm.h,False,ignore,ignore, unsigned long addr,ignore,ignore,u,u,u,u,u,False,0:00:01.178206
+"
+void qede_fill_rss_params(struct qede_dev *edev,
+			  struct qed_update_vport_rss_params *rss, u8 *update);",554,../linux/drivers/net/ethernet/qlogic/qede/qede.h,False,struct qede_dev *edev,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.344656
+"int mlx5_esw_offloads_sf_vport_enable(struct mlx5_eswitch *esw, struct devlink_port *dl_port,
+				      u16 vport_num, u32 controller, u32 sfnum);",698,../linux/drivers/net/ethernet/mellanox/mlx5/core/eswitch.h,False,ignore,ignore,ignore, u32 controller,ignore,u,u,u,u,u,False,0:00:01.501170
+"
+s32 igb_read_invm_version(struct e1000_hw *hw,
+			  struct e1000_fw_version *invm_ver);",10,../linux/drivers/net/ethernet/intel/igb/e1000_i210.h,False,ignore,"
+			  struct e1000_fw_version *invm_ver",u,u,u,u,u,u,u,u,False,0:00:01.203183
+"
+s32 e1000e_get_cable_length_m88(struct e1000_hw *hw);",16,../linux/drivers/net/ethernet/intel/e1000e/phy.h,False,struct e1000_hw *hw,u,u,u,u,u,u,u,u,u,True,0:00:01.725253
+"
+int qlcnic_setup_netdev(struct qlcnic_adapter *, struct net_device *, int);",1700,../linux/drivers/net/ethernet/qlogic/qlcnic/qlcnic.h,False,struct qlcnic_adapter *,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.377709
+"int _rtw_pwr_wakeup(struct adapter *adapter, u32 ips_defer_ms,
+		    const char *caller);",131,../linux/drivers/staging/r8188eu/include/rtw_pwrctrl.h,False,struct adapter *adapter,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.478195
+"
+void efx_remove_interrupts(struct efx_nic *efx);",17,../linux/drivers/net/ethernet/sfc/efx_channels.h,False,struct efx_nic *efx,u,u,u,u,u,u,u,u,u,False,0:00:01.350662
+"int fib6_nh_init(struct net *net, struct fib6_nh *fib6_nh,
+		 struct fib6_config *cfg, gfp_t gfp_flags,
+		 struct netlink_ext_ack *extack);",485,../linux/include/net/ip6_fib.h,False,ignore,ignore,"
+		 struct fib6_config *cfg",ignore,ignore,u,u,u,u,u,False,0:00:01.477397
+"
+int vfs_link(struct dentry *, struct user_namespace *, struct inode *,
+	     struct dentry *, struct inode **);",1949,../linux/include/linux/fs.h,False,ignore,ignore, struct inode *,ignore,ignore,u,u,u,u,u,True,0:00:01.125720
+"
+u32 airtime_link_metric_get(struct ieee80211_local *local,
+			    struct sta_info *sta);",264,../linux/net/mac80211/mesh.h,False,ignore,"
+			    struct sta_info *sta",u,u,u,u,u,u,u,u,False,0:00:01.365652
+"
+void reiserfs_cache_bitmap_metadata(struct super_block *sb, struct buffer_head *bh, struct reiserfs_bitmap_info *info);",3321,../linux/fs/reiserfs/reiserfs.h,False,ignore,ignore, struct reiserfs_bitmap_info *info,u,u,u,u,u,u,u,False,0:00:01.088335
+"void inet_csk_addr2sockaddr(struct sock *sk, struct sockaddr *uaddr);",309,../linux/include/net/inet_connection_sock.h,False,struct sock *sk,ignore,u,u,u,u,u,u,u,u,False,0:00:01.355371
+"
+void nvkm_memory_unref(struct nvkm_memory **);",50,../linux/drivers/gpu/drm/nouveau/include/nvkm/core/memory.h,False,struct nvkm_memory **,u,u,u,u,u,u,u,u,u,False,0:00:01.177334
+"
+int nci_spi_send(struct nci_spi *nspi,
+		 struct completion *write_handshake_completion,
+		 struct sk_buff *skb);",417,../linux/include/net/nfc/nci_core.h,False,ignore,"
+		 struct completion *write_handshake_completion",ignore,u,u,u,u,u,u,u,True,0:00:01.227830
+"
+int atl1c_read_phy_core(struct atl1c_hw *hw, bool ext, u8 dev,
+			u16 reg, u16 *phy_data);",44,../linux/drivers/net/ethernet/atheros/atl1c/atl1c_hw.h,False,ignore,ignore, u8 dev,ignore,ignore,u,u,u,u,u,False,0:00:01.293674
+"int f2fs_check_nid_range(struct f2fs_sb_info *sbi, nid_t nid);",3398,../linux/fs/f2fs/f2fs.h,False,ignore, nid_t nid,u,u,u,u,u,u,u,u,True,0:00:02.636387
+"
+u64 vnt_get_next_tbtt(u64 tsf, u16 beacon_interval);",37,../linux/drivers/staging/vt6656/card.h,False,u64 tsf,ignore,u,u,u,u,u,u,u,u,False,0:00:01.326755
+"
+int regulator_list_voltage_pickable_linear_range(struct regulator_dev *rdev,
+						   unsigned int selector);",680,../linux/include/linux/regulator/driver.h,False,ignore,"
+						   unsigned int selector",u,u,u,u,u,u,u,u,False,0:00:01.134969
+"
+void wm831x_device_shutdown(struct wm831x *wm831x);",416,../linux/include/linux/mfd/wm831x/core.h,False,struct wm831x *wm831x,u,u,u,u,u,u,u,u,u,True,0:00:01.143037
+"
+void rds_inc_info_copy(struct rds_incoming *inc,
+		       struct rds_info_iterator *iter,
+		       __be32 saddr, __be32 daddr, int flip);",904,../linux/net/rds/rds.h,False,ignore,ignore,ignore, __be32 daddr,ignore,u,u,u,u,u,False,0:00:01.333331
+"
+int mlx4_ib_modify_wq(struct ib_wq *wq, struct ib_wq_attr *wq_attr,
+		      u32 wq_attr_mask, struct ib_udata *udata);",926,../linux/drivers/infiniband/hw/mlx4/mlx4_ib.h,False,ignore, struct ib_wq_attr *wq_attr,ignore,ignore,u,u,u,u,u,u,False,0:00:01.403120
+"
+int v4l2_fh_is_singular(struct v4l2_fh *fh);",142,../linux/include/media/v4l2-fh.h,False,struct v4l2_fh *fh,u,u,u,u,u,u,u,u,u,True,0:00:01.300479
+"
+int svnic_dev_alloc_desc_ring(struct vnic_dev *vdev, struct vnic_dev_ring *ring,
+			     unsigned int desc_count, unsigned int desc_size);",79,../linux/drivers/scsi/snic/vnic_dev.h,False,ignore,ignore,"
+			     unsigned int desc_count",ignore,u,u,u,u,u,u,True,0:00:01.260242
+"
+int kernel_recvmsg(struct socket *sock, struct msghdr *msg, struct kvec *vec,
+		   size_t num, size_t len, int flags);",309,../linux/include/linux/net.h,False,ignore, struct msghdr *msg,ignore,ignore,ignore,ignore,u,u,u,u,False,0:00:01.274093
+"size_t FSE_decompress_wksp_bmi2(void* dst, size_t dstCapacity, const void* cSrc, size_t cSrcSize, unsigned maxLog, void* workSpace, size_t wkspSize, int bmi2);",356,../linux/lib/zstd/common/fse.h,False,ignore, size_t dstCapacity,ignore,ignore,ignore,ignore,ignore,ignore,u,u,True,0:00:01.281429
+"void __bpf_free_used_btfs(struct bpf_prog_aux *aux,
+			  struct btf_mod_pair *used_btfs, u32 len);",1946,../linux/include/linux/bpf.h,False,ignore,"
+			  struct btf_mod_pair *used_btfs",ignore,u,u,u,u,u,u,u,False,0:00:01.314797
+"int qib_ruc_check_hdr(struct qib_ibport *ibp, struct ib_header *hdr,
+		      int has_grh, struct rvt_qp *qp, u32 bth0);",319,../linux/drivers/infiniband/hw/qib/qib_verbs.h,False,ignore,ignore,ignore, struct rvt_qp *qp,ignore,u,u,u,u,u,False,0:00:01.332009
+"
+void smc_rtoken_set(struct smc_link_group *lgr, int link_idx, int link_idx_new,
+		    __be32 nw_rkey_known, __be64 nw_vaddr, __be32 nw_rkey);",485,../linux/net/smc/smc_core.h,False,ignore,ignore,ignore,"
+		    __be32 nw_rkey_known",ignore,ignore,u,u,u,u,False,0:00:01.393110
+"
+void bnx2x_vfop_qctor_dump_tx(struct bnx2x *bp, struct bnx2x_virtf *vf,
+			    struct bnx2x_queue_init_params *init_params,
+			    struct bnx2x_queue_setup_params *setup_params,
+			    u16 q_idx, u16 sb_idx);",437,../linux/drivers/net/ethernet/broadcom/bnx2x/bnx2x_sriov.h,False,struct bnx2x *bp,ignore,ignore,ignore,ignore,ignore,u,u,u,u,True,0:00:02.061595
+"
+int mlx4_QUERY_IF_STAT_wrapper(struct mlx4_dev *dev, int slave,
+			       struct mlx4_vhcr *vhcr,
+			       struct mlx4_cmd_mailbox *inbox,
+			       struct mlx4_cmd_mailbox *outbox,
+			       struct mlx4_cmd_info *cmd);",1356,../linux/drivers/net/ethernet/mellanox/mlx4/mlx4.h,False,ignore, int slave,ignore,ignore,ignore,ignore,u,u,u,u,False,0:00:01.280914
+"
+int pnfs_generic_sync(struct inode *inode, bool datasync);",304,../linux/fs/nfs/pnfs.h,False,struct inode *inode,ignore,u,u,u,u,u,u,u,u,False,0:00:01.450116
+"
+void ufshcd_schedule_eh_work(struct ufs_hba *hba);",1037,../linux/drivers/scsi/ufs/ufshcd.h,False,struct ufs_hba *hba,u,u,u,u,u,u,u,u,u,False,0:00:01.397372
+"
+void mvs_do_release_task(struct mvs_info *mvi, int phy_no,
+			struct domain_device *dev);",456,../linux/drivers/scsi/mvsas/mv_sas.h,False,ignore,ignore,"
+			struct domain_device *dev",u,u,u,u,u,u,u,False,0:00:01.190883
+"bool rtl92e_set_rf_state(struct net_device *dev,
+			 enum rt_rf_power_state StateToSet,
+			 RT_RF_CHANGE_SOURCE ChangeSource);",601,../linux/drivers/staging/rtl8192e/rtl8192e/rtl_core.h,False,ignore,ignore,"
+			 RT_RF_CHANGE_SOURCE ChangeSource",u,u,u,u,u,u,u,True,0:00:01.771884
+"int gk20a_volt_ctor(struct nvkm_device *device, enum nvkm_subdev_type, int,
+		    const struct cvb_coef *coefs, int nb_coefs,
+		    int vmin, struct gk20a_volt *volt);",41,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/volt/gk20a.h,False,struct nvkm_device *device,ignore,ignore,ignore,ignore,ignore,ignore,u,u,u,True,0:00:01.285939
+"void mlxsw_afk_values_add_u32(struct mlxsw_afk_element_values *values,
+			      enum mlxsw_afk_element element,
+			      u32 key_value, u32 mask_value);",209,../linux/drivers/net/ethernet/mellanox/mlxsw/core_acl_flex_keys.h,False,ignore,ignore,"
+			      u32 key_value",ignore,u,u,u,u,u,u,True,0:00:01.132535
+"
+void smc_sndbuf_sync_sg_for_cpu(struct smc_connection *conn);",488,../linux/net/smc/smc_core.h,False,struct smc_connection *conn,u,u,u,u,u,u,u,u,u,False,0:00:01.404473
+"
+void ocfs2_metadata_cache_io_lock(struct ocfs2_caching_info *ci);",50,../linux/fs/ocfs2/uptodate.h,False,struct ocfs2_caching_info *ci,u,u,u,u,u,u,u,u,u,True,0:00:01.631827
+"
+int asd_erase_nv_sector(struct asd_ha_struct *asd_ha,
+		u32 flash_addr, u32 size);",101,../linux/drivers/scsi/aic94xx/aic94xx_sds.h,False,ignore,"
+		u32 flash_addr",ignore,u,u,u,u,u,u,u,True,0:00:01.376037
+"
+s32 ixgbe_host_interface_command(struct ixgbe_hw *hw, void *, u32 length,
+				 u32 timeout, bool return_data);",91,../linux/drivers/net/ethernet/intel/ixgbe/ixgbe_common.h,False,ignore,ignore,ignore,ignore, bool return_data,u,u,u,u,u,True,0:00:01.989510
+"
+int timer_migration_handler(struct ctl_table *table, int write,
+			    void *buffer, size_t *lenp, loff_t *ppos);",203,../linux/include/linux/timer.h,False,ignore, int write,ignore,ignore,ignore,u,u,u,u,u,True,0:00:01.773324
+void rtw_usleep_os(int us);,151,../linux/drivers/staging/r8188eu/include/osdep_service.h,False,int us,u,u,u,u,u,u,u,u,u,True,0:00:01.351354
+"
+int t4_sge_ctxt_rd_bd(struct adapter *adap, unsigned int cid,
+		      enum ctxt_type ctype, u32 *data);",2074,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4.h,False,struct adapter *adap,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.435266
+"
+int rv730_populate_mclk_value(struct radeon_device *rdev,
+			      u32 engine_clock, u32 memory_clock,
+			      LPRV7XX_SMC_MCLK_VALUE mclk);",184,../linux/drivers/gpu/drm/radeon/rv770_dpm.h,False,ignore,ignore, u32 memory_clock,ignore,u,u,u,u,u,u,True,0:00:01.370494
+"
+void tcpm_pd_receive(struct tcpm_port *port,
+		     const struct pd_message *msg);",162,../linux/include/linux/usb/tcpm.h,False,ignore,"
+		     const struct pd_message *msg",u,u,u,u,u,u,u,u,True,0:00:02.051053
+"
+bool nft_pipapo_lookup(const struct net *net, const struct nft_set *set,
+		       const u32 *key, const struct nft_set_ext **ext);",117,../linux/include/net/netfilter/nf_tables_core.h,False,ignore,ignore,"
+		       const u32 *key",ignore,u,u,u,u,u,u,False,0:00:01.326399
+"
+void rtl_c2hcmd_enqueue(struct ieee80211_hw *hw, struct sk_buff *skb);",111,../linux/drivers/net/wireless/realtek/rtlwifi/base.h,False,ignore, struct sk_buff *skb,u,u,u,u,u,u,u,u,False,0:00:01.330430
+"
+void rtl92d_dm_write_dig(struct ieee80211_hw *hw);",92,../linux/drivers/net/wireless/realtek/rtlwifi/rtl8192de/dm.h,False,struct ieee80211_hw *hw,u,u,u,u,u,u,u,u,u,False,0:00:01.319211
+"
+int t4_query_params_rw(struct adapter *adap, unsigned int mbox, unsigned int pf,
+		       unsigned int vf, unsigned int nparams, const u32 *params,
+		       u32 *val, int rw, bool sleep_ok);",1983,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4.h,False,ignore,ignore,ignore,ignore,ignore,ignore,ignore,ignore, bool sleep_ok,u,False,0:00:01.439926
+"
+int netvsc_send(struct net_device *net,
+		struct hv_netvsc_packet *packet,
+		struct rndis_message *rndis_msg,
+		struct hv_page_buffer *page_buffer,
+		struct sk_buff *skb,
+		bool xdp_tx);",228,../linux/drivers/net/hyperv/hyperv_net.h,False,ignore,ignore,ignore,"
+		struct hv_page_buffer *page_buffer",ignore,ignore,u,u,u,u,False,0:00:01.235266
+"
+int dln2_transfer(struct platform_device *pdev, u16 cmd,
+		  const void *obuf, unsigned obuf_len,
+		  void *ibuf, unsigned *ibuf_len);",65,../linux/include/linux/mfd/dln2.h,False,ignore,ignore,ignore,ignore,ignore, unsigned *ibuf_len,u,u,u,u,True,0:00:01.342647
+"
+void rt2x00mac_get_ringparam(struct ieee80211_hw *hw,
+			     u32 *tx, u32 *tx_max, u32 *rx, u32 *rx_max);",1491,../linux/drivers/net/wireless/ralink/rt2x00/rt2x00.h,False,ignore,"
+			     u32 *tx",ignore,ignore,ignore,u,u,u,u,u,False,0:00:01.329329
+"
+int security_file_permission(struct file *file, int mask);",379,../linux/include/linux/security.h,False,struct file *file,ignore,u,u,u,u,u,u,u,u,True,0:00:02.153971
+"
+int cxgb4_alloc_raw_mac_filt(struct adapter *adap,
+			     unsigned int viid,
+			     const u8 *addr,
+			     const u8 *mask,
+			     unsigned int idx,
+			     u8 lookup_type,
+			     u8 port_id,
+			     bool sleep_ok);",2171,../linux/drivers/net/ethernet/chelsio/cxgb4/cxgb4.h,False,struct adapter *adap,ignore,ignore,ignore,ignore,ignore,ignore,ignore,u,u,False,0:00:01.352613
+"int amdtp_motu_init(struct amdtp_stream *s, struct fw_unit *unit,
+		    enum amdtp_stream_direction dir,
+		    const struct snd_motu_spec *spec,
+		    struct amdtp_motu_cache *cache);",149,../linux/sound/firewire/motu/motu.h,False,ignore,ignore,"
+		    enum amdtp_stream_direction dir",ignore,ignore,u,u,u,u,u,True,0:00:01.375593
+"
+irqreturn_t qla4_8xxx_msix_rsp_q(int irq, void *dev_id);",136,../linux/drivers/scsi/qla4xxx/ql4_glbl.h,False,ignore, void *dev_id,u,u,u,u,u,u,u,u,False,0:00:01.340385
+"
+void f2fs_set_data_blkaddr(struct dnode_of_data *dn);",3611,../linux/fs/f2fs/f2fs.h,False,struct dnode_of_data *dn,u,u,u,u,u,u,u,u,u,False,0:00:01.299507
+void intel_vgpu_clean_opregion(struct intel_vgpu *vgpu);,550,../linux/drivers/gpu/drm/i915/gvt/gvt.h,False,struct intel_vgpu *vgpu,u,u,u,u,u,u,u,u,u,False,0:00:01.332753
+"
+int ubifs_recover_size_accum(struct ubifs_info *c, union ubifs_key *key,
+			     int deletion, loff_t new_size);",2052,../linux/fs/ubifs/ubifs.h,False,ignore,ignore,"
+			     int deletion",ignore,u,u,u,u,u,u,True,0:00:01.438454
+"void getrusage(struct task_struct *p, int who, struct rusage *ru);",9,../linux/include/linux/resource.h,False,ignore, int who,ignore,u,u,u,u,u,u,u,True,0:00:01.993665
+"
+int watchdog_nmi_enable(unsigned int cpu);",121,../linux/include/linux/nmi.h,False,unsigned int cpu,u,u,u,u,u,u,u,u,u,True,0:00:01.222639
+"
+void rmnet_map_checksum_uplink_packet(struct sk_buff *skb,
+				      struct rmnet_port *port,
+				      struct net_device *orig_dev,
+				      int csum_type);",53,../linux/drivers/net/ethernet/qualcomm/rmnet/rmnet_map.h,False,ignore,ignore,ignore,"
+				      int csum_type",u,u,u,u,u,u,False,0:00:01.277565
+"
+int intel_gvt_ggtt_gmadr_h2g(struct intel_vgpu *vgpu, u64 h_addr, u64 *g_addr);",525,../linux/drivers/gpu/drm/i915/gvt/gvt.h,False,ignore, u64 h_addr,ignore,u,u,u,u,u,u,u,True,0:00:02.094444
+"
+int __ipv6_get_lladdr(struct inet6_dev *idev, struct in6_addr *addr,
+		      u32 banned_flags);",110,../linux/include/net/addrconf.h,False,ignore, struct in6_addr *addr,ignore,u,u,u,u,u,u,u,False,0:00:01.466582
+"
+void nv50_fifo_chan_engine_dtor(struct nvkm_fifo_chan *, struct nvkm_engine *);",44,../linux/drivers/gpu/drm/nouveau/nvkm/engine/fifo/channv50.h,False,ignore, struct nvkm_engine *,u,u,u,u,u,u,u,u,False,0:00:01.191651
+"int read_def_system_config(struct sock *sk, struct hci_dev *hdev, void *data,
+			   u16 data_len);",7,../linux/net/bluetooth/mgmt_config.h,False,struct sock *sk,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.290950
+"int intel_vgpu_emulate_opregion_request(struct intel_vgpu *vgpu, u32 swsci);",554,../linux/drivers/gpu/drm/i915/gvt/gvt.h,False,struct intel_vgpu *vgpu,ignore,u,u,u,u,u,u,u,u,True,0:00:01.474126
+"
+void wacom_battery_work(struct work_struct *work);",234,../linux/drivers/hid/wacom.h,False,struct work_struct *work,u,u,u,u,u,u,u,u,u,False,0:00:01.628570
+"
+void devm_remove_action(struct device *dev, void (*action)(void *), void *data);",244,../linux/include/linux/device.h,False,ignore, void (*action,u,u,u,u,u,u,u,u,False,0:00:01.207392
+"int nvkm_sw_chan_ctor(const struct nvkm_sw_chan_func *, struct nvkm_sw *,
+		      struct nvkm_fifo_chan *, const struct nvkm_oclass *,
+		      struct nvkm_sw_chan *);",26,../linux/drivers/gpu/drm/nouveau/nvkm/engine/sw/chan.h,False,ignore,ignore,"
+		      struct nvkm_fifo_chan *",ignore,ignore,u,u,u,u,u,True,0:00:01.254532
+"
+int nvkm_object_ntfy(struct nvkm_object *, u32 mthd, struct nvkm_event **);",59,../linux/drivers/gpu/drm/nouveau/include/nvkm/core/object.h,False,ignore, u32 mthd,ignore,u,u,u,u,u,u,u,True,0:00:01.313292
+"int vsc85xx_csr_write(struct phy_device *phydev,
+		      enum csr_target target, u32 reg, u32 val);",434,../linux/drivers/net/phy/mscc/mscc.h,False,ignore,"
+		      enum csr_target target",ignore,ignore,u,u,u,u,u,u,False,0:00:01.228451
+"
+void tipc_group_member_evt(struct tipc_group *grp, bool *wakeup,
+			   int *sk_rcvbuf, struct tipc_msg *hdr,
+			   struct sk_buff_head *inputq,
+			   struct sk_buff_head *xmitq);",62,../linux/net/tipc/group.h,False,ignore,ignore,ignore, struct tipc_msg *hdr,ignore,ignore,u,u,u,u,False,0:00:01.289974
+"
+int ext4_walk_page_buffers(handle_t *handle,
+			   struct inode *inode,
+			   struct buffer_head *head,
+			   unsigned from,
+			   unsigned to,
+			   int *partial,
+			   int (*fn)(handle_t *handle, struct inode *inode,
+				     struct buffer_head *bh));",2993,../linux/fs/ext4/ext4.h,False,ignore,ignore,ignore,ignore,ignore,"
+			   int *partial",ignore,u,u,u,False,0:00:01.448316
+"
+void cayman_dma_vm_set_pages(struct radeon_device *rdev,
+			     struct radeon_ib *ib,
+			     uint64_t pe,
+			     uint64_t addr, unsigned count,
+			     uint32_t incr, uint32_t flags);",635,../linux/drivers/gpu/drm/radeon/radeon_asic.h,False,struct radeon_device *rdev,ignore,ignore,ignore,ignore,ignore,ignore,u,u,u,True,0:00:01.405410
+"bool batadv_check_management_packet(struct sk_buff *skb,
+				    struct batadv_hard_iface *hard_iface,
+				    int header_len);",16,../linux/net/batman-adv/routing.h,False,ignore,"
+				    struct batadv_hard_iface *hard_iface",ignore,u,u,u,u,u,u,u,False,0:00:01.203767
+"
+int mlx5_query_trust_state(struct mlx5_core_dev *mdev, u8 *trust_state);",219,../linux/include/linux/mlx5/port.h,False,ignore, u8 *trust_state,u,u,u,u,u,u,u,u,False,0:00:01.373152
+"
+int __carl9170_exec_cmd(struct ar9170 *ar, struct carl9170_cmd *cmd,
+			const bool free_buf);",549,../linux/drivers/net/wireless/ath/carl9170/carl9170.h,False,ignore, struct carl9170_cmd *cmd,ignore,u,u,u,u,u,u,u,False,0:00:01.333304
+"
+int ufshcd_wait_for_register(struct ufs_hba *hba, u32 reg, u32 mask,
+				u32 val, unsigned long interval_us,
+				unsigned long timeout_ms);",1033,../linux/drivers/scsi/ufs/ufshcd.h,False,ignore,ignore, u32 mask,ignore,ignore,ignore,u,u,u,u,True,0:00:03.304264
+"
+int cgroup_add_legacy_cftypes(struct cgroup_subsys *ss, struct cftype *cfts);",113,../linux/include/linux/cgroup.h,False,struct cgroup_subsys *ss,ignore,u,u,u,u,u,u,u,u,False,0:00:01.410165
+"
+int csio_mb_fwevt_handler(struct csio_hw *, __be64 *);",257,../linux/drivers/scsi/csiostor/csio_mb.h,False,ignore, __be64 *,u,u,u,u,u,u,u,u,True,0:00:01.450859
+"static inline kprojid_t make_kprojid(struct user_namespace *from, projid_t projid)
+",66,../linux/include/linux/projid.h,False,struct user_namespace *from,ignore,u,u,u,u,u,u,u,u,False,0:00:01.040456
+"
+void aoenet_xmit(struct sk_buff_head *);",243,../linux/drivers/block/aoe/aoe.h,False,struct sk_buff_head *,u,u,u,u,u,u,u,u,u,True,0:00:01.293108
+"
+int snd_seq_timer_set_skew(struct snd_seq_timer *tmr, unsigned int skew, unsigned int base);",121,../linux/sound/core/seq/seq_timer.h,False,struct snd_seq_timer *tmr,ignore,ignore,u,u,u,u,u,u,u,False,0:00:01.063454
+"
+void il_tx_cmd_complete(struct il_priv *il, struct il_rx_buf *rxb);",1738,../linux/drivers/net/wireless/intel/iwlegacy/common.h,False,ignore, struct il_rx_buf *rxb,u,u,u,u,u,u,u,u,False,0:00:01.390743
+"
+void ath10k_core_unregister(struct ath10k *ar);",1335,../linux/drivers/net/wireless/ath/ath10k/core.h,False,struct ath10k *ar,u,u,u,u,u,u,u,u,u,False,0:00:01.397846
+"
+int i2c_read(struct hfi1_pportdata *ppd, u32 target, int i2c_addr,
+	     int offset, void *bp, int len);",192,../linux/drivers/infiniband/hw/hfi1/qsfp.h,False,ignore,ignore,ignore,"
+	     int offset",ignore,ignore,u,u,u,u,False,0:00:01.255704
+"
+int ath6kl_diag_write(struct ath6kl *ar, u32 address, void *data, u32 length);",907,../linux/drivers/net/wireless/ath/ath6kl/core.h,False,ignore, u32 address,ignore,ignore,u,u,u,u,u,u,False,0:00:01.208854
+"
+int br_ioctl_call(struct net *net, struct net_bridge *br, unsigned int cmd,
+		  struct ifreq *ifr, void __user *uarg);",68,../linux/include/linux/if_bridge.h,False,ignore,ignore,ignore,ignore, void __user *uarg,u,u,u,u,u,False,0:00:01.290048
+"
+int flexcop_dma_xfer_control(struct flexcop_device *fc,
+		flexcop_dma_index_t dma_idx, flexcop_dma_addr_index_t index,
+		int onoff);",133,../linux/drivers/media/common/b2c2/flexcop-common.h,False,ignore,ignore,ignore,"
+		int onoff",u,u,u,u,u,u,True,0:00:01.365889
+"void nv50_gpio_reset(struct nvkm_gpio *, u8);",33,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/gpio/priv.h,False,ignore, u8,u,u,u,u,u,u,u,u,True,0:00:01.236471
+"
+void nvkm_firmware_put(const struct firmware *);",8,../linux/drivers/gpu/drm/nouveau/include/nvkm/core/firmware.h,False,const struct firmware *,u,u,u,u,u,u,u,u,u,True,0:00:01.245270
+"void __reiserfs_warning(struct super_block *s, const char *id,
+			 const char *func, const char *fmt, ...);",900,../linux/fs/reiserfs/reiserfs.h,False,ignore, const char *id,ignore,ignore,ignore,u,u,u,u,u,True,0:00:01.275973
+"
+int trace_probe_remove_file(struct trace_probe *tp,
+			    struct trace_event_file *file);",339,../linux/kernel/trace/trace_probe.h,False,struct trace_probe *tp,ignore,u,u,u,u,u,u,u,u,True,0:00:01.492331
+"void drm_atomic_print_new_state(const struct drm_atomic_state *state,
+		struct drm_printer *p);",242,../linux/drivers/gpu/drm/drm_crtc_internal.h,False,ignore,"
+		struct drm_printer *p",u,u,u,u,u,u,u,u,True,0:00:01.535442
+"
+void g94_sor_dp_activesym(struct nvkm_ior *, int, u8, u8, u8, u8);",126,../linux/drivers/gpu/drm/nouveau/nvkm/engine/disp/ior.h,False,ignore, int,ignore,ignore,ignore,ignore,u,u,u,u,True,0:00:01.306866
+"int amdgpu_vm_set_pasid(struct amdgpu_device *adev, struct amdgpu_vm *vm,
+			u32 pasid);",377,../linux/drivers/gpu/drm/amd/amdgpu/amdgpu_vm.h,False,ignore,ignore,"
+			u32 pasid",u,u,u,u,u,u,u,True,0:00:02.104940
+"
+int intel_th_trace_switch(struct intel_th_device *thdev);",237,../linux/drivers/hwtracing/intel_th/intel_th.h,False,struct intel_th_device *thdev,u,u,u,u,u,u,u,u,u,False,0:00:01.107887
+"
+int carl9170_disable_key(struct ar9170 *ar, const u8 id);",569,../linux/drivers/net/wireless/ath/carl9170/carl9170.h,False,struct ar9170 *ar,ignore,u,u,u,u,u,u,u,u,False,0:00:01.316942
+int smpboot_register_percpu_thread(struct smp_hotplug_thread *plug_thread);,44,../linux/include/linux/smpboot.h,False,struct smp_hotplug_thread *plug_thread,u,u,u,u,u,u,u,u,u,False,0:00:01.162106
+"
+void rtw_generate_random_ibss(u8 *pibss);",551,../linux/drivers/staging/r8188eu/include/rtw_mlme.h,False,u8 *pibss,u,u,u,u,u,u,u,u,u,False,0:00:01.264492
+"
+bfa_status_t bfa_ablk_port_config(struct bfa_ablk_s *ablk, int port,
+		enum bfa_mode_s mode, int max_pf, int max_vf,
+		bfa_ablk_cbfn_t cbfn, void *cbarg);",945,../linux/drivers/scsi/bfa/bfa_ioc.h,False,ignore,ignore,ignore,ignore,ignore,"
+		bfa_ablk_cbfn_t cbfn",ignore,u,u,u,True,0:00:02.215299
+"
+int pwc_set_u8_ctrl(struct pwc_device *pdev, u8 request, u16 value, u8 data);",365,../linux/drivers/media/usb/pwc/pwc.h,False,ignore, u8 request,ignore,ignore,u,u,u,u,u,u,True,0:00:01.378117
+"int __hfsplus_setxattr(struct inode *inode, const char *name,
+			const void *value, size_t size, int flags);",22,../linux/fs/hfsplus/xattr.h,False,ignore, const char *name,ignore,ignore,ignore,u,u,u,u,u,False,0:00:01.084438
+"
+int snd_pcm_hw_param_value(const struct snd_pcm_hw_params *params,
+			   snd_pcm_hw_param_t var, int *dir);",18,../linux/include/sound/pcm_params.h,False,const struct snd_pcm_hw_params *params,ignore,ignore,u,u,u,u,u,u,u,True,0:00:01.616018
+"
+int xenbus_dev_is_online(struct xenbus_device *dev);",244,../linux/include/xen/xenbus.h,False,struct xenbus_device *dev,u,u,u,u,u,u,u,u,u,False,0:00:01.089174
+"
+int t3_phy_intr_handler(struct adapter *adapter);",672,../linux/drivers/net/ethernet/chelsio/cxgb3/common.h,False,struct adapter *adapter,u,u,u,u,u,u,u,u,u,True,0:00:01.920836
+"
+u32 cx231xx_get_vbi_line(struct cx231xx *dev, struct cx231xx_dmaqueue *dma_q,
+			 u8 sav_eav, u8 *p_buffer, u32 buffer_size);",38,../linux/drivers/media/usb/cx231xx/cx231xx-vbi.h,False,ignore,ignore,ignore, u8 *p_buffer,ignore,u,u,u,u,u,True,0:00:01.416367
+"
+bool amdgpu_atom_parse_data_header(struct atom_context *ctx, int index, uint16_t *size,
+			    uint8_t *frev, uint8_t *crev, uint16_t *data_start);",161,../linux/drivers/gpu/drm/amd/amdgpu/atom.h,False,ignore, int index,ignore,ignore,ignore,ignore,u,u,u,u,True,0:00:01.839275
+"
+void do_trap(struct pt_regs *regs, int signo, int code, unsigned long addr);",89,../linux/arch/riscv/include/asm/bug.h,False,struct pt_regs *regs,ignore,ignore,ignore,u,u,u,u,u,u,False,0:00:01.165418
+"
+u16 dcb_gpio_parse(struct nvkm_bios *, int idx, int ent, u8 *ver, u8 *len,
+		   struct dcb_gpio_func *);",48,../linux/drivers/gpu/drm/nouveau/include/nvkm/subdev/bios/gpio.h,False,ignore,ignore, int ent,ignore,ignore,ignore,u,u,u,u,True,0:00:01.247724
