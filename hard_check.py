@@ -74,10 +74,8 @@ def main(csv_reader, csv_writer):
                     #quick compile back as regular
                     compile_files(gcc_)
         location += 1
-        if location > 1000:
-            break
     #return home
-    print(valid_ones)
+    #print(valid_ones)
     time_elapsed = datetime.datetime.now() - time_start
     print(time_elapsed)
     print("compile %")
@@ -197,7 +195,7 @@ def check_csv(filename):
 if  __name__ == "__main__":
     print("bozo")
     #total_scraped = pd.read_csv("final_full.csv")
-    with open("final_full_shufffled.csv") as read,  open("temp_shuffle_k.csv", "w") as write:
+    with open("final_full_shufffled.csv") as read,  open("full_shuffle_labeled.csv", "w") as write:
         csv_read = csv.reader(read, delimiter=',')
         csv_write = csv.writer(write)
         #gz_to_csv("tags.gz", csv_write)
