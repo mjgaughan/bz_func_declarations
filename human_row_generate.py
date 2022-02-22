@@ -17,11 +17,13 @@ def main(csv_reader, csv_writer):
                 github_links[locations_array[-1]] = github_link
             print(github_links)
             temp_row = row
-            temp_row.append([github_links["p"], github_links["f"]])
+            temp_row.append(github_links["p"])
+            temp_row.append(github_links["f"])
             csv_writer.writerow(temp_row)
         else:
             header = row
-            header.append(["prototype_location_gh", "function_location_gh"])
+            header.append("prototype_location_gh")
+            header.append("function_location_gh")
             csv_writer.writerow(header)
         location += 1
         #if location > 3:
