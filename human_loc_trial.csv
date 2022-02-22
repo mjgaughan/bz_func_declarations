@@ -1,0 +1,46 @@
+func_prototype,est_line,file,in_macro,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,immutable,label_time,id,"['prototype_location_gh', 'function_location_gh']"
+"
+void udp_v6_rehash(struct sock *sk);",15,../linux/net/ipv6/udp_impl.h,FALSE,struct sock *sk,u,u,u,u,u,u,u,u,u,FALSE,0:00:01,,"['https://github.com/torvalds/linux/blob/v5.16/net/ipv6/udp_impl.h#L16', 'https://github.com/torvalds/linux/blob/v5.16/net/ipv6/udp.c#L93']"
+"int nvkm_vmm_pfn_map(struct nvkm_vmm *, u8 page, u64 addr, u64 size, u64 *pfn);",185,../linux/drivers/gpu/drm/nouveau/nvkm/subdev/mmu/vmm.h,FALSE,ignore,ignore,ignore,ignore,u64 *pfn,u,u,u,u,u,FALSE,0:00:01,1,"['https://github.com/torvalds/linux/blob/v5.16/drivers/gpu/drm/nouveau/nvkm/subdev/mmu/vmm.h#L186', 'https://github.com/torvalds/linux/blob/v5.16/drivers/gpu/drm/nouveau/nvkm/subdev/mmu/vmm.c#L1207']"
+"
+void r8712_SwitchBandwidth(struct _adapter *pAdapter);",262,../linux/drivers/staging/rtl8712/rtl871x_mp.h,FALSE,struct _adapter *pAdapter,u,u,u,u,u,u,u,u,u,TRUE,0:00:01,2,"['https://github.com/torvalds/linux/blob/v5.16/drivers/staging/rtl8712/rtl871x_mp.h#L263', 'https://github.com/torvalds/linux/blob/v5.16/drivers/staging/rtl8712/rtl871x_mp.c#L333']"
+"
+void video_mux(struct cx231xx *dev, int index);",913,../linux/drivers/media/usb/cx231xx/cx231xx.h,FALSE,struct cx231xx *dev,ignore,u,u,u,u,u,u,u,u,TRUE,0:00:02,3,"['https://github.com/torvalds/linux/blob/v5.16/drivers/media/usb/cx231xx/cx231xx.h#L914', 'https://github.com/torvalds/linux/blob/v5.16/drivers/staging/rtl8712/rtl871x_mp.c#L333']"
+"
+void tipc_bcast_dec_bearer_dst_cnt(struct net *net, int bearer_id);",86,../linux/net/tipc/bcast.h,FALSE,struct net *net,ignore,u,u,u,u,u,u,u,u,FALSE,0:00:01,4,"['https://github.com/torvalds/linux/blob/v5.16/net/tipc/bcast.h#L87', 'https://github.com/torvalds/linux/blob/v5.16/net/tipc/bcast.c#L157']"
+"
+int ubi_io_read_vid_hdr(struct ubi_device *ubi, int pnum,
+			struct ubi_vid_io_buf *vidb, int verbose);",935,../linux/drivers/mtd/ubi/ubi.h,FALSE,ignore,int pnum,ignore,ignore,u,u,u,u,u,u,TRUE,0:00:01,5,"['https://github.com/torvalds/linux/blob/v5.16/drivers/mtd/ubi/ubi.h#L935', 'https://github.com/torvalds/linux/blob/v5.16/drivers/mtd/ubi/io.c#L966']"
+"int smcr_link_init(struct smc_link_group *lgr, struct smc_link *lnk,
+		   u8 link_idx, struct smc_init_info *ini);",501,../linux/net/smc/smc_core.h,FALSE,ignore,struct smc_link *lnk,ignore,ignore,u,u,u,u,u,u,FALSE,0:00:01,6,"['https://github.com/torvalds/linux/blob/v5.16/net/smc/smc_core.h#L501', 'https://github.com/torvalds/linux/blob/v5.16/net/smc/smc_core.c#L733']"
+"
+void ReadAdapterInfo8188EU(struct adapter *Adapter);",116,../linux/drivers/staging/r8188eu/include/hal_intf.h,FALSE,struct adapter *Adapter,u,u,u,u,u,u,u,u,u,FALSE,0:00:01,7,"['https://github.com/torvalds/linux/blob/v5.16/drivers/staging/r8188eu/include/hal_intf.h#L117', 'https://github.com/torvalds/linux/blob/v5.16/drivers/staging/r8188eu/hal/usb_halinit.c#L1082']"
+"int ocfs2_lock_global_qf(struct ocfs2_mem_dqinfo *oinfo, int ex);",110,../linux/fs/ocfs2/quota.h,FALSE,ignore,int ex,u,u,u,u,u,u,u,u,TRUE,0:00:02,8,"['https://github.com/torvalds/linux/blob/v5.16/fs/ocfs2/quota.h#L111', 'https://github.com/torvalds/linux/blob/v5.16/fs/ocfs2/quota_global.c#L298']"
+"
+unsigned long ucs2_as_utf8(u8 *dest, const ucs2_char_t *src,
+			   unsigned long maxlength);",16,../linux/include/linux/ucs2_string.h,FALSE,u8 *dest,ignore,ignore,u,u,u,u,u,u,u,FALSE,0:00:01,9,"['https://github.com/torvalds/linux/blob/v5.16/include/linux/ucs2_string.h#L16', 'https://github.com/torvalds/linux/blob/v5.16/lib/ucs2_string.c#L83']"
+"
+void intel_uncore_runtime_resume(struct intel_uncore *uncore);",228,../linux/drivers/gpu/drm/i915/intel_uncore.h,FALSE,struct intel_uncore *uncore,u,u,u,u,u,u,u,u,u,TRUE,0:00:02,10,"['https://github.com/torvalds/linux/blob/v5.16/drivers/gpu/drm/i915/intel_uncore.h#L229', 'https://github.com/torvalds/linux/blob/v5.16/drivers/gpu/drm/i915/intel_uncore.c#L608']"
+"
+endif
+void pcie_port_device_remove(struct pci_dev *dev);",119,../linux/drivers/pci/pcie/portdrv.h,FALSE,struct pci_dev *dev,u,u,u,u,u,u,u,u,u,TRUE,0:00:01,11,"['https://github.com/torvalds/linux/blob/v5.16/drivers/pci/pcie/portdrv.h#L120', 'https://github.com/torvalds/linux/blob/v5.16/drivers/pci/pcie/portdrv_core.c#L505']"
+"
+int btrfs_rmap_block(struct btrfs_fs_info *fs_info, u64 chunk_start,
+		       struct block_device *bdev, u64 physical, u64 **logical,
+		       int *naddrs, int *stripe_len);",304,../linux/fs/btrfs/block-group.h,FALSE,ignore,ignore,ignore,ignore,ignore,ignore,int *stripe_len,u,u,u,FALSE,0:00:01,12,"['https://github.com/torvalds/linux/blob/v5.16/fs/btrfs/block-group.h#L303', 'https://github.com/torvalds/linux/blob/v5.16/fs/btrfs/block-group.c#L1746']"
+"
+int f2fs_write_single_data_page(struct page *page, int *submitted,
+				struct bio **bio, sector_t *last_block,
+				struct writeback_control *wbc,
+				enum iostat_type io_type,
+				int compr_blocks, bool allow_balance);",3638,../linux/fs/f2fs/f2fs.h,FALSE,ignore,ignore,ignore,sector_t *last_block,ignore,ignore,ignore,ignore,u,u,TRUE,0:00:03,13,"['https://github.com/torvalds/linux/blob/v5.16/fs/f2fs/f2fs.h#L3635', 'https://github.com/torvalds/linux/blob/v5.16/fs/f2fs/data.c#L2771']"
+"
+int em28xx_suspend_extension(struct em28xx *dev);",840,../linux/drivers/media/usb/em28xx/em28xx.h,FALSE,struct em28xx *dev,u,u,u,u,u,u,u,u,u,TRUE,0:00:01,14,"['https://github.com/torvalds/linux/blob/v5.16/drivers/media/usb/em28xx/em28xx.h#L841', 'https://github.com/torvalds/linux/blob/v5.16/drivers/media/usb/em28xx/em28xx-core.c#L1150']"
+"int tracepoint_printk_sysctl(struct ctl_table *table, int write,
+			     void *buffer, size_t *lenp, loff_t *ppos);",1102,../linux/include/linux/ftrace.h,FALSE,struct ctl_table *table,ignore,ignore,ignore,ignore,u,u,u,u,u,TRUE,0:00:03,15,"['https://github.com/torvalds/linux/blob/v5.16/include/linux/ftrace.h#L1102', 'https://github.com/torvalds/linux/blob/v5.16/kernel/trace/trace.c#L2851']"
+"int mtd_ooblayout_ecc(struct mtd_info *mtd, int section,
+		      struct mtd_oob_region *oobecc);",429,../linux/include/linux/mtd/mtd.h,FALSE,struct mtd_info *mtd,ignore,ignore,u,u,u,u,u,u,u,FALSE,0:00:01,16,"['https://github.com/torvalds/linux/blob/v5.16/include/linux/mtd/mtd.h#L429', 'https://github.com/torvalds/linux/blob/v5.16/drivers/mtd/mtdcore.c#L1638']"
+"
+ZSTDLIB_API size_t ZSTD_DCtx_loadDictionary_byReference(ZSTD_DCtx* dctx, const void* dict, size_t dictSize);",1927,../linux/include/linux/zstd_lib.h,FALSE,ignore,const void* dict,ignore,u,u,u,u,u,u,u,TRUE,0:00:01,17,"['https://github.com/torvalds/linux/blob/v5.16/include/linux/zstd_lib.h#L1928', 'https://github.com/torvalds/linux/blob/v5.16/lib/zstd/decompress/zstd_decompress.c#L1481']"
+"ifdef CONFIG_BINARY_PRINTF
+void seq_bprintf(struct seq_file *m, const char *f, const u32 *binary);",172,../linux/include/linux/seq_file.h,FALSE,ignore,ignore,const u32 *binary,u,u,u,u,u,u,u,FALSE,0:00:01,18,"['https://github.com/torvalds/linux/blob/v5.16/include/linux/seq_file.h#L173', 'https://github.com/torvalds/linux/blob/v5.16/fs/seq_file.c#L412']"
