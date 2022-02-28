@@ -33,6 +33,7 @@ def main(csv_read, csv_writer):
             func_body = get_body(loc_locations["function"][1], loc_locations["function"][2], loc_locations["function"][0])
             print(loc_locations["function"][0])
             print(func_body)
+            temp_row.append(func_body)
             csv_writer.writerow(temp_row)
         else:
             header = row
