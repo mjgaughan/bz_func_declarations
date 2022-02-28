@@ -1,7 +1,7 @@
 import csv
 import os
 from h_parse import check_form
-
+import datetime
 from tqdm import tqdm
 
 def find_location(func_name):
@@ -23,6 +23,7 @@ def find_location(func_name):
 
 def main(csv_read, csv_writer):
     location = 0
+    time_start = datetime.datetime.now()
     for row in csv_read:
     #for location in tqdm(range(len(list(csv_read)))):
         #row = list(csv_read)[location]
@@ -44,8 +45,11 @@ def main(csv_read, csv_writer):
             header.append("func_body_text")
             csv_writer.writerow(header)
         location += 1
+        print(location)
         if location > 7:
             break
+    time_elapsed = datetime.datetime.now() - time_start
+    print(time_elapsed)
 
 
 def get_body(file_loc, line, func_name):
