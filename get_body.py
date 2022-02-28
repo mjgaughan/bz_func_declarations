@@ -2,6 +2,8 @@ import csv
 import os
 from h_parse import check_form
 
+from tqdm import tqdm
+
 def find_location(func_name):
     locations = {}
     with open("../bz_func_declarations/tags_f_p.csv") as tags:
@@ -22,6 +24,8 @@ def find_location(func_name):
 def main(csv_read, csv_writer):
     location = 0
     for row in csv_read:
+    #for location in tqdm(range(len(list(csv_read)))):
+        #row = list(csv_read)[location]
         if location != 0:
             func_name = row[0][:row[0].index('(')]
             func_name = func_name[func_name.rfind(' ') + 1:]
@@ -31,8 +35,8 @@ def main(csv_read, csv_writer):
             #csv_writer.writerow(temp_row)
             #print(loc_locations["function"])
             func_body = get_body(loc_locations["function"][1], loc_locations["function"][2], loc_locations["function"][0])
-            print(loc_locations["function"][0])
-            print(func_body)
+            #print(loc_locations["function"][0])
+            #print(func_body)
             temp_row.append(func_body)
             csv_writer.writerow(temp_row)
         else:
@@ -45,7 +49,7 @@ def main(csv_read, csv_writer):
 
 
 def get_body(file_loc, line, func_name):
-    print(file_loc)
+    #print(file_loc)
     with open("../linux/" + file_loc) as f:
         chars = f.readlines()
         in_body = False
@@ -77,7 +81,7 @@ def get_body(file_loc, line, func_name):
 
 
 if  __name__ == "__main__":
-    with open("full_shuffle_labeled.csv") as read,  open("test_test_test.csv", "w") as write:
+    with open("full_shuffle_labeled.csv") as read,  open("temp_final_labeled_body_shuffled.csv", "w") as write:
         csv_read = csv.reader(read, delimiter=',')
         csv_write = csv.writer(write)
         main(csv_read, csv_write)
