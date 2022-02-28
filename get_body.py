@@ -46,7 +46,7 @@ def main(csv_read, csv_writer):
             csv_writer.writerow(header)
         location += 1
         print(location)
-        if location > 7:
+        if location > 8:
             break
     time_elapsed = datetime.datetime.now() - time_start
     print(time_elapsed)
