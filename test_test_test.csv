@@ -1,0 +1,22 @@
+func_prototype,est_line,file,in_macro,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,immutable,label_time,func_body_text
+"
+int ubi_vtbl_rename_volumes(struct ubi_device *ubi,
+			    struct list_head *rename_list);",841,../linux/drivers/mtd/ubi/ubi.h,False,struct ubi_device *ubi,ignore,u,u,u,u,u,u,u,u,True,0:00:01.210646
+"
+void vmw_kms_lost_device(struct drm_device *dev);",1215,../linux/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h,False,struct drm_device *dev,u,u,u,u,u,u,u,u,u,True,0:00:01.658718
+"
+void tcp_select_initial_window(const struct sock *sk, int __space,
+			       __u32 mss, __u32 *rcv_wnd,
+			       __u32 *window_clamp, int wscale_ok,
+			       __u8 *rcv_wscale, __u32 init_rcv_wnd);",1401,../linux/include/net/tcp.h,False,ignore, int __space,ignore,ignore,ignore,ignore,ignore,ignore,u,u,False,0:00:01.326564
+"
+bool zone_watermark_ok(struct zone *z, unsigned int order,
+		unsigned long mark, int highest_zoneidx,
+		unsigned int alloc_flags);",952,../linux/include/linux/mmzone.h,False,ignore, unsigned int order,ignore,ignore,ignore,u,u,u,u,u,True,0:00:03.034677
+"
+void udp_v6_rehash(struct sock *sk);",15,../linux/net/ipv6/udp_impl.h,False,struct sock *sk,u,u,u,u,u,u,u,u,u,False,0:00:01.311316
+"int comedi_pcmcia_enable(struct comedi_device *dev,
+			 int (*conf_check)(struct pcmcia_device *p_dev,
+					   void *priv_data));",21,../linux/drivers/comedi/comedi_pcmcia.h,False,struct comedi_device *dev,ignore,u,u,u,u,u,u,u,u,True,0:00:01.094932
+"irqreturn_t cqhci_irq(struct mmc_host *mmc, u32 intmask, int cmd_error,
+		      int data_error);",313,../linux/drivers/mmc/host/cqhci.h,False,ignore, u32 intmask,ignore,ignore,u,u,u,u,u,u,True,0:00:01.359044
