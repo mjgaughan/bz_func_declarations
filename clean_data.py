@@ -2,14 +2,16 @@ import csv
 
 
 
-
+'''
+This function is to toss out any functions that took in void or empty param lists.
+Given that this is looking for parameters, this is not helpful
+'''
 def exclude_void(csv_reader, csv_writer):
     voids = 0
     total = 0
     for row in csv_reader:
         total += 1
         args = row[0][row[0].find('(') + 1: row[0].find(')') ]
-        #print(args)
         if args != "void" and args != "" and " " in args:
             csv_write.writerow(row)
         else:
@@ -19,11 +21,15 @@ def exclude_void(csv_reader, csv_writer):
     print("total: " + str(total))
     print("% void/no args: "+ str(voids/total))
     print("------")
-
+'''
+This method takes each function and expands to represent all parameters in the function. 
+The parameter is the labeled thing, so it makes sense that each row corresponds to a parameter.
+'''
 def multiply_for_par(csv_reader, csv_writer):
     total_lines = 0
     pointers = 0
     for row in csv_reader:
+        #these are all of the params
         args = row[0][row[0].find('(') + 1: row[0].find(')') ]
         if ',' in args:
             args_list = args.split(',')
@@ -31,6 +37,7 @@ def multiply_for_par(csv_reader, csv_writer):
             args_list = [args]
         arg_list_len = len(args_list)
         skip = False
+        #if the len of the param list is more then 10 then we don't want to bother
         if arg_list_len > 10:
             skip = True
         for arg in args_list:
