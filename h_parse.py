@@ -14,9 +14,11 @@ C_PROHIB = ["return ", "=", "\n*", "*/", "while ", ">", "if ", "define ", "exter
 PUNCTUATION = [",", ";"]
 PROHIB_START = set(op[0] for op in C_PROHIB)
 
-
-#decayed and unnecessary function to flip the h files to txt files
-#can just read in the h files AS txt files
+'''
+decayed and unnecessary function to flip the h files to txt files;
+can just read in the h files AS txt files;
+this method is not used in the final running of the script
+'''
 def h_to_txt(h_filename):
     nl_file = h_filename[:h_filename.find('.')]
     print(nl_file)
@@ -36,6 +38,7 @@ def recurse_down(root_dir):
         for filename in glob.glob(root_dir + '**/*.h', recursive=True):
             files_examined += 1
             print("starting parse on " + filename)
+            #pass it down to parse_txt
             parse_txt(filename, csvwriter)
             print("done with " + filename)
             print("files: " + str(files_examined))
@@ -43,6 +46,7 @@ def recurse_down(root_dir):
 #parsing the h file as txt
 def parse_txt(txtfile, writer):
     with open(txtfile) as f:
+        #in retrospect, it would have been much easier to use readlines but I was running into some issues doing so on first pass
         chars = f.read()
         block = ""
         time_start = datetime.datetime.now()
@@ -62,23 +66,23 @@ def parse_txt(txtfile, writer):
                 if "{" in block:
                     block = block[:block.find('{')]
                 valid = True
+                #don't need comments
                 if "*/" in block:
                         block = block[block.find('*/') + 2:]
+                #checking if the code block contains disqualifying strings
                 for entry in C_PROHIB:
                     if entry in block:
                         valid = False
                 #checks form of lines to see if they match function prototypes as defined in literature
                 if ('(' in block and ')' in block):
+                    #checking if the block meets the function def form as defined in lit
                     valid = check_form(block, valid)
-                    #print("----")
-                    #print(block)
-                    #print(valid)
                     #isolating arguments between first open paren and last close paren
                     arguments = block[block.find('(') + 1 :block.rfind(')') - 1]
                     temp_arg = ""
                     open_paren = 1
                     arg_arr = []
-                    #for each character in the argument, append to temporary save
+                    #for each character in the argument, append to temporary save, either array or string
                     for char in arguments:
                         if char == "(":
                             open_paren += 1
@@ -88,31 +92,30 @@ def parse_txt(txtfile, writer):
                             arg_arr.append(temp_arg)
                             temp_arg = ""
                         temp_arg += char
-                    #print(arg_arr)
                     #this below block is for identifying function prototypes that might be in other prototypes
+                    # a rerursive form but due to only attemptign to analyze one layer deep, not implemented recursively
                     for arg in arg_arr:
                         cleaned_arg = clean_arg_string(arg)
                         if "(" in cleaned_arg and check_form(cleaned_arg, True):
                             if cleaned_arg[1] == "(":
                                 cleaned_arg = cleaned_arg[2:]
-                            #print("---------")
-                            #print(cleaned_arg + " is located at line " + str(line_loc) + " in file " + str(txtfile))
+                            #this step is essentially treating a param which has been ID'd as a func def as a func def
                             writer.writerow([cleaned_arg, line_loc, str(txtfile), "True"])
-                            #print("---------")
                     #this block above does the function prototype within thing
                     if valid:
-                        #print("---------")
                         func_prototype = block
-                        #print(func_prototype + " is located at line " + str(line_loc) + " in file " + str(txtfile))
                         writer.writerow([func_prototype, line_loc, str(txtfile), "False"])
                         #print("---------")
                 block = ""
             #if a given file takes more than 10 minutes, skip it
             time_elapsed = datetime.datetime.now() - time_start
-            #if time_elapsed > datetime.timedelta(seconds = 600):
-                #break
+            if time_elapsed > datetime.timedelta(seconds = 600):
+                break
 
-
+'''
+this method attempts to check the syntactical form of code blocks to see if they are function definitions
+While very rudimentary, its rules were informed by the K&R C textbook
+'''
 def check_form(block, valid):
     #if it comes in being not valid
     if not valid:
