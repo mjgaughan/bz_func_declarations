@@ -111,7 +111,11 @@ def compile_files(gcc_command):
         return True
     
 
-
+'''
+this function is where all of the 'const' insertion occurs
+the function finds the relevant location of the parameter and inserts the string 'const' to the relevant places
+the function then saves these changes so that the file can be compiled with the gcc command
+'''
 def edit_file(location_array, original_row):
     file_location = "../linux/" + location_array[1]
     opened_file = open(file_location)
@@ -119,32 +123,39 @@ def edit_file(location_array, original_row):
     #getting file line from sometimes messy location
     file_line = int(re.sub(r'\W+', '', location_array[2]))
     #iterating backwards through the file starting at the stated location of the file
+    #the file line # are not always accurate, so there is some breadth needed to identify the correct location
     #finding the target parameter that is needed
     target_param = ""
+    #grabbing the target parameter from the data row
     for first_index in range(4,14):
         current_entry = original_row[first_index]
         if current_entry != 'u' and current_entry != "ignore":
             target_param = current_entry.strip()
-    #making sure the line we are grabbing has the target param the way we need
+    #making sure the line we are grabbing has the target param the way we need (in a parameter list)
     for index in range(len(string_list)):
         #this is the current line being examined in the file
         current_line = string_list[file_line -index]
         #is the func_name in the current line
         if location_array[0] in current_line:
+            #iterating through possible lines where the parameter might be
             if target_param not in current_line:
                 new_index = -1
                 while target_param not in current_line:
                     new_index += 1
                     current_line = string_list[file_line - index + new_index]
                     print(current_line)
+            #since we know that the target parameter HAS to be in the file, we can act knowing it will be found
             print("This is it, this is the target param!")
             print(current_line)
+            #this is just making backups for when things are edited
             edit_line = string_list.index(current_line)
             new_line = current_line
             new_param = target_param
+            #if there is already const, then it seems a bit ridiculous to add it again
             if "const" not in target_param:
                 new_param = "const " + new_param
                 #new_line = current_line[:current_line.index(target_param)] + "const " + current_line[current_line.index(target_param):]
+            #if ther eparam is a pointer, then there's a different way to include const (have to do it twice)
             if "*" in target_param:
                 for letter_index in range(len(new_param)):
                     if new_param[letter_index] == "*":
@@ -156,7 +167,8 @@ def edit_file(location_array, original_row):
             string_list[edit_line] = new_line 
             break
     opened_file.close()
-    #write to file
+    #write to file, need to find the location and then overwrite it before closing out the file
+    #the previous work was identifying the location and the line
     print("this is the file location")
     print(file_location)
     print(os.getcwd())
@@ -167,6 +179,10 @@ def edit_file(location_array, original_row):
     new_file.write(new_file_edits)
     new_file.close()
 
+'''
+this function exists to find the location of the function from the tags file
+as a lot of this code is, it's somewhat brute force in trying to get the task done
+'''
 def find_location(func_name):
     locations = {}
     with open("../bz_func_declarations/tags_f_p.csv") as tags:
